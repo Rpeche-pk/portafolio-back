@@ -1,26 +1,4 @@
-# Node.js
-node_modules/
-
-# Dependencias de desarrollo
-npm-debug.log
-yarn-error.log
 
 # Archivos de configuración
 .vscode/
 .DS_Store
-
-# Archivos de compilación
-dist/
-out/
-*.js
-*.map
-
-# Archivos de configuración personalizados (ajusta según tus necesidades)
-config.js
-secrets.js
-
-# Otros archivos y carpetas generados por tu entorno de desarrollo
-*.log
-*.iml
-.idea/
-.cache/
