@@ -11,8 +11,10 @@ const removeLanguage = () => {
   localStorage.removeItem("language");
 };
 const changeLanguage = async (lang) => {
+
   try {
-    const requestJson = await fetch(`/assets/js/languages/${lang}.json`);
+  
+    const requestJson = await fetch(`Portafolio-Back/assets/js/languages/${lang}.json`);
 
     if (!requestJson.ok) {
       throw new Error(`Error fetching language JSON: ${requestJson.status} ${requestJson.statusText}`);
