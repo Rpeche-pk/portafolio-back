@@ -54,4 +54,16 @@
 .bs-icon.bs-icon-circle {
   border-radius: 50%;
 }
+::-webkit-scrollbar {
+  width: 12px; /* Ancho de la barra lateral */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #5d5d5d82; /* Color del pulgar (la parte que puedes arrastrar) */
+  border-radius: 6px; /* Borde redondeado del pulgar */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f0f0f0; /* Color de fondo de la barra lateral */
+}
 

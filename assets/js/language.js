@@ -5,7 +5,7 @@ const setLanguage = (lang) => {
 };
 
 const getLanguage = () => {
-  return localStorage.getItem("language") || "es";
+  return localStorage.getItem("language") || "en";
 };
 const removeLanguage = () => {
   localStorage.removeItem("language");

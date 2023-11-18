@@ -54,7 +54,7 @@ particlesJS({
     },
     move: {
       enable: true,
-      speed: 6,
+      speed: 4,
       direction: "none",
       random: false,
       straight: false,
@@ -76,7 +76,7 @@ particlesJS({
       },
       onclick: {
         enable: true,
-        mode: "repulse",
+        mode: "remove",
       },
       resize: true,
     },
