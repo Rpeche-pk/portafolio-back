@@ -8,16 +8,15 @@ function sendEmail() {
     alerta("warning","Please complete all fields",1500);
     return;
   }
-  let enlace = `https://mail.google.com/mail/u/0/?to=pecheaparcana1998@gmail.com&subject=${asunto}&body=${name}; ${cuerpo}&fs=1&tf=cm`;
+  /*let enlace = `https://mail.google.com/mail/u/0/?to=pecheaparcana1998@gmail.com&subject=${asunto}&body=${name}; ${cuerpo}&fs=1&tf=cm`;
   // Puedes utilizar el enlace como necesites, por ejemplo, abrirlo en una nueva ventana
-  window.open(enlace, "_blank");
-  cleanFields();
-  alerta("success","email sent successfully, thank you!");
-  
+  window.open(enlace, "_blank");*/
 
+  alerta("success","email sent successfully, thank you!");
+  cleanFields();
 }
 
-alerta = (code,info,time=3500) => {
+alerta = (code,info,time=2000) => {
   const Toast = Swal.mixin({
     toast: true,
     position: "top-end",
