@@ -14,6 +14,8 @@
         "home-project-one": "We want to offer you not just an ordering tool, but a digital companion that understands your preferences and makes every meal an easy and delicious experience.<br><br>",
         "home-project-two": "Cashier is a digital wallet designed to be your Passport to the Modern Financial World.<br>What are you waiting for to be part of this initiative.<br><br>",
         "home-project-three": "The main objective of this initiative is to provide users with a tool that allows them to quickly compare prices of different products. This makes it easier for them to make informed decisions when making their purchases.",
+        "home-project-four": "A powerful web application that was developed for the efficient management of vehicle fleets.</br> It has Chatbot for better control and decision making</br></br>",
+        "home-project-five": "Chatbot for managing vehicle fleets, has a control panel for managing vehicles and drivers.</br>All this within WhatsApp Mobile.</br></br></br>",
         "home-h3": "Like what you see?",
         "home-button-contact": "<strong>Contact Me</strong>",
         "home-skill-title": "<strong>Skills</strong>",
@@ -63,7 +65,13 @@
         "proyects-two-title": "Cashier",
         "proyects-two-description": "Description",
         "proyects-two-parraf-1": "\"<strong>Cashier</strong>\" 📱, a digital wallet that is revolutionizing the way we manage our finances. 💰💳",
-        "proyects-two-parraf-2": "✅Intuitive: it makes the interactivity of the application easier for the user, making payments and transfers safe and reliable.<br>✅Security Controls: high-level encryption to protect your data and transactions. Your money is in the best hands.<br>✅Loyalty Rewards: Cashier values your loyalty by offering you exclusive discounts in the best businesses.<br>✅Cutting-edge Technology: Cashier is developed with the most robust programming languages and under SOLID principles It is easily maintainable and scalable."
-
+        "proyects-two-parraf-2": "✅Intuitive: it makes the interactivity of the application easier for the user, making payments and transfers safe and reliable.<br>✅Security Controls: high-level encryption to protect your data and transactions. Your money is in the best hands.<br>✅Loyalty Rewards: Cashier values your loyalty by offering you exclusive discounts in the best businesses.<br>✅Cutting-edge Technology: Cashier is developed with the most robust programming languages and under SOLID principles It is easily maintainable and scalable.",
+        "proyects-three-title": "Trucking: Efficient Fleet Management with WhatsApp Interaction",
+        "proyects-three-description": "Description",
+        "proyects-three-parraf-1": "📌Trucking is an innovative web application designed to optimize the management of vehicle fleets in companies. Provides detailed data on fleet usage and maintenance, improving operational efficiency and reducing failure rates.",
+        "proyects-three-parraf-2": "<strong>Real Time Tracking:</strong> Obtain instant information about the location and status of each vehicle.</br><strong>Detailed Recording:</strong> Access precise usage and maintenance data for a quick shot informed decision making.</br><strong>Interaction through WhatsApp:</strong> Added value with an integrated chatbot that connects to WhatsApp, facilitating communication and tracking requests.</br>",
+        "proyects-four-description": "Description",
+        "proyects-four-parraf-1": "📌<strong>Maipevi Bot</strong>, our WhatsApp chatbot developed with the powerful Baileys library, is the perfect solution to efficiently manage your company's fleet of vehicles. This chatbot offers a friendly and accessible interface to make it easy to interact and track crucial fleet information.",
+        "proyects-four-parraf-2": "<strong>Information Consultation:</strong> Quickly access key data such as location, status and maintenance records of each vehicle.</br><strong> Report Generation:</strong>Maipevi Bot can generate detailed reports on fleet performance, simplifying analysis and decision making.</br><strong> Proactive Notifications:</strong>Receive important alerts and notifications directly on WhatsApp, always keeping you informed and prepared.</br>"
     }
 }

@@ -14,6 +14,8 @@
         "home-project-one": "Queremos ofrecerle no solo una herramienta para realizar pedidos, sino un compañero digital que comprenda sus preferencias y haga de cada comida una experiencia fácil y deliciosa.<br><br>",
         "home-project-two": "Cashier es una billetera digital diseñada para ser su pasaporte al mundo financiero moderno.<br>Que esperas para ser parte de esta iniciativa.<br><br>",
         "home-project-three": "El principal objetivo de esta iniciativa es proporcionar a los usuarios una herramienta que les permita comparar rápidamente precios de diferentes productos. Esto les facilita tomar decisiones informadas al realizar sus compras.",
+        "home-project-four": "Una potente aplicación web que se desarrollo para la gestión eficiente de flotas de vehículos.</br> Cuenta con Chatbot para un mejor control y toma de decisión</br></br>",
+        "home-project-five": "Chatbot para la gestión de flotas de vehiculos, cuenta con un panel de control para la gestión de los vehiculos y conductores.</br>Todo esto dentro de WhatsApp Móvil.</br></br>",
         "home-h3": "¿Te gusta lo que ves?",
         "home-button-contact": "<strong>Contactame</strong>",
         "home-skill-title": "<strong>Habilidades</strong>",
@@ -63,6 +65,14 @@
         "proyects-two-title": "Cashier",
         "proyects-two-description": "Descripción",
         "proyects-two-parraf-1": "\"<strong>Cashier</strong>\" 📱, un monedero digital que está revolucionando la forma en que gestionamos nuestras finanzas. 💰💳",
-        "proyects-two-parraf-2": "✅Intuitiva: facilita al usuario la interactividad de la aplicación, logrando realizar pagos y transferencias de manera segura y confiable.<br>✅Controles de Seguridad: cifrado de alto nivel para proteger tus datos y transacciones. Tu dinero está en las mejores manos.<br>✅Recompensas de Lealtad: cashier valora tu lealtad ofreciéndote descuentos exclusivos en los mejores negocios.<br>✅Tecnología de Vanguardia: Cashier está desarrollada con los mas robustos lenguajes de programación y bajo principios SOLID es facilmente mantenible y escalable."
+        "proyects-two-parraf-2": "✅Intuitiva: facilita al usuario la interactividad de la aplicación, logrando realizar pagos y transferencias de manera segura y confiable.<br>✅Controles de Seguridad: cifrado de alto nivel para proteger tus datos y transacciones. Tu dinero está en las mejores manos.<br>✅Recompensas de Lealtad: cashier valora tu lealtad ofreciéndote descuentos exclusivos en los mejores negocios.<br>✅Tecnología de Vanguardia: Cashier está desarrollada con los mas robustos lenguajes de programación y bajo principios SOLID es facilmente mantenible y escalable.",
+        "proyects-three-title": "Trucking: Gestión Eficiente de Flotas con Interacción en WhatsApp",
+        "proyects-three-description": "Descripción",
+        "proyects-three-parraf-1": "📌Trucking es una innovadora aplicación web diseñada para optimizar la gestión de flotas de vehículos en empresas. Proporciona datos detallados sobre el uso y mantenimiento de la flota, mejorando la eficiencia operativa y reduciendo las tasas de fallas.",
+        "proyects-three-parraf-2": "<strong>Seguimiento en Tiempo Real:</strong> Obtén información instantánea sobre la ubicación y el estado de cada vehículo.</br><strong>Registro Detallado:</strong> Accede a datos precisos de uso y mantenimiento para una toma de decisiones informada.</br><strong>Interacción por WhatsApp:</strong> Valor agregado con un chatbot integrado que se conecta a WhatsApp, facilitando la comunicación y el seguimiento de solicitudes.</br>",
+        "proyects-four-description": "Descripción",
+        "proyects-four-parraf-1": "📌<strong>Maipevi Bot</strong>, nuestro chatbot en WhatsApp desarrollado con la potente librería Baileys, es la solución perfecta para gestionar eficientemente la flota de vehículos de tu empresa. Este chatbot ofrece una interfaz amigable y accesible para facilitar la interacción y el seguimiento de información crucial sobre la flota.",
+        "proyects-four-parraf-2": "<strong>Consulta de Información:</strong> Accede rápidamente a datos clave como ubicación, estado y registros de mantenimiento de cada vehículo.</br><strong> Generación de Reportes:</strong>Maipevi Bot puede generar informes detallados sobre el rendimiento de la flota, simplificando el análisis y la toma de decisiones.</br><strong> Notificaciones Proactivas:</strong>Recibe alertas y notificaciones importantes directamente en WhatsApp, manteniéndote siempre informado y preparado.</br>"
+
     }
 }
