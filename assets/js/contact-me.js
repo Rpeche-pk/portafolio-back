@@ -10,7 +10,7 @@ function sendEmail() {
   // Puedes utilizar el enlace como necesites, por ejemplo, abrirlo en una nueva ventana
   window.open(enlace, "_blank");*/
   if (asunto == "" || name == "" || cuerpo == "") {
-    alerta("warning", "Please complete all fields", 1500);
+    alerta("warning", "Por favor, complete todos los campos", 1500);
     return;
   }
   //validate email pattern
@@ -21,7 +21,7 @@ function sendEmail() {
     return;
   }
 
-  alerta("success", "email sent successfully, thank you!",2200);
+  alerta("success", "Email enviado, Gracias!",2200);
   //cleanFields();
 }
 

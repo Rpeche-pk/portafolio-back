@@ -73,5 +73,12 @@
         "proyects-four-description": "Description",
         "proyects-four-parraf-1": "📌<strong>Maipevi Bot</strong>, our WhatsApp chatbot developed with the powerful Baileys library, is the perfect solution to efficiently manage your company's fleet of vehicles. This chatbot offers a friendly and accessible interface to make it easy to interact and track crucial fleet information.",
         "proyects-four-parraf-2": "<strong>Information Consultation:</strong> Quickly access key data such as location, status and maintenance records of each vehicle.</br><strong> Report Generation:</strong>Maipevi Bot can generate detailed reports on fleet performance, simplifying analysis and decision making.</br><strong> Proactive Notifications:</strong>Receive important alerts and notifications directly on WhatsApp, always keeping you informed and prepared.</br>"
+    },
+    "contact": {
+        "contact-title": "Contact Me",
+        "contact-name": "Name",
+        "contact-email": "Email",
+        "contact-message": "Message",
+        "contact-button": "Send Message"
     }
 }

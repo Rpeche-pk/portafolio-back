@@ -39,16 +39,16 @@
     <main class="page contact-page">
         <section class="portfolio-block contact">
             <div class="container">
-                <div class="heading">
+                <div class="heading" data-key="contact" data-value="contact-title">
                     <h2>Contact me</h2>
                 </div>         
                                                                     
                 <form class="shadow-lg pageclip-form" data-bs-theme="light" action="https://send.pageclip.co/YU1nFAImNcbUjF7E3Mql1lMy0hhVcIjy/lrpa-form" method="post">
-                    <div class="mb-3"><label class="form-label" for="name">Your Name</label><input class="form-control item" type="text"  name="name" placeholder="Your name"/></div>
-                    <div class="mb-3"><label class="form-label" for="email">Your Email</label><input class="form-control item" type="text" name="subject" placeholder="example@example.com" required></div>
+                    <div class="mb-3"><label class="form-label" for="name" data-key="contact" data-value="contact-name">Your Name</label><input class="form-control item" type="text"  name="name" placeholder="Your name"/></div>
+                    <div class="mb-3"><label class="form-label" for="email" data-key="contact" data-value="contact-email">Your Email</label><input class="form-control item" type="text" name="subject" placeholder="example@example.com" required></div>
                     <div class="mb-3"></div>
-                    <div class="mb-3"><label class="form-label" for="body">Message</label><textarea class="form-control item" name="body" placeholder="Your message"/></textarea></div>
-                    <div class="mb-3 mt-4"><button class="btn btn-primary btn-lg d-block w-100 pageclip-form__submit" type="submit" onclick="sendEmail()">Send Message</button></div>
+                    <div class="mb-3"><label class="form-label" for="body" data-key="contact" data-value="contact-message">Message</label><textarea class="form-control item" name="body" placeholder="Your message"/></textarea></div>
+                    <div class="mb-3 mt-4"><button class="btn btn-primary btn-lg d-block w-100 pageclip-form__submit" type="submit" onclick="sendEmail()" data-key="contact" data-value="contact-button">Send Message</button></div>
                 </form>
             </div>
         </section>
