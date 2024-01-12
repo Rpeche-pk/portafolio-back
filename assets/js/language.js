@@ -14,7 +14,7 @@ const changeLanguage = async (lang) => {
 
   try {
   
-    const requestJson = await fetch(`assets/js/languages/${lang}.json`);
+    const requestJson = await fetch(`/assets/js/languages/${lang}.json`);
 
     if (!requestJson.ok) {
       throw new Error(`Error fetching language JSON: ${requestJson.status} ${requestJson.statusText}`);
@@ -38,9 +38,9 @@ const changeLanguage = async (lang) => {
 languageSelect.addEventListener("click", async (event) => {
   const lang = event.target.parentElement.dataset.language;
   if (lang == "es") {
-    alerta("success", "Idioma cambiado a español", 1200);
+    alerta("success", "Idioma cambiado a español", 1150);
   } else {
-    alerta("success", "Language changed to english", 1200);
+    alerta("success", "Language changed to english", 1150);
   }
   setLanguage(lang);
   await changeLanguage(lang);
