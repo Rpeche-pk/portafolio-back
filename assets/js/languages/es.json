@@ -7,7 +7,7 @@
         "nav-contact": "Contactame"
     },
     "home": {
-        "home-title": "Hola soy <strong>Luis Peche</strong>, soy un apasionado desarrollador backend especializado en <strong>Java Spring Boot</strong>.<br>Mi experiencia incluye diseñar arquitecturas eficientes, implementando <strong>servicios</strong>  <strong>web</strong> <strong>RESTful</strong>  e integración de bases de datos, todo utilizando las mejores prácticas de desarrollo ágil. Ademas poseo sólidos conocimientos en el campo del <strong>análisis de datos</strong>",
+        "home-title": "Hola soy <strong>Luis Peche</strong>, soy un apasionado desarrollador backend especializado en <strong>Java, Spring Boot y Spring Cloud</strong>.<br>Mi experiencia incluye diseñar arquitecturas eficientes, implementando <strong>servicios</strong>  <strong>web</strong> <strong>RESTful</strong>  e integración de bases de datos, todo utilizando las mejores prácticas de desarrollo ágil. Ademas poseo sólidos conocimientos en el campo del <strong>análisis de datos</strong> y creación de chat bot con <strong>AI</strong>.",
         "home-button": "<strong>Conóceme</strong>",
         "home-project-title": "<strong>Proyectos</strong>",
         "home-project-description": "Explora mi mundo de innovación digital, donde cada proyecto es una pieza única que fusiona tecnología y creatividad para transformar desafíos en soluciones impactantes. ¡Bienvenido a mi portafolio de creaciones, donde cada línea de código cuenta una historia de éxito! <br/><strong><em>Haz clic sobre las imágenes</em></strong>",
@@ -16,10 +16,11 @@
         "home-project-three": "El principal objetivo de esta iniciativa es proporcionar a los usuarios una herramienta que les permita comparar rápidamente precios de diferentes productos. Esto les facilita tomar decisiones informadas al realizar sus compras.",
         "home-project-four": "Una potente aplicación web que se desarrollo para la gestión eficiente de flotas de vehículos.</br> Cuenta con Chatbot para un mejor control y toma de decisión</br></br>",
         "home-project-five": "Chatbot para la gestión de flotas de vehiculos, cuenta con un panel de control para la gestión de los vehiculos y conductores.</br>Todo esto dentro de WhatsApp Móvil.</br></br>",
+        "home-project-six": "Especialista en creación de agentes de IA con <strong>Spring AI</strong>, implementación de arquitecturas RAG para respuestas inteligentes y despliegue de servidores <strong>MCP (Model Context Protocol)</strong> para integración estándar con LLMs.</br>",
         "home-h3": "¿Te gusta lo que ves?",
         "home-button-contact": "<strong>Contactame</strong>",
         "home-skill-title": "<strong>Habilidades</strong>",
-        "home-card-backend": "Soy un desarrollador backend altamente competente y con sólida experiencia en el uso de tecnologías como Java, Spring Boot, Spring Data JPA, Spring Mail, Spring Security, Docker, Maven y Git.",
+        "home-card-backend": "Soy un desarrollador backend altamente competente y con sólida experiencia en el uso de tecnologías como Java, Spring Cloud, Spring AI, Spring Boot, Spring Data JPA, Spring Mail, Spring Security, Docker, Maven y Git.",
         "home-card-bot": "Mi enfoque incluye la integración de tecnologías como Baileys/WAWebSockets y Node.js en conjunto con WhatsApp Business, brindando una solución eficiente y centrada en el usuario.",
         "home-card-scraping": "Soy experto en web scraping, usando Python, Selenium, Selenium Grid y Beautiful Soup. Mi experiencia abarca desde la extracción de datos hasta el procesamiento de datos, utilizando técnicas programáticas.",
         "home-banner": "Participé activamente en el desarrollo de un interesante proyecto de billetera digital, llamado <strong>\"Cashier\"</strong>, donde la innovación y la colaboración fueron claves. En este contexto, formé parte de una emulación de trabajo en equipo, contribuyendo a la creación de una solución integral para facilitar las transacciones financieras digitales.",
@@ -72,7 +73,14 @@
         "proyects-three-parraf-2": "<strong>Seguimiento en Tiempo Real:</strong> Obtén información instantánea sobre la ubicación y el estado de cada vehículo.</br><strong>Registro Detallado:</strong> Accede a datos precisos de uso y mantenimiento para una toma de decisiones informada.</br><strong>Interacción por WhatsApp:</strong> Valor agregado con un chatbot integrado que se conecta a WhatsApp, facilitando la comunicación y el seguimiento de solicitudes.</br>",
         "proyects-four-description": "Descripción",
         "proyects-four-parraf-1": "📌<strong>Maipevi Bot</strong>, nuestro chatbot en WhatsApp desarrollado con la potente librería Baileys, es la solución perfecta para gestionar eficientemente la flota de vehículos de tu empresa. Este chatbot ofrece una interfaz amigable y accesible para facilitar la interacción y el seguimiento de información crucial sobre la flota.",
-        "proyects-four-parraf-2": "<strong>Consulta de Información:</strong> Accede rápidamente a datos clave como ubicación, estado y registros de mantenimiento de cada vehículo.</br><strong> Generación de Reportes:</strong>Maipevi Bot puede generar informes detallados sobre el rendimiento de la flota, simplificando el análisis y la toma de decisiones.</br><strong> Notificaciones Proactivas:</strong>Recibe alertas y notificaciones importantes directamente en WhatsApp, manteniéndote siempre informado y preparado.</br>"
+        "proyects-four-parraf-2": "<strong>Consulta de Información:</strong> Accede rápidamente a datos clave como ubicación, estado y registros de mantenimiento de cada vehículo.</br><strong> Generación de Reportes:</strong>Maipevi Bot puede generar informes detallados sobre el rendimiento de la flota, simplificando el análisis y la toma de decisiones.</br><strong> Notificaciones Proactivas:</strong>Recibe alertas y notificaciones importantes directamente en WhatsApp, manteniéndote siempre informado y preparado.</br>",
+
+        "proyects-five-title": "AI Assistant Agent",
+        "proyects-five-description": "Descripción",
+        "proyects-five-parraf-1": "🤖<strong>AI Assistant Agent</strong>, un sistema de agentes inteligentes desarrollado con <strong>Spring AI Framework</strong>, implementando arquitecturas RAG (Retrieval Augmented Generation) y servidores MCP (Model Context Protocol) para integración estandarizada con modelos de lenguaje. Este sistema enterprise-grade ofrece capacidades avanzadas de procesamiento de lenguaje natural y toma de decisiones automatizada.",
+        "proyects-five-parraf-2": "<strong>Patrones Agenticos Avanzados:</strong> Implementa Chain Workflow, Routing Workflow y Orchestrator-Workers para procesamiento inteligente de tareas complejas.</br><strong>Integración Multi-LLM:</strong> Soporte para múltiples proveedores (OpenAI, Azure OpenAI, Ollama) con failover automático y balanceo de carga.</br><strong>MCP Server Implementation:</strong> Desarrollo de servidores Model Context Protocol para integración estandarizada con herramientas externas y bases de datos vectoriales.</br><strong>RAG Architecture:</strong> Sistema de recuperación y generación aumentada con vector stores para consultas contextualizadas sobre documentos empresariales.</br>",
+        "proyects-five-sub-title": "Documentación",
+        "proyects-five-sub-title2": "Spring-AI-MCP-Docs"
     },
     "contact": {
         "contact-title": "Contáctame",
