@@ -12,7 +12,7 @@ const builderPath = join(repositoryRoot, "scripts", "build-shared-shell.mjs");
 const pageConfig = JSON.parse(
   await readFile(join(repositoryRoot, "templates", "page-shell.json"), "utf8"),
 );
-const legacyShellPages = new Set(["project-page-5.html"]);
+const legacyShellPages = new Set();
 
 function runBuilder(outputDirectory, ...args) {
   return execFileSync(process.execPath, [builderPath, "--output", outputDirectory, ...args], {
