@@ -2,3 +2,4 @@
 # Archivos de configuración
 .vscode/
 .DS_Store
+dist/

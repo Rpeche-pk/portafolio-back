@@ -1,0 +1,47 @@
+{
+  "index.html": {
+    "contactHref": "contact.html",
+    "activeLinks": ["nav-home", "nav-project", "nav-skill"],
+    "collapseStyle": "padding-bottom: 0px;padding-left: 0px;"
+  },
+  "cv.html": {
+    "contactHref": "https://www.linkedin.com/in/luis-peche/",
+    "activeLinks": ["nav-about"],
+    "collapseStyle": "padding-bottom: 0px;padding-left: 0px;"
+  },
+  "contact.html": {
+    "contactHref": "https://www.linkedin.com/in/luis-peche/",
+    "activeLinks": [],
+    "collapseStyle": "padding-bottom: 0px;padding-left: 0px;"
+  },
+  "project-page.html": {
+    "contactHref": "https://www.linkedin.com/in/luis-peche/",
+    "activeLinks": [],
+    "collapseStyle": ""
+  },
+  "project-page-1.html": {
+    "contactHref": "https://www.linkedin.com/in/luis-peche/",
+    "activeLinks": [],
+    "collapseStyle": "padding-bottom: 0px;padding-left: 0px;"
+  },
+  "project-page-2.html": {
+    "contactHref": "https://www.linkedin.com/in/luis-peche/",
+    "activeLinks": [],
+    "collapseStyle": "padding-bottom: 0px;padding-left: 0px;"
+  },
+  "project-page-3.html": {
+    "contactHref": "https://www.linkedin.com/in/luis-peche/",
+    "activeLinks": [],
+    "collapseStyle": ""
+  },
+  "project-page-4.html": {
+    "contactHref": "https://www.linkedin.com/in/luis-peche/",
+    "activeLinks": [],
+    "collapseStyle": ""
+  },
+  "project-page-5.html": {
+    "contactHref": "https://www.linkedin.com/in/luis-peche/",
+    "activeLinks": [],
+    "collapseStyle": ""
+  }
+}
