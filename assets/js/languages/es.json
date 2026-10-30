@@ -87,6 +87,8 @@
         "contact-name": "Nombre",
         "contact-email": "Email",
         "contact-message": "Mensaje",
-        "contact-button": "Enviar Mensaje"
+        "contact-button": "Enviar Mensaje",
+        "contact-error": "No se pudo enviar tu mensaje. Inténtalo de nuevo más tarde.",
+        "contact-unavailable": "No se pudo cargar el envío automático. Puedes intentar enviar el formulario; la página podría recargarse."
     }
 }

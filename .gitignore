@@ -3,3 +3,9 @@
 .vscode/
 .DS_Store
 dist/
+.atl
+tui.jsonc
+opencode-*
+opencode.*
+.agents
+skills-lock.json

@@ -87,6 +87,8 @@
         "contact-name": "Name",
         "contact-email": "Email",
         "contact-message": "Message",
-        "contact-button": "Send Message"
+        "contact-button": "Send Message",
+        "contact-error": "Your message could not be sent. Please try again later.",
+        "contact-unavailable": "Automatic submission could not load. You can still try to submit the form; the page may reload."
     }
 }

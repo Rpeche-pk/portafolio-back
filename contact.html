@@ -28,12 +28,14 @@
                     <h2 data-key="contact" data-value="contact-title">Contact me</h2>
                 </div>         
                                                                     
-                <form class="shadow-lg pageclip-form" data-bs-theme="light" action="https://send.pageclip.co/YU1nFAImNcbUjF7E3Mql1lMy0hhVcIjy/lrpa-form" method="post">
-                    <div class="mb-3"><label class="form-label" for="name" data-key="contact" data-value="contact-name">Your Name</label><input class="form-control item" type="text"  name="name" placeholder="Your name"/></div>
-                    <div class="mb-3"><label class="form-label" for="email" data-key="contact" data-value="contact-email">Your Email</label><input class="form-control item" type="text" name="subject" placeholder="example@example.com" required></div>
+                <form class="shadow-lg contact-form" data-bs-theme="light" action="https://send.pageclip.co/YU1nFAImNcbUjF7E3Mql1lMy0hhVcIjy" method="post">
+                    <div class="mb-3"><label class="form-label" for="name" data-key="contact" data-value="contact-name">Your Name</label><input class="form-control item" id="name" type="text" name="name" autocomplete="name" placeholder="Your name" required></div>
+                    <div class="mb-3"><label class="form-label" for="email" data-key="contact" data-value="contact-email">Your Email</label><input class="form-control item" id="email" type="email" name="email" autocomplete="email" placeholder="example@example.com" required></div>
                     <div class="mb-3"></div>
-                    <div class="mb-3"><label class="form-label" for="body" data-key="contact" data-value="contact-message">Message</label><textarea class="form-control item" name="body" placeholder="Your message"/></textarea></div>
-                    <div class="mb-3 mt-4"><button class="btn btn-primary btn-lg d-block w-100 pageclip-form__submit" type="submit" onclick="sendEmail()" data-key="contact" data-value="contact-button">Send Message</button></div>
+                    <div class="mb-3"><label class="form-label" for="body" data-key="contact" data-value="contact-message">Message</label><textarea class="form-control item" id="body" name="body" placeholder="Your message" required></textarea></div>
+                    <div class="mb-3 mt-4"><button class="btn btn-primary btn-lg d-block w-100 pageclip-form__submit" type="submit" data-key="contact" data-value="contact-button">Send Message</button></div>
+                    <p id="contact-error" class="alert alert-danger mb-0" data-key="contact" data-value="contact-error" role="alert" hidden>No se pudo enviar tu mensaje. Inténtalo de nuevo más tarde.</p>
+                    <p id="contact-unavailable" class="alert alert-warning mb-0" data-key="contact" data-value="contact-unavailable" role="alert" hidden>No se pudo cargar el envío automático. Puedes intentar enviar el formulario; la página podría recargarse.</p>
                 </form>
             </div>
         </section>
@@ -42,7 +44,6 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/particles.min.js"></script>
-    <script src="assets/js/contact-me.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="assets/js/language.js"></script>
     <script src="assets/js/Lightbox-Gallery-baguetteBox.min.js"></script>
@@ -50,18 +51,7 @@
     <script src="assets/js/pikaday.min.js"></script>
     <script src="assets/js/theme.js"></script>
     <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
-    <script>
-        var nombreInput = document.querySelector('[name="subject"]');
-        // Personalizar el mensaje de validación requerido
-        nombreInput.oninvalid = function(event) {
-          event.target.setCustomValidity('Por favor, Ingrese correctamente su correo electrónico.');
-        };
-    
-        // Restablecer el mensaje de validación cuando el input es válido
-        nombreInput.oninput = function(event) {
-          event.target.setCustomValidity('');
-        };
-      </script>
+    <script src="assets/js/contact-form.js"></script>
 </body>
 
 </html>
