@@ -9,13 +9,16 @@ node scripts/build-shared-shell.mjs
 python -m http.server --directory dist 8000
 ```
 
-Open `http://localhost:8000`. The build does not require an npm install.
+Open `http://localhost:8000`. The build does not require an npm install. Preview the generated `dist/` directory rather than opening the source HTML files directly; the shared shell is inserted during the build.
+
+Vercel uses the repository's `vercel.json` to build and publish `dist/` when the GitHub-backed project deploys.
 
 ## Update the shared shell
 
 - Edit `templates/shared-navbar.html` or `templates/shared-footer.html` for shared markup.
 - Edit `templates/page-shell.json` only when a page's existing active links, Contact destination, or collapse padding needs to change.
 - Existing pages may keep their inline shell or use one `<!-- shared-navbar -->` and one `<!-- shared-footer -->` marker; the generator supports both forms.
-- Run `node scripts/build-shared-shell.mjs` to regenerate the static site.
+- Run `node scripts/build-shared-shell.mjs` to regenerate the static site. Run `node scripts/build-shared-shell.mjs --check` to detect stale or incomplete output without rewriting it.
+
 
 The build preserves each page's existing navigation behavior. It does not turn page links into client-side navigation, so full-document navigation remains.

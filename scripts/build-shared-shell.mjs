@@ -13,6 +13,7 @@ const validNavigationKeys = new Set([
 
 function parseArguments(args) {
   const options = {
+    check: false,
     help: false,
     output: join(repositoryRoot, "dist"),
   };
@@ -20,7 +21,9 @@ function parseArguments(args) {
   for (let index = 0; index < args.length; index += 1) {
     const argument = args[index];
 
-    if (argument === "--help") {
+    if (argument === "--check") {
+      options.check = true;
+    } else if (argument === "--help") {
       options.help = true;
     } else if (argument === "--output") {
       const output = args[index + 1];
@@ -217,8 +220,46 @@ async function createSiteFiles(sourcePagesDirectory = repositoryRoot) {
   return outputFiles;
 }
 
+async function verifyOutput(outputDirectory, expectedFiles) {
+  const mismatches = [];
+
+  for (const [relativePath, expected] of expectedFiles) {
+    try {
+      const actual = await readFile(join(outputDirectory, relativePath));
+      if (!actual.equals(expected)) {
+        mismatches.push(relativePath);
+      }
+    } catch {
+      mismatches.push(relativePath);
+    }
+  }
+
+  try {
+    const actualFiles = await listFiles(outputDirectory);
+    const expectedPaths = [...expectedFiles.keys()].sort();
+    for (const unexpectedPath of actualFiles.filter((path) => !expectedFiles.has(path))) {
+      mismatches.push(`${unexpectedPath} (unexpected)`);
+    }
+    for (const missingPath of expectedPaths.filter((path) => !actualFiles.includes(path))) {
+      if (!mismatches.includes(missingPath)) mismatches.push(missingPath);
+    }
+  } catch {
+    mismatches.push("output directory is missing");
+  }
+
+  if (mismatches.length > 0) {
+    throw new Error(`Generated site is stale or incomplete: ${[...new Set(mismatches)].join(", ")}.`);
+  }
+}
+
 export async function buildSite(options) {
   const outputFiles = await createSiteFiles(options.sourcePagesDirectory ?? repositoryRoot);
+
+  if (options.check) {
+    await verifyOutput(options.output, outputFiles);
+    console.log(`Static output is current (${outputFiles.size} files).`);
+    return;
+  }
 
   await mkdir(options.output, { recursive: true });
   for (const [relativePath, content] of outputFiles) {
@@ -237,6 +278,7 @@ Generate the static site with the shared navbar and footer.
 
 Options:
   --output <dir>  Write the static site to a directory (default: dist)
+  --check         Verify that the output directory matches the current sources
   --help          Show this help`);
 }
 
