@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio design system — source sync</title>
+  <style>
+    :root {
+      --primary: #006bc8;
+      --primary-ink: #002b50;
+      --primary-subtle: #cce1f4;
+      --primary-border: #99c4e9;
+      --link-hover: #0b80cc;
+      --ink: #212529;
+      --ground: #fff;
+      --border: #dee2e6;
+      --border-translucent: rgba(0, 0, 0, 0.175);
+      --radius-sm: 0.25rem;
+      --radius: 0.375rem;
+      --radius-lg: 0.5rem;
+      --radius-xl: 1rem;
+      --radius-xxl: 2rem;
+      --radius-pill: 50rem;
+      --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+      --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+      --gutter: 1.5rem;
+      color-scheme: light;
+    }
+    * { box-sizing: border-box; }
+    body {
+      background: var(--ground);
+      color: var(--ink);
+      font: 16px/1.5 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      min-width: 1440px;
+    }
+    main {
+      margin: 0 auto;
+      max-width: 1440px;
+      padding: 56px 64px 72px;
+    }
+    h1, h2, p { margin: 0; }
+    h1 { font-size: 40px; line-height: 1.1; }
+    h2 { font-size: 22px; line-height: 1.2; }
+    .intro { color: #212529; margin-top: 12px; max-width: 680px; }
+    .section { border-top: 1px solid var(--border); margin-top: 40px; padding-top: 24px; }
+    .section-heading { align-items: baseline; display: flex; gap: 16px; margin-bottom: 20px; }
+    .section-heading p { color: #212529; font-size: 14px; }
+    .swatches { display: grid; gap: 12px; grid-template-columns: repeat(5, 1fr); }
+    .swatch { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+    .sample { height: 62px; }
+    .swatch p { font-size: 14px; padding: 10px 12px; }
+    .swatch code { display: block; font: inherit; font-size: 13px; }
+    .type-sample { align-items: baseline; border-bottom: 1px solid var(--border); display: flex; gap: 24px; padding: 14px 0; }
+    .type-sample strong { min-width: 170px; }
+    .type-sample .display { color: var(--primary-ink); font-size: 34px; font-weight: 700; line-height: 1.08; }
+    .type-sample .body { font-size: 16px; line-height: 1.6; }
+    .tokens { display: grid; gap: 24px; grid-template-columns: 1fr 1fr; }
+    .space-list, .radius-list, .shadow-list { display: flex; flex-wrap: wrap; gap: 16px; }
+    .space-item, .radius-item, .shadow-item { align-items: center; display: flex; gap: 10px; min-height: 44px; }
+    .space-bar { background: var(--primary); height: 10px; }
+    .radius-box { background: var(--primary-subtle); border: 1px solid var(--primary-border); height: 36px; width: 72px; }
+    .shadow-box { background: var(--ground); border: 1px solid var(--border); height: 36px; width: 72px; }
+    .components { display: grid; gap: 16px; grid-template-columns: 1fr 1fr 1fr; }
+    .nav-demo { align-items: center; background: var(--primary); color: var(--ground); display: flex; gap: 24px; min-height: 64px; padding: 12px 20px; }
+    .nav-demo strong { margin-right: auto; }
+    .button-demo { align-items: center; display: flex; gap: 12px; min-height: 64px; }
+    .button-demo button { background: var(--primary); border: 1px solid var(--primary); border-radius: var(--radius-pill); color: var(--ground); font: inherit; min-height: 44px; padding: 0 20px; }
+    .card-demo { border: 1px solid var(--border-translucent); border-radius: var(--radius); min-height: 136px; padding: 18px; }
+    .card-demo h3 { font-size: 18px; margin: 0 0 8px; }
+    .card-demo p { color: #212529; }
+    code { font: 0.9em ui-monospace, SFMono-Regular, Consolas, monospace; }
+    @media (max-width: 900px) { body { min-width: 900px; } main { padding: 32px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Portfolio design system</h1>
+    <p class="intro">A source-derived reference for the existing portfolio. This board documents current values; it does not alter the live site.</p>
+
+    <section class="section" aria-labelledby="colors-heading">
+      <div class="section-heading"><h2 id="colors-heading">Color tokens</h2><p>Bootstrap and portfolio overrides</p></div>
+      <div class="swatches">
+        <div class="swatch"><div class="sample" style="background:#006bc8"></div><p>Primary<code>#006bc8</code></p></div>
+        <div class="swatch"><div class="sample" style="background:#002b50"></div><p>Primary emphasis<code>#002b50</code></p></div>
+        <div class="swatch"><div class="sample" style="background:#cce1f4"></div><p>Primary subtle<code>#cce1f4</code></p></div>
+        <div class="swatch"><div class="sample" style="background:#212529"></div><p>Body ink<code>#212529</code></p></div>
+        <div class="swatch"><div class="sample" style="background:#dee2e6"></div><p>Border<code>#dee2e6</code></p></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="type-heading">
+      <div class="section-heading"><h2 id="type-heading">Typography</h2><p>Current source: Lato; local weights 300, 400, 700</p></div>
+      <div class="type-sample"><strong>Hero heading · 700</strong><span class="display">Luis Peche</span></div>
+      <div class="type-sample"><strong>Body · 400</strong><span class="body">Backend development with Java, Spring Boot, and Spring Cloud.</span></div>
+      <div class="type-sample"><strong>Small · 300</strong><span>Source-declared light weight.</span></div>
+    </section>
+
+    <section class="section" aria-labelledby="spacing-heading">
+      <div class="section-heading"><h2 id="spacing-heading">Spacing</h2><p>Values present in Bootstrap and portfolio CSS</p></div>
+      <div class="tokens">
+        <div><strong>Gutter · 1.5rem</strong><div class="space-list"><div class="space-item"><span class="space-bar" style="width:24px"></span><code>0.25rem</code></div><div class="space-item"><span class="space-bar" style="width:48px"></span><code>0.5rem</code></div><div class="space-item"><span class="space-bar" style="width:96px"></span><code>1rem</code></div><div class="space-item"><span class="space-bar" style="width:144px"></span><code>1.5rem</code></div></div></div>
+        <div><strong>Project grid gap</strong><p>1.5rem desktop · 1rem mobile</p><p>Navbar padding: 0.5rem desktop · 0.375rem mobile</p></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="shape-heading">
+      <div class="section-heading"><h2 id="shape-heading">Radius and shadows</h2><p>Bootstrap source tokens</p></div>
+      <div class="tokens">
+        <div><strong>Radius</strong><div class="radius-list"><div class="radius-item"><span class="radius-box" style="border-radius:.25rem"></span><code>.25rem</code></div><div class="radius-item"><span class="radius-box" style="border-radius:.375rem"></span><code>.375rem</code></div><div class="radius-item"><span class="radius-box" style="border-radius:.5rem"></span><code>.5rem</code></div><div class="radius-item"><span class="radius-box" style="border-radius:50rem"></span><code>50rem</code></div></div></div>
+        <div><strong>Shadow</strong><div class="shadow-list"><div class="shadow-item"><span class="shadow-box" style="box-shadow:var(--shadow-sm)"></span><code>sm</code></div><div class="shadow-item"><span class="shadow-box" style="box-shadow:var(--shadow)"></span><code>default</code></div><div class="shadow-item"><span class="shadow-box" style="box-shadow:var(--shadow-lg)"></span><code>lg</code></div></div></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="components-heading">
+      <div class="section-heading"><h2 id="components-heading">Core components</h2><p>Current navbar, action, and project card</p></div>
+      <div class="components">
+        <div><strong>Navbar</strong><nav class="nav-demo" aria-label="Example"><strong>Luis Peche</strong><span>Home</span><span>Projects</span><span>Skills</span></nav></div>
+        <div><strong>Primary action</strong><div class="button-demo"><button type="button">Know me</button><span>44px minimum height</span></div></div>
+        <article class="card-demo"><h3>Project card</h3><p>Three columns on wide screens; one on mobile. Image region: 200px.</p></article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
