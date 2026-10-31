@@ -104,6 +104,33 @@ test("project technology tags are grounded in project detail references", () => 
   assert.match(cards[0], /data-value="home-project-six">Intelligent REST API powered by Spring Boot/);
 });
 
+test("technology tags share the origin badge style and wrap beside it", () => {
+  const technologyTags = cards.flatMap((card) =>
+    [...card.matchAll(/<li class="([^"]*project-technology[^"]*)">([^<]+)<\/li>/g)],
+  );
+  assert.equal(technologyTags.length, expectedTechnologies.flat().length);
+  for (const [, classNames] of technologyTags) {
+    assert.match(classNames, /(?:^|\s)badge(?:\s|$)/);
+    assert.match(classNames, /(?:^|\s)bg-primary(?:\s|$)/);
+    assert.doesNotMatch(classNames, /(?:^|\s)(?:bg-light|text-dark)(?:\s|$)/);
+  }
+  assert.match(styles, /\.project-card-meta\s*\{[^}]*display:\s*flex[^}]*flex-wrap:\s*wrap[^}]*gap:\s*0\.375rem/s);
+  assert.match(styles, /\.project-card-meta\s+\.badge\s*\{[^}]*font-size:\s*0\.8125rem/s);
+  assert.match(styles, /\.project-technology-list\s*\{[^}]*flex:\s*1\s+1\s+0[^}]*flex-wrap:\s*wrap[^}]*gap:/s);
+  assert.doesNotMatch(styles, /\.project-technology\s*\{[^}]*font-size:/s);
+  assert.doesNotMatch(styles, /\.project-technology\s*\{[^}]*padding:/s);
+});
+
+test("project card content stays compact and keeps space before the author", () => {
+  assert.doesNotMatch(styles, /\.project-card-meta\s*\{[^}]*min-height:/s);
+  assert.doesNotMatch(styles, /\.project-card \.card-title\s*\{[^}]*min-height:/s);
+  assert.match(styles, /\.project-card \.card-title\s*\{[^}]*margin-top:\s*0\.875rem/s);
+  assert.match(styles, /\.project-card \.card-title\s*\{[^}]*margin-bottom:\s*0\.625rem/s);
+  assert.doesNotMatch(styles, /\.project-card \.card-text\s*\{[^}]*flex:/s);
+  assert.match(styles, /\.project-card-author\s*\{[^}]*margin-top:\s*auto[^}]*padding-top:\s*1\.5rem/s);
+  assert.match(styles, /\.project-grid\s*\{[^}]*grid-auto-rows:\s*1fr/s);
+});
+
 test("project cards align without clipping content or overflowing responsive widths", () => {
   assert.match(styles, /\.project-grid\s*\{[^}]*display:\s*grid[^}]*grid-auto-rows:\s*1fr/s);
   assert.match(styles, /grid-template-columns:\s*repeat\(3,\s*minmax\(0,\s*1fr\)\)/);
@@ -111,9 +138,7 @@ test("project cards align without clipping content or overflowing responsive wid
   assert.match(styles, /grid-template-columns:\s*minmax\(0,\s*1fr\)/);
   assert.match(styles, /\.project-card\s*\{[^}]*display:\s*flex[^}]*flex-direction:\s*column[^}]*height:\s*100%/s);
   assert.match(styles, /\.project-card-author\s*\{[^}]*margin-top:\s*auto/s);
-  assert.match(styles, /\.project-card \.card-title\s*\{[^}]*min-height:\s*3\.5rem/s);
   assert.match(styles, /\.project-card-image\s*\{[^}]*height:\s*200px[^}]*object-fit:\s*contain/s);
-  assert.match(styles, /\.project-card-meta\s*\{[^}]*min-height:\s*7\.5rem/s);
   assert.match(styles, /\.project-technology-list\s*\{[^}]*display:\s*flex[^}]*flex-wrap:\s*wrap[^}]*gap:/s);
   assert.match(styles, /\.project-grid-item\s*\{[^}]*min-width:\s*0/s);
   assert.match(styles, /\.project-technology\s*\{[^}]*overflow-wrap:\s*anywhere/s);

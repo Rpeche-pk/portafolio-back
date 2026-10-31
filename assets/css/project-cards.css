@@ -41,14 +41,13 @@
 }
 
 #proyectos .project-card-meta {
-  align-content: flex-start;
   display: flex;
   flex-wrap: wrap;
   gap: 0.375rem;
-  min-height: 7.5rem;
+  min-width: 0;
 }
 
-#proyectos .project-card-meta > .badge {
+#proyectos .project-card-meta .badge {
   align-self: flex-start;
   flex: 0 0 auto;
   font-size: 0.8125rem;
@@ -57,7 +56,7 @@
 
 #proyectos .project-technology-list {
   display: flex;
-  flex: 1 1 100%;
+  flex: 1 1 0;
   flex-wrap: wrap;
   gap: 0.375rem;
   list-style: none;
@@ -67,22 +66,17 @@
 }
 
 #proyectos .project-technology {
-  font-size: 0.75rem;
-  font-weight: 500;
-  line-height: 1.2;
   max-width: 100%;
   overflow-wrap: anywhere;
-  padding: 0.3rem 0.5rem;
   white-space: normal;
 }
 
 #proyectos .project-card .card-title {
-  margin-bottom: 0.75rem;
-  min-height: 3.5rem;
+  margin-bottom: 0.625rem;
+  margin-top: 0.875rem;
 }
 
 #proyectos .project-card .card-text {
-  flex: 1 0 auto;
   min-width: 0;
 }
 
@@ -90,6 +84,7 @@
   align-items: center;
   margin-top: auto;
   min-width: 0;
+  padding-top: 1.5rem;
 }
 
 #proyectos .project-card-author img {
