@@ -1,5 +1,5 @@
 Feature: Project cards alignment and technology tags.
-Branch: `feature/project-card-layout`; generated HTML source is `index.html` and stylesheet will stay limited to the project-card section.
+Branch: `feature/project-card-layout`; generated HTML source is `index.html`; slice 1 is `f5091f2` (504 authored changed lines; one cohesive feature, no further implementation slices planned).
 Risk: none — scope is one project section with new section-specific selectors; verify after inspecting the diff.
 
 ## Specs
@@ -34,10 +34,12 @@ Risk: none — scope is one project section with new section-specific selectors;
 > - Si tienes navegador disponible, verifica la alineación visual y especifica qué pudiste comprobar.
 
 ## Tasks
-- T1 — S1-S3 — route: inline — commit: pending — implement sourced tags, align the six project cards responsively, and verify the section.
+- T1 — S1-S3 — route: inline — status: done — commit: `f5091f2` — implement sourced tags, align the six project cards responsively, and verify the section.
 
 ## Log
 - L1 (2026-10-31): Carga la skill de Impeccable disponible y corrige el layout de las cards de proyectos de mi portafolio HTML, CSS y JavaScript.
+
+L2 (2026-10-31): T1 is implemented in commit `f5091f2`. `node --test tests/project-cards.test.mjs` passes (3/3); `node scripts/build-shared-shell.mjs --check` passes. Full suite: 28/32 pass; four unrelated checks fail (localized homepage H1, an existing card test's assistant-page assertion, AI Assistant copy, and overflow in another section). No browser executable was available, so responsive verification is static. `gentle_review assess` could not assess the native diff because pre-existing untracked files require an explicit declaration; its self-verification plan requires no independent verifier. Slice 1 is the single cohesive feature commit (504 authored changed lines); no further implementation slices are planned.
 
 OBJETIVO 1: ALINEACIÓN
 - Consigue que las cards de cada fila tengan la misma altura.
