@@ -1,5 +1,5 @@
 Feature: Project cards alignment and technology tags.
-Branch: `feature/project-card-layout`; generated HTML source is `index.html`; slice 1 is `f5091f2`, with a scoped visual refinement in progress.
+Branch: `feature/project-card-layout`; generated HTML source is `index.html`; implementation slices: `f5091f2` (504 changed lines) and `3acb7a1` (201 changed lines, final refinement).
 Risk: none — scope is one project section with new section-specific selectors; verify after inspecting the diff.
 
 ## Specs
@@ -71,7 +71,7 @@ Risk: none — scope is one project section with new section-specific selectors;
 >   qué reglas estaban provocando los espacios excesivos.
 
 ## Tasks
-- T1 — S1-S3 — route: inline — status: in_progress — commit: `f5091f2` (baseline; visual refinement pending) — implement sourced tags, align the six project cards responsively, and verify the section.
+- T1 — S1-S3 — route: inline — status: done — commit: `f5091f2`, `3acb7a1` — implement sourced tags, align the six project cards responsively, and verify the section.
 
 ## Log
 - L1 (2026-10-31): Carga la skill de Impeccable disponible y corrige el layout de las cards de proyectos de mi portafolio HTML, CSS y JavaScript.
@@ -146,3 +146,5 @@ RESPONSIVE Y VALIDACIÓN
 - Si tienes navegador disponible, verifica la alineación visual y especifica qué pudiste comprobar.
 
 L4 (2026-10-31): Replaced the technology tags with the same badge bg-primary classes as LRPA. Removed the 7.5rem metadata and 3.5rem title minimum heights, let the technology list wrap beside the origin badge, and removed description flex growth. Applied 14px tags/title spacing, 10px title/description spacing, and 24px author top padding while retaining margin-top: auto and equal grid rows. Card tests pass 5/5 and the build check passes. Full suite 30/34; the same four existing failures remain. No browser executable is available; gentle_review assess cannot inspect the diff because pre-existing untracked files require explicit declaration.
+
+L5 (2026-10-31): The refinement is committed as `3acb7a1` (201 changed lines). The only rules responsible for the oversized card gaps were the `7.5rem` metadata min-height, `3.5rem` title min-height, and flex growth on card descriptions; no `justify-content: space-between` rule existed in the card stylesheet.
