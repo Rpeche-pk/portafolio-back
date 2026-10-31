@@ -85,11 +85,15 @@ test("project section loads its scoped stylesheet and preserves six card content
   ]);
   assert.equal(cards.filter((card) => /class="d-flex project-card-author"/.test(card)).length, 6);
   assert.equal(cards.filter((card) => /href="https:\/\/www\.linkedin\.com\/in\/luis-peche\//.test(card)).length, 6);
-  assert.equal(cards.filter((card) => /class="badge bg-primary"/.test(card)).length, 6);
+  assert.equal(cards.filter((card) => /<span class="badge bg-primary">(?:LRPA|No Country)<\/span>/.test(card)).length, 0);
 });
 
 test("project technology tags are grounded in project detail references", () => {
   assert.equal(cards.filter((card) => /class="project-technology-list"/.test(card)).length, 6);
+  assert.equal(cards.filter((card) => /<span class="badge bg-primary">(?:LRPA|No Country)<\/span>/.test(card)).length, 0);
+  for (const card of cards) {
+    assert.match(card, /<div class="project-card-meta"[^>]*>\s*<ul class="project-technology-list"/);
+  }
   for (const [index, technologies] of expectedTechnologies.entries()) {
     for (const technology of technologies) {
       assert.ok(cards[index].includes(`>${technology}</li>`), `card ${index + 1} includes sourced ${technology}`);
@@ -115,8 +119,8 @@ test("technology tags share the origin badge style and wrap beside it", () => {
     assert.doesNotMatch(classNames, /(?:^|\s)(?:bg-light|text-dark)(?:\s|$)/);
   }
   assert.match(styles, /\.project-card-meta\s*\{[^}]*display:\s*flex[^}]*flex-wrap:\s*wrap[^}]*gap:\s*0\.375rem/s);
-  assert.match(styles, /\.project-card-meta\s+\.badge\s*\{[^}]*font-size:\s*0\.8125rem/s);
-  assert.match(styles, /\.project-technology-list\s*\{[^}]*flex:\s*1\s+1\s+0[^}]*flex-wrap:\s*wrap[^}]*gap:/s);
+  assert.match(styles, /\.project-technology-list\s*\{[^}]*flex:\s*1\s+1\s+100%[^}]*flex-wrap:\s*wrap[^}]*gap:/s);
+  assert.match(styles, /\.project-technology-list\s*\{[^}]*flex:\s*1\s+1\s+100%[^}]*flex-wrap:\s*wrap[^}]*gap:/s);
   assert.doesNotMatch(styles, /\.project-technology\s*\{[^}]*font-size:/s);
   assert.doesNotMatch(styles, /\.project-technology\s*\{[^}]*padding:/s);
 });
@@ -127,7 +131,7 @@ test("project card content stays compact and keeps space before the author", () 
   assert.match(styles, /\.project-card \.card-title\s*\{[^}]*margin-top:\s*0\.875rem/s);
   assert.match(styles, /\.project-card \.card-title\s*\{[^}]*margin-bottom:\s*0\.625rem/s);
   assert.doesNotMatch(styles, /\.project-card \.card-text\s*\{[^}]*flex:/s);
-  assert.match(styles, /\.project-card-author\s*\{[^}]*margin-top:\s*auto[^}]*padding-top:\s*1\.5rem/s);
+  assert.match(styles, /\.project-card-author\s*\{[^}]*margin-top:\s*auto[^}]*padding-top:\s*0/s);
   assert.match(styles, /\.project-grid\s*\{[^}]*grid-auto-rows:\s*1fr/s);
 });
 
