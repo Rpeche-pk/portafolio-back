@@ -53,7 +53,7 @@ S6: “- No publiques ni integres el rediseño en la página principal.
 ## Tasks
 
 - T1 (S2-S3): Sync design-system tokens and board from local design sources. Route: inline. Commit: `100f70c` (190-line source-sync slice; only new `design/system.*` files).
-- T2 (S3-S5): Apply a restrained source-token-based direction, create the independent preview, and provide three distinct self-contained canvas artboards (one primary and two alternatives) using existing content/assets. Route: inline. Commit: pending in two local slices, each under ~400 authored lines: A `preview-redesign/index.html` + `design/portfolio-redesign/01-quiet-ledger.html` + this feature document (378 inserted lines); B `design/portfolio-redesign/design.json` + `02-portrait-editorial.html` + `03-work-gallery.html` (287 lines). No production or deployment changes.
+- T2 (S3-S5): Apply a restrained source-token-based direction, create the independent preview, and provide three distinct self-contained canvas artboards (one primary and two alternatives) using existing content/assets. Route: inline. Commit: A `80a906b` (378 inserted lines; preview, primary board, feature doc); B pending (295 changed lines including the tracking-document delta; manifest and two alternatives). No production or deployment changes.
 - T3 (S5-S6): Run available structural/style checks, report browser limits and proposal details. Route: inline. Commit: pending.
 
 ## Log
@@ -122,3 +122,9 @@ L5: Contrast check found `#0b80cc` on white at 4.22:1. Replaced hover text with 
 L6: Reformatted all proposal HTML for reviewability. Made the navbar transparent over the same white page ground so the static dot pattern continues behind it; dividers remain aligned to the shared content container. The actual T2 slice boundaries are A=254 lines and B=287 lines. Canvas refresh and final checks are pending after this style adjustment.
 
 L7: Final post-format structural check passes for the root preview and all three artboards: manifest, required content, three cards, local images/routes, source-token colors, focus styles, mobile rules, reduced motion, and no remote assets/scripts. Contrast: `#006bc8`/white 5.33:1, `#002B50`/white 14.37:1, and `#002B50`/`#CCE1F4` 10.70:1. The first check script used an overly strict media-query whitespace matcher and failed; the corrected assertion passed. Browser rendering/screenshots remain unavailable.
+
+L8: T2 slice A is committed as `80a906b`; slice B remains limited to 287 authored lines. The commit harness reports 1,166 cumulative changed lines in 7 commits since `origin/main`, including earlier unrelated branch work; this feature's commits remain individually bounded and local. The user prohibited publishing/integration, so no push or PR is part of this delivery.
+
+L9: `gentle_review assess` for slice A (`baseRef: 100f70c`, committed-only) returned `risk: medium`, `nativeRisk: unassessable`, and zero changed paths because the workspace contains untracked files requiring an explicit declaration. RDD is off, so no review lifecycle action was taken. The returned plan relies on writer self-verification; structural, local-link, token, and contrast checks passed.
+
+L10: Before slice B, the exact boundary is 287 inserted lines across the manifest and two alternatives, plus an 8-line tracking-document delta (295 changed lines total). This remains below 400 and excludes generated Taste metadata and all prior unrelated branch work.

@@ -1,0 +1,28 @@
+{
+  "title": "Luis Peche — Portfolio redesign proposal",
+  "brief": "A calm, reference-led portfolio preview with a unified white ground, low-contrast dot grid, aligned section dividers, the real profile image, and the first three real projects. Keep it isolated from production.",
+  "feature": "odd/tasks/portfolio-redesign-preview.md",
+  "artboards": [
+    {
+      "file": "01-quiet-ledger.html",
+      "title": "Quiet ledger",
+      "tradeoff": "Closest to the restrained reference; project details stay scannable in a vertical list.",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "file": "02-portrait-editorial.html",
+      "title": "Portrait editorial",
+      "tradeoff": "Gives Luis's portrait more presence; the two-column opening is less compact.",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "file": "03-work-gallery.html",
+      "title": "Work gallery",
+      "tradeoff": "Makes all three projects comparable at a glance; descriptions get less room on desktop.",
+      "width": 1440,
+      "height": 1000
+    }
+  ]
+}
