@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="assets/css/Footer-Dark-icons.css">
     <link rel="stylesheet" href="assets/css/Lightbox-Gallery-baguetteBox.min.css">
     <link rel="stylesheet" href="assets/css/pikaday.min.css">
+    <link rel="stylesheet" href="assets/css/project-cards.css">
     
     <style>
         #particles-js {
@@ -52,104 +53,159 @@
                         <p data-aos="flip-up" data-aos-duration="500" class="w-lg-50" data-key="home" data-value="home-project-description">"Explore my world of digital innovation, where each project is a unique piece that fuses technology and creativity to transform challenges into impactful solutions. Welcome to my portfolio of creations, where every line of code tells a story of success!"<br><strong><em>Click on the images</em></strong></p>
                     </div>
                 </div>
-                <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3" style="margin-top: -34px;">
-                    <div class="col">
-                        <div class="card"><a href="project-page-5.html"><img data-bss-hover-animate="pulse" class="card-img-top w-100 d-block" src="assets/img/tech/spring-ai.jpg" style="height: 200px; object-fit: contain; background-color: #f8f9fa;" alt="Proyecto6"></a>
-                            <div class="card-body p-4"><span class="badge bg-primary" style="font-size: 13px;">LRPA</span>
-                                <h4 class="card-title"><strong>AI Assistant</strong></h4>
-                                <p class="card-text" data-key="home" data-value="home-project-six">Intelligent REST API powered by Spring Boot and AI integration. Provides smart responses and automated solutions for business processes through natural language processing and machine learning capabilities.</p>
-                                <div class="d-flex">
-                                    <a href="https://www.linkedin.com/in/luis-peche/" target="_blank" style="width: auto;">
+                <div class="project-grid" style="margin-top: -34px;">
+                    <article class="project-grid-item project-card card">
+                        <a href="project-page-5.html" class="project-card-image-link"><img data-bss-hover-animate="pulse" class="card-img-top w-100 d-block project-card-image" src="assets/img/tech/spring-ai.jpg" alt="Proyecto6"></a>
+                        <div class="card-body p-4 project-card-body">
+                            <div class="project-card-meta" aria-label="Project origin and technologies">
+                                <span class="badge bg-primary">LRPA</span>
+                                <ul class="project-technology-list" aria-label="Technologies used">
+                                    <li class="badge bg-light text-dark project-technology">Java 17</li>
+                                    <li class="badge bg-light text-dark project-technology">Spring Boot</li>
+                                </ul>
+                            </div>
+                            <h4 class="card-title"><strong>AI Assistant</strong></h4>
+                            <p class="card-text" data-key="home" data-value="home-project-six">Intelligent REST API powered by Spring Boot and AI integration. Provides smart responses and automated solutions for business processes through natural language processing and machine learning capabilities.</p>
+                            <div class="d-flex project-card-author">
+                                <a href="https://www.linkedin.com/in/luis-peche/" target="_blank" style="width: auto;">
                                     <img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="assets/img/avatars/perfil.jpg"></a>
-                                    <div>
-                                        <p class="fw-bold mb-0">Luis Peche</p>
-                                        <p class="text-muted mb-0">Dev Backend</p>
-                                    </div>
+                                <div>
+                                    <p class="fw-bold mb-0">Luis Peche</p>
+                                    <p class="text-muted mb-0">Dev Backend</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="card"><a href="project-page.html"><img data-bss-hover-animate="pulse" class="card-img-top w-100 d-block fit-cover" src="assets/img/tech/zephyr.png" style="height: 200px;" alt="Proyecto"></a>
-                            <div class="card-body p-4"><span class="badge bg-primary" style="font-size: 13px;">LRPA</span>
-                                <h4 class="card-title"><strong>Zephyr Cygnus</strong></h4>
-                                <p class="card-text" data-key="home" data-value="home-project-one">We want to offer you not just an ordering tool, but a digital companion that understands your preferences and makes every meal an easy and delicious experience.<br><br></p>
-                                <div class="d-flex">
-                                    <a href="https://www.linkedin.com/in/luis-peche/" target="_blank" style="width: auto;">
+                    </article>
+                    <article class="project-grid-item project-card card">
+                        <a href="project-page.html" class="project-card-image-link"><img data-bss-hover-animate="pulse" class="card-img-top w-100 d-block fit-cover project-card-image" src="assets/img/tech/zephyr.png" alt="Proyecto"></a>
+                        <div class="card-body p-4 project-card-body">
+                            <div class="project-card-meta" aria-label="Project origin and technologies">
+                                <span class="badge bg-primary">LRPA</span>
+                                <ul class="project-technology-list" aria-label="Technologies used">
+                                    <li class="badge bg-light text-dark project-technology">Java 17</li>
+                                    <li class="badge bg-light text-dark project-technology">Spring Boot</li>
+                                    <li class="badge bg-light text-dark project-technology">PostgreSQL</li>
+                                    <li class="badge bg-light text-dark project-technology">Node.js 18</li>
+                                    <li class="badge bg-light text-dark project-technology">Baileys</li>
+                                    <li class="badge bg-light text-dark project-technology">WhatsApp Business</li>
+                                </ul>
+                            </div>
+                            <h4 class="card-title"><strong>Zephyr Cygnus</strong></h4>
+                            <p class="card-text" data-key="home" data-value="home-project-one">We want to offer you not just an ordering tool, but a digital companion that understands your preferences and makes every meal an easy and delicious experience.<br><br></p>
+                            <div class="d-flex project-card-author">
+                                <a href="https://www.linkedin.com/in/luis-peche/" target="_blank" style="width: auto;">
                                     <img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="assets/img/avatars/perfil.jpg"></a>
-                                    <div>
-                                        <p class="fw-bold mb-0">Luis Peche</p>
-                                        <p class="text-muted mb-0">Dev Backend</p>
-                                    </div>
+                                <div>
+                                    <p class="fw-bold mb-0">Luis Peche</p>
+                                    <p class="text-muted mb-0">Dev Backend</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="card"><a href="project-page-3.html"><img data-bss-hover-animate="pulse" class="card-img-top w-100 d-block fit-cover" src="assets/img/tech/trucking.png" style="height: 200px;" alt="Proyecto1"></a>
-                            <div class="card-body p-4"><span class="badge bg-primary" style="font-size: 13px;">No Country</span>
-                                <h4 class="card-title"><strong>Trucking</strong></h4>
-                                <p class="card-text" data-key="home" data-value="home-project-four">A powerful web application that was developed for the efficient management of vehicle fleets.</br> It has Chatbot for better control and decision making</br></br></p>
-                                <div class="d-flex">
-                                    <a href="https://www.linkedin.com/in/luis-peche/" target="_blank" style="width: auto;">
+                    </article>
+                    <article class="project-grid-item project-card card">
+                        <a href="project-page-3.html" class="project-card-image-link"><img data-bss-hover-animate="pulse" class="card-img-top w-100 d-block fit-cover project-card-image" src="assets/img/tech/trucking.png" alt="Proyecto1"></a>
+                        <div class="card-body p-4 project-card-body">
+                            <div class="project-card-meta" aria-label="Project origin and technologies">
+                                <span class="badge bg-primary">No Country</span>
+                                <ul class="project-technology-list" aria-label="Technologies used">
+                                    <li class="badge bg-light text-dark project-technology">Java 17</li>
+                                    <li class="badge bg-light text-dark project-technology">Spring Boot</li>
+                                    <li class="badge bg-light text-dark project-technology">MySQL</li>
+                                    <li class="badge bg-light text-dark project-technology">React</li>
+                                    <li class="badge bg-light text-dark project-technology">Baileys</li>
+                                    <li class="badge bg-light text-dark project-technology">Docker</li>
+                                </ul>
+                            </div>
+                            <h4 class="card-title"><strong>Trucking</strong></h4>
+                            <p class="card-text" data-key="home" data-value="home-project-four">A powerful web application that was developed for the efficient management of vehicle fleets.</br> It has Chatbot for better control and decision making</br></br></p>
+                            <div class="d-flex project-card-author">
+                                <a href="https://www.linkedin.com/in/luis-peche/" target="_blank" style="width: auto;">
                                     <img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="assets/img/avatars/perfil.jpg"></a>
-                                    <div>
-                                        <p class="fw-bold mb-0">Luis Peche</p>
-                                        <p class="text-muted mb-0">Dev Backend</p>
-                                    </div>
+                                <div>
+                                    <p class="fw-bold mb-0">Luis Peche</p>
+                                    <p class="text-muted mb-0">Dev Backend</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="card"><a href="project-page-4.html"><img data-bss-hover-animate="pulse" class="card-img-top w-100 d-block fit-cover" src="assets/img/tech/maipevi.png" style="height: 200px;" alt="Proyecto5"></a>
-                            <div class="card-body p-4"><span class="badge bg-primary" style="font-size: 13px;">LRPA</span>
-                                <h4 class="card-title"><strong>Maipevi Bot</strong></h4>
-                                <p class="card-text" data-key="home" data-value="home-project-five">Chatbot for managing vehicle fleets, has a control panel for managing vehicles and drivers.</br>All this within WhatsApp Mobile.</br></br></br></p>
-                                <div class="d-flex">
-                                    <a href="https://www.linkedin.com/in/luis-peche/" target="_blank" style="width: auto;">
+                    </article>
+                    <article class="project-grid-item project-card card">
+                        <a href="project-page-4.html" class="project-card-image-link"><img data-bss-hover-animate="pulse" class="card-img-top w-100 d-block fit-cover project-card-image" src="assets/img/tech/maipevi.png" alt="Proyecto5"></a>
+                        <div class="card-body p-4 project-card-body">
+                            <div class="project-card-meta" aria-label="Project origin and technologies">
+                                <span class="badge bg-primary">LRPA</span>
+                                <ul class="project-technology-list" aria-label="Technologies used">
+                                    <li class="badge bg-light text-dark project-technology">Java 17</li>
+                                    <li class="badge bg-light text-dark project-technology">Spring Boot</li>
+                                    <li class="badge bg-light text-dark project-technology">MySQL</li>
+                                    <li class="badge bg-light text-dark project-technology">Node.js</li>
+                                    <li class="badge bg-light text-dark project-technology">Baileys</li>
+                                    <li class="badge bg-light text-dark project-technology">WhatsApp Business</li>
+                                </ul>
+                            </div>
+                            <h4 class="card-title"><strong>Maipevi Bot</strong></h4>
+                            <p class="card-text" data-key="home" data-value="home-project-five">Chatbot for managing vehicle fleets, has a control panel for managing vehicles and drivers.</br>All this within WhatsApp Mobile.</br></br></br></p>
+                            <div class="d-flex project-card-author">
+                                <a href="https://www.linkedin.com/in/luis-peche/" target="_blank" style="width: auto;">
                                     <img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="assets/img/avatars/perfil.jpg"></a>
-                                    <div>
-                                        <p class="fw-bold mb-0">Luis Peche</p>
-                                        <p class="text-muted mb-0">Dev Backend</p>
-                                    </div>
+                                <div>
+                                    <p class="fw-bold mb-0">Luis Peche</p>
+                                    <p class="text-muted mb-0">Dev Backend</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="card"><a href="project-page-2.html"><img data-bss-hover-animate="pulse" class="card-img-top w-100 d-block fit-cover" src="assets/img/nature/Banner.png" style="height: 200px;" alt="Proyecto2"></a>
-                            <div class="card-body p-4"><span class="badge bg-primary" style="font-size: 13px;">No Country</span>
-                                <h4 class="card-title"><strong>Digital Wallet "Cashier"</strong></h4>
-                                <p class="card-text" data-key="home" data-value="home-project-two">Cashier is a digital wallet designed to be your Passport to the Modern Financial World.<br>What are you waiting for to be part of this initiative.<br><br></p>
-                                <div class="d-flex">
-                                    <a href="https://www.linkedin.com/in/luis-peche/" target="_blank" style="width: auto;">
+                    </article>
+                    <article class="project-grid-item project-card card">
+                        <a href="project-page-2.html" class="project-card-image-link"><img data-bss-hover-animate="pulse" class="card-img-top w-100 d-block fit-cover project-card-image" src="assets/img/nature/Banner.png" alt="Proyecto2"></a>
+                        <div class="card-body p-4 project-card-body">
+                            <div class="project-card-meta" aria-label="Project origin and technologies">
+                                <span class="badge bg-primary">No Country</span>
+                                <ul class="project-technology-list" aria-label="Technologies used">
+                                    <li class="badge bg-light text-dark project-technology">Java 17</li>
+                                    <li class="badge bg-light text-dark project-technology">Spring Boot</li>
+                                    <li class="badge bg-light text-dark project-technology">PostgreSQL</li>
+                                    <li class="badge bg-light text-dark project-technology">Angular</li>
+                                    <li class="badge bg-light text-dark project-technology">JWT</li>
+                                    <li class="badge bg-light text-dark project-technology">Docker</li>
+                                </ul>
+                            </div>
+                            <h4 class="card-title"><strong>Digital Wallet "Cashier"</strong></h4>
+                            <p class="card-text" data-key="home" data-value="home-project-two">Cashier is a digital wallet designed to be your Passport to the Modern Financial World.<br>What are you waiting for to be part of this initiative.<br><br></p>
+                            <div class="d-flex project-card-author">
+                                <a href="https://www.linkedin.com/in/luis-peche/" target="_blank" style="width: auto;">
                                     <img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="assets/img/avatars/perfil.jpg"></a>
-                                    <div>
-                                        <p class="fw-bold mb-0">Luis Peche</p>
-                                        <p class="text-muted mb-0">Dev Backend</p>
-                                    </div>
+                                <div>
+                                    <p class="fw-bold mb-0">Luis Peche</p>
+                                    <p class="text-muted mb-0">Dev Backend</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="card"><a href="project-page-1.html"><img data-bss-hover-animate="pulse" class="card-img-top w-100 d-block" src="assets/img/tech/devbot.png" style="height: 200px;" alt="Proyecto3"></a>
-                            <div class="card-body p-4"><span class="badge bg-primary" style="font-size: 13px;">LRPA</span>
-                                <h4 class="card-title"><strong>DevBot Supermarket</strong></h4>
-                                <p class="card-text" data-key="home" data-value="home-project-three">The main objective of this initiative is to provide users with a tool that allows them to quickly compare prices of different products. This makes it easier for them to make informed decisions when making their purchases.</p>
-                                <div class="d-flex">
-                                    <a href="https://www.linkedin.com/in/luis-peche/" target="_blank" style="width: auto;">
+                    </article>
+                    <article class="project-grid-item project-card card">
+                        <a href="project-page-1.html" class="project-card-image-link"><img data-bss-hover-animate="pulse" class="card-img-top w-100 d-block project-card-image" src="assets/img/tech/devbot.png" alt="Proyecto3"></a>
+                        <div class="card-body p-4 project-card-body">
+                            <div class="project-card-meta" aria-label="Project origin and technologies">
+                                <span class="badge bg-primary">LRPA</span>
+                                <ul class="project-technology-list" aria-label="Technologies used">
+                                    <li class="badge bg-light text-dark project-technology">Python</li>
+                                    <li class="badge bg-light text-dark project-technology">Selenium Grid</li>
+                                    <li class="badge bg-light text-dark project-technology">Node.js</li>
+                                    <li class="badge bg-light text-dark project-technology">Google Cloud Platform</li>
+                                    <li class="badge bg-light text-dark project-technology">Dialogflow</li>
+                                    <li class="badge bg-light text-dark project-technology">MongoDB</li>
+                                </ul>
+                            </div>
+                            <h4 class="card-title"><strong>DevBot Supermarket</strong></h4>
+                            <p class="card-text" data-key="home" data-value="home-project-three">The main objective of this initiative is to provide users with a tool that allows them to quickly compare prices of different products. This makes it easier for them to make informed decisions when making their purchases.</p>
+                            <div class="d-flex project-card-author">
+                                <a href="https://www.linkedin.com/in/luis-peche/" target="_blank" style="width: auto;">
                                     <img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="assets/img/avatars/perfil.jpg"></a>
-                                    <div>
-                                        <p class="fw-bold mb-0">Luis Peche</p>
-                                        <p class="text-muted mb-0">Dev Backend</p>
-                                    </div>
+                                <div>
+                                    <p class="fw-bold mb-0">Luis Peche</p>
+                                    <p class="text-muted mb-0">Dev Backend</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    
+                    </article>
                 </div>
             </div>
             <div class="container">
