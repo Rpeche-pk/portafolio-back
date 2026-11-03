@@ -10,6 +10,15 @@ const validNavigationKeys = new Set([
   "nav-skill",
   "nav-contact",
 ]);
+const validRouteKeys = new Set(["home", "projects", "skills", "about", "contact"]);
+
+function resolveTemplatePath(templateName, pageName, fieldName) {
+  if (typeof templateName !== "string" || !/^[a-z0-9-]+\.html$/i.test(templateName)) {
+    throw new Error(`${fieldName} must be a template filename for ${pageName}.`);
+  }
+
+  return join(repositoryRoot, "templates", templateName);
+}
 
 function parseArguments(args) {
   const options = {
@@ -128,6 +137,30 @@ function replaceShell(page, marker, tagName, opening, replacement, pageName) {
   return `${page.slice(0, elementStart)}${replacement}${page.slice(elementEnd)}`;
 }
 
+function replaceFooterShell(page, replacement, pageName) {
+  const marker = "<!-- shared-footer -->";
+  const markerCount = countOccurrences(page, marker);
+  if (markerCount === 1) return page.replace(marker, replacement);
+  if (markerCount > 1) throw new Error(`${pageName} must contain at most one ${marker} marker.`);
+
+  if (page.includes('<footer class="site-footer">')) {
+    return replaceShell(page, "shared-footer", "footer", '<footer class="site-footer">', replacement, pageName);
+  }
+  return replaceShell(page, "shared-footer", "footer", '<footer class="page-footer', replacement, pageName);
+}
+
+function replaceNavbarShell(page, replacement, pageName) {
+  const marker = "<!-- shared-navbar -->";
+  const markerCount = countOccurrences(page, marker);
+  if (markerCount === 1) return page.replace(marker, replacement);
+  if (markerCount > 1) throw new Error(`${pageName} must contain at most one ${marker} marker.`);
+
+  if (page.includes('<header class="site-header">')) {
+    return replaceShell(page, "shared-navbar", "header", '<header class="site-header">', replacement, pageName);
+  }
+  return replaceShell(page, "shared-navbar", "nav", '<nav class="navbar', replacement, pageName);
+}
+
 function validatePageConfig(pageName, config) {
   if (!config || typeof config.contactHref !== "string" || !Array.isArray(config.activeLinks)) {
     throw new Error(`Invalid shell configuration for ${pageName}.`);
@@ -141,19 +174,53 @@ function validatePageConfig(pageName, config) {
   if (typeof config.collapseStyle !== "string") {
     throw new Error(`collapseStyle must be a string for ${pageName}.`);
   }
+
+  if (config.navigation !== undefined) {
+    if (!config.navigation || typeof config.navigation !== "object" || Array.isArray(config.navigation)) {
+      throw new Error(`navigation must be an object for ${pageName}.`);
+    }
+    for (const [key, href] of Object.entries(config.navigation)) {
+      if (!validRouteKeys.has(key) || typeof href !== "string" || href.trim() === "") {
+        throw new Error(`Invalid navigation route ${key} for ${pageName}.`);
+      }
+    }
+  }
+
+  resolveTemplatePath(config.navbarTemplate ?? "shared-navbar.html", pageName, "navbarTemplate");
+  resolveTemplatePath(config.footerTemplate ?? "shared-footer.html", pageName, "footerTemplate");
 }
 
 function getNavbarVariables(config) {
   const activeClass = (key) => config.activeLinks.includes(key) ? " active" : "";
+  const currentPage = (key) => config.activeLinks.includes(key) ? ' aria-current="location"' : "";
+
+  const routes = {
+    home: "index.html#home",
+    projects: "index.html#projects",
+    skills: "index.html#skills",
+    about: "index.html#about",
+    contact: "index.html#contact",
+    ...config.navigation,
+  };
 
   return {
+    HOME_HREF: routes.home,
+    BRAND_HREF: routes.home,
+    PROJECTS_HREF: routes.projects,
+    SKILLS_HREF: routes.skills,
+    ABOUT_HREF: routes.about,
     ACTIVE_HOME: activeClass("nav-home"),
+    CURRENT_HOME: currentPage("nav-home"),
     ACTIVE_PROJECTS: activeClass("nav-project"),
+    CURRENT_PROJECTS: currentPage("nav-project"),
     ACTIVE_ABOUT: activeClass("nav-about"),
+    CURRENT_ABOUT: currentPage("nav-about"),
     ACTIVE_SKILLS: activeClass("nav-skill"),
+    CURRENT_SKILLS: currentPage("nav-skill"),
     ACTIVE_CONTACT: activeClass("nav-contact"),
+    CURRENT_CONTACT: currentPage("nav-contact"),
     COLLAPSE_STYLE: config.collapseStyle ? ` style="${config.collapseStyle}"` : "",
-    CONTACT_HREF: config.contactHref,
+    CONTACT_HREF: routes.contact,
   };
 }
 
@@ -184,29 +251,24 @@ async function createSiteFiles(sourcePagesDirectory = repositoryRoot) {
     throw new Error("Page shell configuration must list every root HTML page exactly once.");
   }
 
-  const navbarTemplate = await readFile(join(repositoryRoot, "templates", "shared-navbar.html"), "utf8");
-  const footerTemplate = await readFile(join(repositoryRoot, "templates", "shared-footer.html"), "utf8");
   const outputFiles = new Map();
 
   for (const pageName of pages) {
     const pageConfig = config[pageName];
     validatePageConfig(pageName, pageConfig);
 
+    const variables = getNavbarVariables(pageConfig);
+    const navbarTemplate = await readFile(resolveTemplatePath(pageConfig.navbarTemplate ?? "shared-navbar.html", pageName, "navbarTemplate"), "utf8");
+    const footerTemplate = await readFile(resolveTemplatePath(pageConfig.footerTemplate ?? "shared-footer.html", pageName, "footerTemplate"), "utf8");
     let page = await readFile(join(sourcePagesDirectory, pageName), "utf8");
-    page = replaceShell(
+    page = replaceNavbarShell(
       page,
-      "shared-navbar",
-      "nav",
-      '<nav class="navbar',
-      renderTemplate(navbarTemplate, getNavbarVariables(pageConfig), `${pageName} navbar`),
+      renderTemplate(navbarTemplate, variables, `${pageName} navbar`),
       pageName,
     );
-    page = replaceShell(
+    page = replaceFooterShell(
       page,
-      "shared-footer",
-      "footer",
-      '<footer class="page-footer',
-      footerTemplate.trimEnd(),
+      renderTemplate(footerTemplate, variables, `${pageName} footer`),
       pageName,
     );
     outputFiles.set(pageName, Buffer.from(page, "utf8"));

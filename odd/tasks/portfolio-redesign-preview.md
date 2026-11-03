@@ -53,8 +53,9 @@ S6: “- No publiques ni integres el rediseño en la página principal.
 ## Tasks
 
 - T1 (S2-S3): Sync design-system tokens and board from local design sources. Route: inline. Commit: `100f70c` (190-line source-sync slice; only new `design/system.*` files).
-- T2 (S3-S5): Apply a restrained source-token-based direction, create the independent preview, and provide three distinct self-contained canvas artboards (one primary and two alternatives) using existing content/assets. Route: inline. Commit: A `80a906b` (378 inserted lines; preview, primary board, feature doc); B pending (295 changed lines including the tracking-document delta; manifest and two alternatives). No production or deployment changes.
-- T3 (S5-S6): Run available structural/style checks, report browser limits and proposal details. Route: inline. Commit: pending.
+- T2 (S3-S5): Apply a restrained source-token-based direction, create the independent preview, and provide three distinct self-contained canvas artboards (one primary and two alternatives) using existing content/assets. Route: inline. Commit: A `80a906b` (378 inserted lines; preview, primary board, feature doc); B `acf776e` (295 changed lines; manifest, two alternatives, tracking update). No production or deployment changes.
+- T3 (S5-S6): Run available structural/style checks, report browser limits and proposal details. Route: inline. Commit: none (verification/report only).
+- T4 (linked follow-up specs `odd/tasks/work-gallery-reference-refinement.md`, S1-S10): Refine the selected `03-work-gallery` artboard against the user's new screenshot with evidence-backed profile/credential content; preview only and preserve the About Me destination deferral. Route: inline. Status: done; verified as recorded in the linked follow-up task. Commit: none (approval-gated preview).
 
 ## Log
 
@@ -128,3 +129,24 @@ L8: T2 slice A is committed as `80a906b`; slice B remains limited to 287 authore
 L9: `gentle_review assess` for slice A (`baseRef: 100f70c`, committed-only) returned `risk: medium`, `nativeRisk: unassessable`, and zero changed paths because the workspace contains untracked files requiring an explicit declaration. RDD is off, so no review lifecycle action was taken. The returned plan relies on writer self-verification; structural, local-link, token, and contrast checks passed.
 
 L10: Before slice B, the exact boundary is 287 inserted lines across the manifest and two alternatives, plus an 8-line tracking-document delta (295 changed lines total). This remains below 400 and excludes generated Taste metadata and all prior unrelated branch work.
+
+L11: T2 is complete in commits `80a906b` and `acf776e`; both slices are under 400 lines and contain only proposal/design assets plus task tracking. The final preview remains local and approval-gated; no publish, push, or integration was performed.
+
+L12: Final committed-range inspection shows proposal commits contain only preview/design files and this feature document; no production page or deployment file is part of those commits. The final static structure/contrast check passed before the commits and no HTML/CSS changed afterward. The native assessment was attempted once for slice A and remains unassessable because the workspace has untracked files; it was not retried. The working tree still contains `design/portfolio-redesign/01-dot-grid.html` (a pre-manifest draft), `preview-redesign/direction.json`, `preview-redesign/.taste-history.json`, and this task-log update; none is in the proposal commits. Browser rendering/screenshots are unavailable; the canvas is open at `http://127.0.0.1:56605/WHxmCdNs4A-znsQ1QsYI9KLL2OsP8wJU/d/portfolio-redesign/`.
+
+L13: Follow-up user request (verbatim):
+Actualizar únicamente el borrador existente “03-work-gallery” tomando como referencia visual la imagen adjunta, sin modificar ni publicar la página principal. Mantener la paleta acordada, Dot Grid, divisores, identidad Luis Peche, HTML/CSS/JavaScript vanilla y bibliotecas existentes. Cargar Taste, Impeccable y la skill de Emil; traducir las indicaciones Tailwind a CSS sin instalar Tailwind.
+
+El diseño pedido incluye:
+- Marco Bento vertical para la fotografía original, bien encuadrada y sin filtros ni deformación, con fondo translúcido, borde y sombra azul sutiles.
+- Badges de disponibilidad solo si está confirmada y de microservicios; evitar credenciales o niveles no respaldados.
+- Core Stack con Java, Spring Boot, Spring Cloud, REST, Data analysis y AI chatbots, respetando el idioma y con tags responsive.
+- Tarjeta de experiencia bancaria bajo los botones, con “+2 años” editable en configuración y texto propuesto por el usuario, sin inventar responsabilidades.
+- Credenciales renderizadas desde datos centralizados, extensibles y accesibles. Incluir solo credenciales confirmadas; estados de verificación solo con URL real. Datos de muestra, si se usan, deben identificarse claramente.
+- Navbar con monograma LP en contenedor carbón, “LuisPeche_” y guion bajo azul con parpadeo discreto; estático con reduced motion.
+- Diseño responsive en una columna móvil, altura flexible, destinos y cordón existentes conservados y sin superposiciones.
+- Mostrar vista previa y verificar escritorio, tablet y móvil si hay navegador; indicar datos pendientes, dónde añadir credenciales y tamaños/interacciones verificados. Esperar aprobación antes de integrar en la página principal.
+
+L14: Gentle Design handoff for `design/portfolio-redesign/03-work-gallery.html` is in progress. Implementation stays preview-only and awaits user approval before any production integration.
+
+L15: Follow-up artboard refinement is complete and preview-only. Detailed request, user decision deferral, verification results, browser/tool limitations, and outstanding About Me decision are documented in `odd/tasks/work-gallery-reference-refinement.md`. The canvas was refreshed at `http://127.0.0.1:63115/jCwJf2mBMJ4LVREBkmVlgwd0eT1nLO-r/d/portfolio-redesign/`. The selected artboard remains unintegrated, uncommitted, and unpublished. `odd/tasks/work-gallery-reference-refinement.md` is the detailed follow-up spec and verification record.

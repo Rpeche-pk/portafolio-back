@@ -38,6 +38,18 @@ function activeNavigationItems(nav) {
     .sort();
 }
 
+function replaceWorkGalleryShellWithMarkers(html) {
+  if (html.includes("<!-- shared-navbar -->")) return html;
+  const headerStart = html.indexOf('<header class="site-header">');
+  const headerEnd = html.indexOf("</header>", headerStart) + "</header>".length;
+  if (headerStart < 0 || headerEnd < "</header>".length) return html;
+  let output = `${html.slice(0, headerStart)}<!-- shared-navbar -->${html.slice(headerEnd)}`;
+  const footerStart = output.indexOf('<footer class="site-footer"');
+  const footerEnd = output.indexOf("</footer>", footerStart) + "</footer>".length;
+  if (footerStart < 0 || footerEnd < "</footer>".length) return output;
+  return `${output.slice(0, footerStart)}<!-- shared-footer -->${output.slice(footerEnd)}`;
+}
+
 test("source pages use shell markers and keep generated output behavior", async () => {
   const sourcePages = (await readdir(repositoryRoot)).filter((name) => name.endsWith(".html")).sort();
   assert.deepEqual(sourcePages, Object.keys(pageConfig).sort());
@@ -51,6 +63,7 @@ test("source pages use shell markers and keep generated output behavior", async 
       const source = await readFile(join(repositoryRoot, pageName), "utf8");
       const output = await readFile(join(outputDirectory, pageName), "utf8");
       const config = pageConfig[pageName];
+      const usesWorkGalleryShell = config.navbarTemplate === "work-gallery-navbar.html";
       const nav = output.match(/<nav\b[\s\S]*?<\/nav>/)?.[0] ?? "";
       const contactLink = nav.match(/<a\b[^>]*data-value="nav-contact"[^>]*>/)?.[0] ?? "";
 
@@ -62,13 +75,24 @@ test("source pages use shell markers and keep generated output behavior", async 
         assert.equal((source.match(/<!-- shared-footer -->/g) ?? []).length, 1, `${pageName} footer marker`);
         assert.doesNotMatch(source, /<nav class="navbar|<footer class="page-footer/);
       }
-      assert.equal((output.match(/<nav\b/g) ?? []).length, 1);
-      assert.equal((output.match(/class="page-footer py-3 border-top"/g) ?? []).length, 1);
-      assert.deepEqual(activeNavigationItems(nav), [...config.activeLinks].sort(), `${pageName} active items`);
-      assert.equal(contactLink.match(/href="([^"]+)"/)?.[1], config.contactHref, `${pageName} Contact link`);
+      if (usesWorkGalleryShell) {
+        assert.equal((output.match(/<nav\b/g) ?? []).length, 2, `${pageName} primary and footer navigation`);
+        assert.equal((output.match(/class="site-footer"/g) ?? []).length, 1, `${pageName} approved footer`);
+        assert.doesNotMatch(output, /class="page-footer py-3 border-top"/);
+        for (const [key, href] of Object.entries(config.navigation)) {
+          assert.ok(output.includes(`data-nav="${key}" href="${href}"`), `${pageName} ${key} route`);
+        }
+        assert.match(output, /class="brand" href="#home"/);
+      } else {
+        assert.equal((output.match(/<nav\b/g) ?? []).length, 1);
+        assert.equal((output.match(/class="page-footer py-3 border-top"/g) ?? []).length, 1);
+        assert.deepEqual(activeNavigationItems(nav), [...config.activeLinks].sort(), `${pageName} active items`);
+        assert.equal(contactLink.match(/href="([^"]+)"/)?.[1], config.contactHref, `${pageName} Contact link`);
+      }
+      const normalizeShell = usesWorkGalleryShell ? replaceWorkGalleryShellWithMarkers : replaceShellWithMarkers;
       assert.equal(
-        replaceShellWithMarkers(output).replace(/\r\n/g, "\n"),
-        (legacyShellPages.has(pageName) ? replaceShellWithMarkers(source) : source).replace(/\r\n/g, "\n"),
+        normalizeShell(output).replace(/\r\n/g, "\n"),
+        (legacyShellPages.has(pageName) ? normalizeShell(source) : source).replace(/\r\n/g, "\n"),
         `${pageName} non-shell content and scripts remain unchanged`,
       );
 

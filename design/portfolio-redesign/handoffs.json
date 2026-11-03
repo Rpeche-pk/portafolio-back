@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "chosen": "03-work-gallery.html",
+  "handoffs": {
+    "03-work-gallery.html": {
+      "status": "implemented",
+      "queued": false,
+      "sentAt": "2026-11-01T03:05:32.527Z",
+      "startedAt": "2026-11-01T18:57:37.003Z",
+      "implementedAt": "2026-11-01T19:16:50.990Z",
+      "feature": "odd/tasks/portfolio-redesign-preview.md",
+      "note": "Projects refresh complete in the preview-only artboard: six sourced bilingual cards, accessible Details overlays, responsive 3/2/1 layout, and verified EN/ES × light/dark plus touch behavior.",
+      "previewUrl": "http://127.0.0.1:8765/design/portfolio-redesign/03-work-gallery.html"
+    }
+  }
+}

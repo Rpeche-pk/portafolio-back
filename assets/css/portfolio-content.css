@@ -1,0 +1,245 @@
+.block-intro .about-me h1,
+.assistant-heading h1 {
+  color: var(--bs-primary-text-emphasis, #002b50);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.08;
+  margin: 0 auto 1rem;
+  max-width: 18ch;
+  text-wrap: balance;
+}
+
+.block-intro .about-me p {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 65ch;
+}
+
+.block-intro .about-me {
+  margin-inline: auto;
+  max-width: 56rem;
+}
+
+.intro-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem auto 0;
+}
+
+.intro-actions .btn {
+  align-items: center;
+  border-radius: 999px;
+  display: inline-flex;
+  font-weight: 600;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 8.5rem;
+  padding: 0.65rem 1.25rem;
+}
+
+.intro-actions .btn:focus-visible,
+.project-link:focus-visible,
+.assistant-project-cta:focus-visible {
+  outline: 3px solid var(--bs-primary-text-emphasis, #002b50);
+  outline-offset: 3px;
+}
+
+.project-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.project-grid-item {
+  display: flex;
+  min-width: 0;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.project-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.project-card .card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.project-card .card-title {
+  margin-bottom: 0.75rem;
+}
+
+.project-card .card-text {
+  flex-grow: 1;
+}
+
+.project-card-logo {
+  background-color: #f8f9fa;
+  height: 200px;
+  object-fit: contain;
+  padding: 2.75rem;
+  width: 100%;
+}
+
+.project-origin {
+  align-self: flex-start;
+  color: var(--bs-primary-text-emphasis, #002b50);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.project-link:focus-visible {
+  outline: 3px solid var(--bs-primary-text-emphasis, #002b50);
+  outline-offset: 3px;
+}
+
+.project-link {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  margin-top: auto;
+  min-height: 44px;
+}
+
+.featured-project {
+  box-sizing: border-box;
+  height: auto !important;
+  margin-right: 0 !important;
+  padding-left: clamp(1rem, 4vw, 3rem) !important;
+  padding-right: clamp(1rem, 4vw, 3rem) !important;
+  width: 100%;
+}
+
+.featured-project .text {
+  margin-top: 0 !important;
+}
+
+.featured-project .text h3 {
+  text-align: left !important;
+}
+
+.featured-project .text p {
+  height: auto !important;
+  line-height: 1.6;
+  text-align: left !important;
+}
+
+.featured-project-image {
+  display: block;
+  height: auto !important;
+  margin: 1rem auto !important;
+  max-width: 100%;
+  padding: 0 !important;
+  width: 350px !important;
+}
+
+.assistant-project > .container {
+  margin-top: 0 !important;
+  padding-inline: clamp(1rem, 3vw, 2rem);
+}
+
+.assistant-heading {
+  margin: 3rem auto 2rem;
+  max-width: 48rem;
+  text-align: center;
+}
+
+.assistant-details {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: minmax(0, 1.6fr) auto minmax(12rem, 0.7fr);
+  margin: 0 auto 3rem;
+  max-width: 60rem;
+}
+
+.assistant-details h2 {
+  color: var(--bs-primary-text-emphasis, #002b50);
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.assistant-overview .lead {
+  font-size: clamp(1.125rem, 2vw, 1.35rem);
+  line-height: 1.55;
+  margin: 0;
+  max-width: 50ch;
+}
+
+.assistant-mark {
+  align-self: center;
+  margin: 0;
+}
+
+.assistant-mark img {
+  display: block;
+  height: auto;
+  max-width: 7rem;
+  width: 100%;
+}
+
+.assistant-technologies {
+  margin: 0;
+}
+
+.assistant-technologies ul {
+  line-height: 1.8;
+  margin-bottom: 0;
+  padding-left: 1.25rem;
+}
+
+.assistant-project-cta {
+  margin-bottom: 3rem;
+  min-height: 44px;
+}
+
+.assistant-project-actions {
+  margin: 0 auto 3rem;
+  max-width: 60rem;
+}
+
+@media (max-width: 767.98px) {
+  .landing-page #proyectos > .container {
+    padding-inline: 1rem;
+  }
+
+  .featured-project {
+    margin-top: 0 !important;
+    padding-top: 3rem !important;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .assistant-heading {
+    margin-top: 2rem;
+  }
+
+  .assistant-details {
+    grid-template-columns: 1fr;
+  }
+
+  .assistant-mark {
+    grid-row: 2;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

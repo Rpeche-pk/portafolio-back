@@ -1,47 +1,56 @@
 {
   "index.html": {
-    "contactHref": "contact.html",
-    "activeLinks": ["nav-home", "nav-project", "nav-skill"],
+    "contactHref": "index.html#contact",
+    "navbarTemplate": "work-gallery-navbar.html",
+    "footerTemplate": "work-gallery-footer.html",
+    "navigation": {
+      "home": "#home",
+      "projects": "#projects",
+      "skills": "#skills",
+      "about": "#about",
+      "contact": "#contact"
+    },
+    "activeLinks": ["nav-home"],
     "collapseStyle": "padding-bottom: 0px;padding-left: 0px;"
   },
   "cv.html": {
-    "contactHref": "https://www.linkedin.com/in/luis-peche/",
+    "contactHref": "index.html#contact",
     "activeLinks": ["nav-about"],
     "collapseStyle": "padding-bottom: 0px;padding-left: 0px;"
   },
   "contact.html": {
-    "contactHref": "https://www.linkedin.com/in/luis-peche/",
-    "activeLinks": [],
+    "contactHref": "index.html#contact",
+    "activeLinks": ["nav-contact"],
     "collapseStyle": "padding-bottom: 0px;padding-left: 0px;"
   },
   "project-page.html": {
-    "contactHref": "https://www.linkedin.com/in/luis-peche/",
-    "activeLinks": [],
+    "contactHref": "index.html#contact",
+    "activeLinks": ["nav-project"],
     "collapseStyle": ""
   },
   "project-page-1.html": {
-    "contactHref": "https://www.linkedin.com/in/luis-peche/",
-    "activeLinks": [],
+    "contactHref": "index.html#contact",
+    "activeLinks": ["nav-project"],
     "collapseStyle": "padding-bottom: 0px;padding-left: 0px;"
   },
   "project-page-2.html": {
-    "contactHref": "https://www.linkedin.com/in/luis-peche/",
-    "activeLinks": [],
+    "contactHref": "index.html#contact",
+    "activeLinks": ["nav-project"],
     "collapseStyle": "padding-bottom: 0px;padding-left: 0px;"
   },
   "project-page-3.html": {
-    "contactHref": "https://www.linkedin.com/in/luis-peche/",
-    "activeLinks": [],
+    "contactHref": "index.html#contact",
+    "activeLinks": ["nav-project"],
     "collapseStyle": ""
   },
   "project-page-4.html": {
-    "contactHref": "https://www.linkedin.com/in/luis-peche/",
-    "activeLinks": [],
+    "contactHref": "index.html#contact",
+    "activeLinks": ["nav-project"],
     "collapseStyle": ""
   },
   "project-page-5.html": {
-    "contactHref": "https://www.linkedin.com/in/luis-peche/",
-    "activeLinks": [],
+    "contactHref": "index.html#contact",
+    "activeLinks": ["nav-project"],
     "collapseStyle": ""
   }
 }

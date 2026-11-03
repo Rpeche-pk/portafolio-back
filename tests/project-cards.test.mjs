@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { existsSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -6,146 +7,45 @@ import test from "node:test";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const homepage = await readFile(join(root, "index.html"), "utf8");
-const styles = await readFile(join(root, "assets/css/project-cards.css"), "utf8").catch(() => "");
-const projectDetailPages = [
-  "project-page-5.html",
-  "project-page.html",
-  "project-page-3.html",
-  "project-page-4.html",
-  "project-page-2.html",
-  "project-page-1.html",
-];
-const projectDetails = await Promise.all(projectDetailPages.map((path) => readFile(join(root, path), "utf8")));
-const cards = [...homepage.matchAll(/<article class="project-grid-item project-card card">([\s\S]*?)<\/article>/g)]
-  .map((match) => match[1]);
+const script = await readFile(join(root, "assets/js/work-gallery.js"), "utf8");
+const styles = await readFile(join(root, "assets/css/work-gallery.css"), "utf8");
+const projectEntries = [...script.matchAll(/\{ id: '([^']+)', title: '([^']+)', image: '([^']+)', href: '([^']+)', demoUrl: (null|'[^']+')/g)]
+  .map(([, id, title, image, href, demo]) => ({ id, title, image, href, demoUrl: demo === "null" ? null : demo.slice(1, -1) }));
 
-const technologySourcePatterns = {
-  "Java 17": /Java 17/i,
-  "Spring Boot": /Spring Boot/i,
-  "PostgreSQL": /PostgreSQL/i,
-  "Node.js 18": /NodeJs 18/i,
-  "Node.js": /NodeJs/i,
-  Baileys: /Baileys/i,
-  "WhatsApp Business": /WhatsApp Business/i,
-  MySQL: /MYSQL/i,
-  React: /React/i,
-  Docker: /Docker/i,
-  Angular: /Angular/i,
-  JWT: /JWT/i,
-  Python: /Python/i,
-  "Selenium Grid": /Selenium Grid/i,
-  "Google Cloud Platform": /Google Cloud Platform/i,
-  Dialogflow: /Dialogflow/i,
-  MongoDB: /MongoDb/i,
-};
-
-const expectedTechnologies = [
-  ["Java 17", "Spring Boot"],
-  ["Java 17", "Spring Boot", "PostgreSQL", "Node.js 18", "Baileys", "WhatsApp Business"],
-  ["Java 17", "Spring Boot", "MySQL", "React", "Baileys", "Docker"],
-  ["Java 17", "Spring Boot", "MySQL", "Node.js", "Baileys", "WhatsApp Business"],
-  ["Java 17", "Spring Boot", "PostgreSQL", "Angular", "JWT", "Docker"],
-  ["Python", "Selenium Grid", "Node.js", "Google Cloud Platform", "Dialogflow", "MongoDB"],
+const expectedProjects = [
+  ["ai-assistant", "AI Assistant", "assets/img/tech/spring-ai.jpg", "project-page-5.html", null],
+  ["zephyr-cygnus", "Zephyr Cygnus", "assets/img/tech/zephyr.png", "project-page.html", "https://youtube.com/shorts/Y6HE0hWtwjQ?feature=share"],
+  ["trucking", "Trucking", "assets/img/tech/trucking.png", "project-page-3.html", "https://youtu.be/UziTMfvcI_I?si=1UnvCDU5zI0jnLUk"],
+  ["maipevi-bot", "Maipevi Bot", "assets/img/tech/maipevi.png", "project-page-4.html", "https://youtube.com/shorts/dmyQ0JASXjg?feature=share"],
+  ["cashier", 'Digital Wallet "Cashier"', "assets/img/nature/Banner.png", "project-page-2.html", "https://youtu.be/HhMpTuKcwdA?si=xswrr048GnvEkTyE"],
+  ["devbot-supermarket", "DevBot Supermarket", "assets/img/tech/devbot.png", "project-page-1.html", null],
 ];
 
-test("project section loads its scoped stylesheet and preserves six card contents and destinations", () => {
-  assert.match(homepage, /href="assets\/css\/project-cards\.css"/);
-  assert.equal(cards.length, 6);
-  assert.deepEqual(cards.map((card) => card.match(/<h4 class="card-title">([\s\S]*?)<\/h4>/)?.[1]), [
-    "<strong>AI Assistant</strong>",
-    "<strong>Zephyr Cygnus</strong>",
-    "<strong>Trucking</strong>",
-    "<strong>Maipevi Bot</strong>",
-    "<strong>Digital Wallet \"Cashier\"</strong>",
-    "<strong>DevBot Supermarket</strong>",
-  ]);
-  assert.deepEqual(cards.map((card) => card.match(/<img[^>]*src="([^"]+)"/)?.[1]), [
-    "assets/img/tech/spring-ai.jpg",
-    "assets/img/tech/zephyr.png",
-    "assets/img/tech/trucking.png",
-    "assets/img/tech/maipevi.png",
-    "assets/img/nature/Banner.png",
-    "assets/img/tech/devbot.png",
-  ]);
-  assert.deepEqual(cards.map((card) => card.match(/<a href="([^"]+)" class="project-card-image-link"/)?.[1]), [
-    "project-page-5.html",
-    "project-page.html",
-    "project-page-3.html",
-    "project-page-4.html",
-    "project-page-2.html",
-    "project-page-1.html",
-  ]);
-  assert.deepEqual(cards.map((card) => card.match(/class="card-text" data-key="home" data-value="([^"]+)"/)?.[1]), [
-    "home-project-six",
-    "home-project-one",
-    "home-project-four",
-    "home-project-five",
-    "home-project-two",
-    "home-project-three",
-  ]);
-  assert.equal(cards.filter((card) => /class="d-flex project-card-author"/.test(card)).length, 6);
-  assert.equal(cards.filter((card) => /href="https:\/\/www\.linkedin\.com\/in\/luis-peche\//.test(card)).length, 6);
-  assert.equal(cards.filter((card) => /<span class="badge bg-primary">(?:LRPA|No Country)<\/span>/.test(card)).length, 0);
-});
+test("homepage renders six sourced project cards with valid detail/image paths", () => {
+  assert.match(homepage, /<div class="project-list" id="project-list"><\/div>/);
+  assert.match(homepage, /<noscript[^>]*>[\s\S]*AI Assistant[\s\S]*DevBot Supermarket[\s\S]*<\/noscript>/);
+  assert.equal(projectEntries.length, expectedProjects.length);
+  assert.deepEqual(projectEntries.map(({ id, title, image, href }) => [id, title, image, href]),
+    expectedProjects.map(([id, title, image, href]) => [id, title, image, href]));
 
-test("project technology tags are grounded in project detail references", () => {
-  assert.equal(cards.filter((card) => /class="project-technology-list"/.test(card)).length, 6);
-  assert.equal(cards.filter((card) => /<span class="badge bg-primary">(?:LRPA|No Country)<\/span>/.test(card)).length, 0);
-  for (const card of cards) {
-    assert.match(card, /<div class="project-card-meta"[^>]*>\s*<ul class="project-technology-list"/);
+  for (const project of projectEntries) {
+    assert.ok(existsSync(join(root, project.image)), `${project.title} image exists`);
+    assert.ok(existsSync(join(root, project.href)), `${project.title} detail page exists`);
   }
-  for (const [index, technologies] of expectedTechnologies.entries()) {
-    for (const technology of technologies) {
-      assert.ok(cards[index].includes(`>${technology}</li>`), `card ${index + 1} includes sourced ${technology}`);
-      assert.match(
-        projectDetails[index],
-        technologySourcePatterns[technology],
-        `${technology} is present in ${projectDetailPages[index]}`,
-      );
-    }
+  assert.match(script, /card\.className = 'project-card'/);
+  assert.match(script, /detailsLink\.href = project\.href/);
+  assert.match(styles, /\.project-card\s*\{/);
+});
+
+test("only distinct real demos are rendered as external actions", () => {
+  const demos = projectEntries.filter((project) => project.demoUrl);
+  assert.deepEqual(projectEntries.map((project) => project.demoUrl), expectedProjects.map((project) => project[4]));
+  assert.equal(demos.length, 4);
+  assert.equal(new Set(demos.map((project) => project.demoUrl)).size, demos.length);
+  for (const project of demos) {
+    assert.equal(new URL(project.demoUrl).protocol, "https:");
+    assert.notEqual(project.demoUrl, project.href, `${project.title} demo is distinct from its detail page`);
   }
-  assert.match(cards[0], /Java 17[\s\S]*Spring Boot/);
-  assert.match(cards[0], /data-value="home-project-six">Intelligent REST API powered by Spring Boot/);
-});
-
-test("technology tags share the origin badge style and wrap beside it", () => {
-  const technologyTags = cards.flatMap((card) =>
-    [...card.matchAll(/<li class="([^"]*project-technology[^"]*)">([^<]+)<\/li>/g)],
-  );
-  assert.equal(technologyTags.length, expectedTechnologies.flat().length);
-  for (const [, classNames] of technologyTags) {
-    assert.match(classNames, /(?:^|\s)badge(?:\s|$)/);
-    assert.match(classNames, /(?:^|\s)bg-primary(?:\s|$)/);
-    assert.doesNotMatch(classNames, /(?:^|\s)(?:bg-light|text-dark)(?:\s|$)/);
-  }
-  assert.match(styles, /\.project-card-meta\s*\{[^}]*display:\s*flex[^}]*flex-wrap:\s*wrap[^}]*gap:\s*0\.375rem/s);
-  assert.match(styles, /\.project-technology-list\s*\{[^}]*flex:\s*1\s+1\s+100%[^}]*flex-wrap:\s*wrap[^}]*gap:/s);
-  assert.match(styles, /\.project-technology-list\s*\{[^}]*flex:\s*1\s+1\s+100%[^}]*flex-wrap:\s*wrap[^}]*gap:/s);
-  assert.doesNotMatch(styles, /\.project-technology\s*\{[^}]*font-size:/s);
-  assert.doesNotMatch(styles, /\.project-technology\s*\{[^}]*padding:/s);
-});
-
-test("project card content stays compact and keeps space before the author", () => {
-  assert.doesNotMatch(styles, /\.project-card-meta\s*\{[^}]*min-height:/s);
-  assert.doesNotMatch(styles, /\.project-card \.card-title\s*\{[^}]*min-height:/s);
-  assert.match(styles, /\.project-card \.card-title\s*\{[^}]*margin-top:\s*0\.875rem/s);
-  assert.match(styles, /\.project-card \.card-title\s*\{[^}]*margin-bottom:\s*0\.625rem/s);
-  assert.doesNotMatch(styles, /\.project-card \.card-text\s*\{[^}]*flex:/s);
-  assert.match(styles, /\.project-card-author\s*\{[^}]*margin-top:\s*auto[^}]*padding-top:\s*0/s);
-  assert.match(styles, /\.project-grid\s*\{[^}]*grid-auto-rows:\s*1fr/s);
-});
-
-test("project cards align without clipping content or overflowing responsive widths", () => {
-  assert.match(styles, /\.project-grid\s*\{[^}]*display:\s*grid[^}]*grid-auto-rows:\s*1fr/s);
-  assert.match(styles, /grid-template-columns:\s*repeat\(3,\s*minmax\(0,\s*1fr\)\)/);
-  assert.match(styles, /grid-template-columns:\s*repeat\(2,\s*minmax\(0,\s*1fr\)\)/);
-  assert.match(styles, /grid-template-columns:\s*minmax\(0,\s*1fr\)/);
-  assert.match(styles, /\.project-card\s*\{[^}]*display:\s*flex[^}]*flex-direction:\s*column[^}]*height:\s*100%/s);
-  assert.match(styles, /\.project-card-author\s*\{[^}]*margin-top:\s*auto/s);
-  assert.match(styles, /\.project-card-image\s*\{[^}]*height:\s*200px[^}]*object-fit:\s*contain/s);
-  assert.match(styles, /\.project-technology-list\s*\{[^}]*display:\s*flex[^}]*flex-wrap:\s*wrap[^}]*gap:/s);
-  assert.match(styles, /\.project-grid-item\s*\{[^}]*min-width:\s*0/s);
-  assert.match(styles, /\.project-technology\s*\{[^}]*overflow-wrap:\s*anywhere/s);
-  assert.doesNotMatch(styles, /\.project-card-(?:title|description)\s*\{[^}]*height:/s);
-  assert.doesNotMatch(styles, /overflow-x:\s*(?:auto|scroll)/);
+  assert.match(script, /if \(project\.demoUrl\)/);
+  assert.match(script, /demoLink\.rel = 'noopener noreferrer'/);
 });

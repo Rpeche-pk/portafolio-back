@@ -3,11 +3,15 @@
         "nav-home": "Home",
         "nav-project": "Projects",
         "nav-about": "About Me",
-        "nav-skill": "Skill",
-        "nav-contact": "Contact"
+        "nav-skill": "Skills",
+        "nav-contact": "Contact",
+        "nav-toggle": "Toggle navigation",
+        "nav-email": "Email Luis Peche",
+        "nav-language": "Choose language"
     },
     "home": {
-        "home-title": "Hi I'm <strong>Luis Peche</strong>, I'm a passionate backend developer specialized in <strong>Java, Spring Boot and Spring Cloud</strong>.<br>My experience includes designing efficient architectures, implementing <strong>RESTful</strong> <strong>web</strong> <strong>services</strong> and database integration, all using agile development best practices. I also have a strong background in the field of <strong>Data Analysis</strong> and <strong>AI chatbot creation.</strong>",
+        "home-avatar-link": "Visit Luis Peche's GitHub profile",
+        "home-title": "Hi I'm <strong>Luis Peche</strong>, I'm a passionate backend developer specialized in <strong>Java, Spring Boot and Spring Cloud</strong>. My experience includes designing efficient architectures, implementing <strong>RESTful</strong> <strong>web</strong> <strong>services</strong> and database integration, all using agile development best practices. I also have a strong background in the field of <strong>Data Analysis</strong> and <strong>AI chatbot creation.</strong>",
         "home-button": "<strong>Know me</strong>",
         "home-project-title": "<strong>Projects</strong>",
         "home-project-description": "Explore my world of digital innovation, where each project is a unique piece that fuses technology and creativity to transform challenges into impactful solutions. Welcome to my portfolio of creations, where every line of code tells a story of success!<br/><strong><em>Click on the images</em></strong>",

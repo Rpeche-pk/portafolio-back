@@ -9,3 +9,7 @@ opencode-*
 opencode.*
 .agents
 skills-lock.json
+.codex
+.playwright*
+.taste-skill
+.gentle*

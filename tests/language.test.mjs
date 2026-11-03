@@ -7,6 +7,8 @@ import test from "node:test";
 
 const repositoryRoot = dirname(dirname(fileURLToPath(import.meta.url)));
 const languageScript = await readFile(join(repositoryRoot, "assets", "js", "language.js"), "utf8");
+const homepageHtml = await readFile(join(repositoryRoot, "index.html"), "utf8");
+const homepageNavbar = await readFile(join(repositoryRoot, "templates/work-gallery-navbar.html"), "utf8");
 const fifthProjectHtml = await readFile(join(repositoryRoot, "project-page-5.html"), "utf8");
 const spanishCatalog = JSON.parse(
   await readFile(join(repositoryRoot, "assets", "js", "languages", "es.json"), "utf8"),
@@ -151,4 +153,12 @@ test("project five uses its own equivalent description label key", () => {
     englishCatalog.proyects[descriptionHeading[1]],
     englishCatalog.proyects["proyects-four-description"],
   );
+});
+
+test("homepage portrait has accessible alternative text and GitHub remains in the approved navbar", () => {
+  const portrait = homepageHtml.match(/<img class="portrait"[^>]*>/)?.[0];
+
+  assert.ok(portrait);
+  assert.match(portrait, /alt="Portrait of Luis Peche"/);
+  assert.match(homepageNavbar, /<a class="icon-link" href="https:\/\/github\.com\/Rpeche-pk"[^>]*rel="noopener noreferrer"[^>]*aria-label="GitHub profile \(opens in a new tab\)"/);
 });
