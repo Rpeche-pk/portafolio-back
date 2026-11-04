@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-04",
+  "runner": "mcp__playwright__browser_run_code_unsafe",
+  "script": "scripts/project-detail-playwright-matrix.js",
+  "baseUrl": "http://127.0.0.1:8766",
+  "result": "PASS",
+  "routesChecked": 6,
+  "viewportCases": 18,
+  "browserErrors": [],
+  "results": [
+    {
+      "project": "zephyr",
+      "route": "project-page.html",
+      "viewportChecks": [
+        { "width": 320, "overflow": false, "h1Count": 1, "imageCount": 4, "allImagesLoadedAndNamed": true, "projectOutboundCount": 1 },
+        { "width": 390, "overflow": false, "h1Count": 1, "imageCount": 4, "allImagesLoadedAndNamed": true, "projectOutboundCount": 1 },
+        { "width": 1440, "overflow": false, "h1Count": 1, "imageCount": 4, "allImagesLoadedAndNamed": true, "projectOutboundCount": 1 }
+      ],
+      "language": { "spanishAndEnglishSwitch": "pass", "persisted": true, "zephyrAltCycle": "es→en→es pass" },
+      "theme": { "lightToDark": "pass", "bootstrapSynchronized": true, "persistedAfterReload": true, "toggleAriaPressed": "true" },
+      "keyboardFocus": { "targetClass": "nav-link", "focusVisible": true, "outlineWidth": "3px" },
+      "reducedMotionTransitionDuration": "0s"
+    },
+    {
+      "project": "devbot-supermarket",
+      "route": "project-page-1.html",
+      "viewportChecks": [
+        { "width": 320, "overflow": false, "h1Count": 1, "imageCount": 1, "allImagesLoadedAndNamed": true, "projectOutboundCount": 1 },
+        { "width": 390, "overflow": false, "h1Count": 1, "imageCount": 1, "allImagesLoadedAndNamed": true, "projectOutboundCount": 1 },
+        { "width": 1440, "overflow": false, "h1Count": 1, "imageCount": 1, "allImagesLoadedAndNamed": true, "projectOutboundCount": 1 }
+      ],
+      "language": { "spanishAndEnglishSwitch": "pass", "persisted": true },
+      "theme": { "lightToDark": "pass", "bootstrapSynchronized": true, "persistedAfterReload": true, "toggleAriaPressed": "true" },
+      "keyboardFocus": { "targetClass": "nav-link", "focusVisible": true, "outlineWidth": "3px" },
+      "reducedMotionTransitionDuration": "0s"
+    },
+    {
+      "project": "cashier",
+      "route": "project-page-2.html",
+      "viewportChecks": [
+        { "width": 320, "overflow": false, "h1Count": 1, "imageCount": 1, "allImagesLoadedAndNamed": true, "projectOutboundCount": 2 },
+        { "width": 390, "overflow": false, "h1Count": 1, "imageCount": 1, "allImagesLoadedAndNamed": true, "projectOutboundCount": 2 },
+        { "width": 1440, "overflow": false, "h1Count": 1, "imageCount": 1, "allImagesLoadedAndNamed": true, "projectOutboundCount": 2 }
+      ],
+      "language": { "spanishAndEnglishSwitch": "pass", "persisted": true },
+      "theme": { "lightToDark": "pass", "bootstrapSynchronized": true, "persistedAfterReload": true, "toggleAriaPressed": "true" },
+      "keyboardFocus": { "targetClass": "nav-link", "focusVisible": true, "outlineWidth": "3px" },
+      "reducedMotionTransitionDuration": "0s"
+    },
+    {
+      "project": "trucking",
+      "route": "project-page-3.html",
+      "viewportChecks": [
+        { "width": 320, "overflow": false, "h1Count": 1, "imageCount": 1, "allImagesLoadedAndNamed": true, "projectOutboundCount": 2 },
+        { "width": 390, "overflow": false, "h1Count": 1, "imageCount": 1, "allImagesLoadedAndNamed": true, "projectOutboundCount": 2 },
+        { "width": 1440, "overflow": false, "h1Count": 1, "imageCount": 1, "allImagesLoadedAndNamed": true, "projectOutboundCount": 2 }
+      ],
+      "language": { "spanishAndEnglishSwitch": "pass", "persisted": true },
+      "theme": { "lightToDark": "pass", "bootstrapSynchronized": true, "persistedAfterReload": true, "toggleAriaPressed": "true" },
+      "keyboardFocus": { "targetClass": "nav-link", "focusVisible": true, "outlineWidth": "3px" },
+      "reducedMotionTransitionDuration": "0s"
+    },
+    {
+      "project": "maipevi-bot",
+      "route": "project-page-4.html",
+      "viewportChecks": [
+        { "width": 320, "overflow": false, "h1Count": 1, "imageCount": 1, "allImagesLoadedAndNamed": true, "projectOutboundCount": 2 },
+        { "width": 390, "overflow": false, "h1Count": 1, "imageCount": 1, "allImagesLoadedAndNamed": true, "projectOutboundCount": 2 },
+        { "width": 1440, "overflow": false, "h1Count": 1, "imageCount": 1, "allImagesLoadedAndNamed": true, "projectOutboundCount": 2 }
+      ],
+      "language": { "spanishAndEnglishSwitch": "pass", "persisted": true },
+      "theme": { "lightToDark": "pass", "bootstrapSynchronized": true, "persistedAfterReload": true, "toggleAriaPressed": "true" },
+      "keyboardFocus": { "targetClass": "nav-link", "focusVisible": true, "outlineWidth": "3px" },
+      "reducedMotionTransitionDuration": "0s"
+    },
+    {
+      "project": "ai-assistant",
+      "route": "project-page-5.html",
+      "viewportChecks": [
+        { "width": 320, "overflow": false, "h1Count": 1, "imageCount": 1, "allImagesLoadedAndNamed": true, "projectOutboundCount": 1 },
+        { "width": 390, "overflow": false, "h1Count": 1, "imageCount": 1, "allImagesLoadedAndNamed": true, "projectOutboundCount": 1 },
+        { "width": 1440, "overflow": false, "h1Count": 1, "imageCount": 1, "allImagesLoadedAndNamed": true, "projectOutboundCount": 1 }
+      ],
+      "language": { "spanishAndEnglishSwitch": "pass", "persisted": true },
+      "theme": { "lightToDark": "pass", "bootstrapSynchronized": true, "persistedAfterReload": true, "toggleAriaPressed": "true" },
+      "keyboardFocus": { "targetClass": "nav-link", "focusVisible": true, "outlineWidth": "3px" },
+      "reducedMotionTransitionDuration": "0s"
+    }
+  ]
+}
