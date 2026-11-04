@@ -140,7 +140,7 @@ test("unsupported saved languages fall back to English", async () => {
 
 test("project five uses its own equivalent description label key", () => {
   const descriptionHeading = fifthProjectHtml.match(
-    /<h3[^>]*data-key="proyects"[^>]*data-value="([^"]+)"/,
+    /<h2[^>]*data-key="proyects"[^>]*data-value="([^"]+)"/,
   );
 
   assert.ok(descriptionHeading);
