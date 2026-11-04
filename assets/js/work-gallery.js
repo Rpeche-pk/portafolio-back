@@ -4,7 +4,7 @@
       const messages = {
         en: {
           footerNavigation: 'Footer navigation', footerAbout: 'About', footerContact: 'Contact me', footerRights: 'All rights reserved.', footerEmailLabel: 'Compose in Gmail (opens in a new tab)', footerEmailSubject: 'Portfolio contact',
-          pageTitle: 'Luis Peche — Work gallery', primaryNavigation: 'Primary navigation', brandHome: 'Luis Peche home', sections: 'Sections',
+          pageTitle: 'Luis Peche — Work gallery', zephyrCatalogChatAlt: 'Zephyr Cygnus catalog screen beside a WhatsApp order conversation on two phones.', zephyrPromoChatCatalogAlt: 'Zephyr Cygnus promotional menu and QR screen beside its mobile catalog and WhatsApp order chat.', zephyrMobileCatalogAlt: 'Zephyr Cygnus mobile catalog showing products and a message button.', primaryNavigation: 'Primary navigation', brandHome: 'Luis Peche home', sections: 'Sections',
           navHome: 'Home', navProjects: 'Projects', navSkills: 'Skills', navAbout: 'About Me', menu: 'Menu', menuLabel: 'Toggle navigation menu',
           socialProfiles: 'Social profiles', chooseLanguage: 'Choose language', themeToggle: 'Theme', themeToggleLabel: 'Toggle color theme', githubLabel: 'GitHub profile (opens in a new tab)',
           linkedinLabel: 'LinkedIn profile (opens in a new tab)', languageSpanish: 'Change language to Spanish', languageEnglish: 'Change language to English',
@@ -26,7 +26,7 @@
         },
         es: {
           footerNavigation: 'Navegación del pie de página', footerAbout: 'Sobre mí', footerContact: 'Contacto', footerRights: 'Todos los derechos reservados.', footerEmailLabel: 'Redactar en Gmail (se abre en una pestaña nueva)', footerEmailSubject: 'Contacto desde el portafolio',
-          pageTitle: 'Luis Peche — Proyectos', primaryNavigation: 'Navegación principal', brandHome: 'Inicio de Luis Peche', sections: 'Secciones',
+          pageTitle: 'Luis Peche — Proyectos', zephyrCatalogChatAlt: 'Pantallas del catálogo de Zephyr Cygnus y de un pedido por WhatsApp en dos teléfonos.', zephyrPromoChatCatalogAlt: 'Pantalla promocional de Zephyr Cygnus con menú y código QR junto al catálogo móvil y al chat de pedido por WhatsApp.', zephyrMobileCatalogAlt: 'Catálogo móvil de Zephyr Cygnus con productos y un botón para enviar un mensaje.', primaryNavigation: 'Navegación principal', brandHome: 'Inicio de Luis Peche', sections: 'Secciones',
           navHome: 'Inicio', navProjects: 'Proyectos', navSkills: 'Habilidades', navAbout: 'Sobre mí', menu: 'Menú', menuLabel: 'Alternar menú de navegación',
           socialProfiles: 'Perfiles sociales', chooseLanguage: 'Elegir idioma', themeToggle: 'Tema', themeToggleLabel: 'Alternar tema de color', githubLabel: 'Perfil de GitHub (se abre en una pestaña nueva)',
           linkedinLabel: 'Perfil de LinkedIn (se abre en una pestaña nueva)', languageSpanish: 'Cambiar el idioma a español', languageEnglish: 'Cambiar el idioma a inglés',

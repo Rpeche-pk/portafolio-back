@@ -129,3 +129,37 @@ test("the shared Work Gallery navbar supports both project localization and curr
   assert.match(navbarTemplate, /data-language="es"/);
   assert.match(navbarTemplate, /data-language="en"/);
 });
+
+test("Zephyr gallery screenshots have descriptive localized alternatives", async () => {
+  const html = await readFile(join(repositoryRoot, "project-page.html"), "utf8");
+  const images = [...html.matchAll(/<img\b[^>]*class="img-fluid"[^>]*>/gi)].map(([tag]) => tag);
+  const expected = [
+    {
+      src: "assets/img/mockup/proto.png",
+      key: "zephyrCatalogChatAlt",
+      en: "Zephyr Cygnus catalog screen beside a WhatsApp order conversation on two phones.",
+      es: "Pantallas del catálogo de Zephyr Cygnus y de un pedido por WhatsApp en dos teléfonos.",
+    },
+    {
+      src: "assets/img/mockup/proto5.png",
+      key: "zephyrPromoChatCatalogAlt",
+      en: "Zephyr Cygnus promotional menu and QR screen beside its mobile catalog and WhatsApp order chat.",
+      es: "Pantalla promocional de Zephyr Cygnus con menú y código QR junto al catálogo móvil y al chat de pedido por WhatsApp.",
+    },
+    {
+      src: "assets/img/mockup/proto-2.png",
+      key: "zephyrMobileCatalogAlt",
+      en: "Zephyr Cygnus mobile catalog showing products and a message button.",
+      es: "Catálogo móvil de Zephyr Cygnus con productos y un botón para enviar un mensaje.",
+    },
+  ];
+
+  assert.equal(images.length, expected.length, "gallery image count");
+  expected.forEach((item, index) => {
+    assert.ok(images[index].includes(`src="${item.src}"`), `gallery image ${index + 1} source`);
+    assert.ok(images[index].includes(`alt="${item.en}"`), `gallery image ${index + 1} English fallback`);
+    assert.ok(images[index].includes(`data-i18n-alt="${item.key}"`), `gallery image ${index + 1} localization key`);
+    assert.equal(workGalleryScript.split(`${item.key}: '${item.en}'`).length - 1, 1, `gallery image ${index + 1} English translation`);
+    assert.equal(workGalleryScript.split(`${item.key}: '${item.es}'`).length - 1, 1, `gallery image ${index + 1} Spanish translation`);
+  });
+});

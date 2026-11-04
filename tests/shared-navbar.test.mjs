@@ -134,7 +134,7 @@ test("shared navbar preserves destinations and declares accessible collapse cont
     "{{CONTACT_HREF}}",
   ]);
   assert.match(workGalleryNavbar, /data-nav="home" href="{{HOME_HREF}}"/);
-  assert.match(workGalleryNavbar, /data-nav="projects" href="{{PROJECTS_HREF}}"/);
+  assert.match(workGalleryNavbar, /data-nav="projects"\{\{CURRENT_PROJECTS\}\} href="{{PROJECTS_HREF}}"/);
   assert.equal(pageShell["index.html"].navbarTemplate, "work-gallery-navbar.html");
   assert.equal(pageShell["index.html"].footerTemplate, "work-gallery-footer.html");
   assert.deepEqual(pageShell["index.html"].activeLinks, ["nav-home"]);
