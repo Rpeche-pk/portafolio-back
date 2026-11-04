@@ -22,6 +22,7 @@ button, summary, a { touch-action: manipulation; }
     .nav-link::after { position: absolute; right: 0; bottom: 5px; left: 0; height: 2px; background: var(--accent); content: ""; opacity: 0; transform: scaleX(.25); transform-origin: left center; }
 .nav-link.is-active { color: var(--accent); }
 .nav-link.is-active::after { opacity: 1; transform: scaleX(1); }
+.site-header .nav-link:focus-visible { outline: 3px solid var(--secondary); outline-offset: 4px; border-radius: 4px; }
 .nav-tools { justify-self: end; gap: 10px; }
 .social-links { gap: 2px; }
     .icon-link, .language-option, .menu-summary, .cord-handle { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; padding: 0; color: var(--secondary); background: transparent; border: 0; cursor: pointer; text-decoration: none; touch-action: manipulation; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }

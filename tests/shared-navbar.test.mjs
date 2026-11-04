@@ -171,6 +171,10 @@ test("navbar styles meet contrast, target, spacing, focus, and fixed-anchor requ
   assert.match(workGalleryStyles, /:focus-visible/);
 });
 
+test("Work Gallery primary nav links have a visible keyboard focus ring", () => {
+  assert.match(workGalleryStyles, /\.site-header\s+\.nav-link:focus-visible\s*\{[^}]*outline:\s*3px solid var\(--secondary\)/s);
+});
+
 test("navbar hover interactions are pointer-gated, focus-visible, and reduced-motion aware", () => {
   assert.match(navbarStyles, /@media\s*\(hover:\s*hover\)\s*and\s*\(pointer:\s*fine\)/);
   assert.match(navbarStyles, /\.navbar-email:hover \.icon[^}]*transform:\s*translateY\(-2px\) scale\(1\.05\)/s);
