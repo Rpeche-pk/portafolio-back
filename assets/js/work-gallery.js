@@ -863,6 +863,7 @@
       }
       function toggleTheme() {
         root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+        if (root.hasAttribute('data-bs-theme')) root.dataset.bsTheme = root.dataset.theme;
         try { window.localStorage.setItem('portfolio-theme', root.dataset.theme); } catch {}
         syncThemeToggle();
         return true;
@@ -913,6 +914,7 @@
         return desktopNav?.getClientRects().length ? desktopNav : mobileLinks;
       }
       function setActiveSection(id) {
+        if (!sectionTargets.length) return;
         if (!sectionById.has(id)) id = sectionTargets[0]?.id ?? 'home';
         const navGroup = getVisibleNavGroup();
         if (activeSectionId === id && activeNavGroup === navGroup) return;

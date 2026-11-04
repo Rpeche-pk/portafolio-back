@@ -1,12 +1,12 @@
 <header class="site-header">
-    <nav class="container nav-inner" aria-label="Primary navigation" data-i18n-aria-label="primaryNavigation">
+    <nav class="container nav-inner" id="flags" aria-label="Primary navigation" data-i18n-aria-label="primaryNavigation">
       <a class="brand" href="{{HOME_HREF}}" aria-label="Luis Peche home" data-i18n-aria-label="brandHome">
         <span class="brand-mark" aria-hidden="true">LP</span>
         <span class="brand-name"><span class="monogram sr-only">LP</span>Luis<span class="brand-name-highlight">Peche</span><span class="cursor" aria-hidden="true">_</span></span>
       </a>
       <div class="desktop-nav" aria-label="Sections" data-i18n-aria-label="sections">
         <a class="nav-link" data-nav="home" href="{{HOME_HREF}}" data-i18n="navHome">Home</a>
-        <a class="nav-link" data-nav="projects" href="{{PROJECTS_HREF}}" data-i18n="navProjects">Projects</a>
+        <a class="nav-link" data-nav="projects"{{CURRENT_PROJECTS}} href="{{PROJECTS_HREF}}" data-i18n="navProjects">Projects</a>
         <a class="nav-link" data-nav="skills" href="{{SKILLS_HREF}}" data-i18n="navSkills">Skills</a>
         <a class="nav-link" data-nav="about" href="{{ABOUT_HREF}}" data-i18n="navAbout">About Me</a>
         <a class="nav-link" data-nav="contact" href="{{CONTACT_HREF}}" data-i18n="navContact">Contact</a>
@@ -34,7 +34,7 @@
         <div class="mobile-panel">
           <div class="mobile-links" aria-label="Sections" data-i18n-aria-label="sections">
             <a class="nav-link" data-nav="home" href="{{HOME_HREF}}" data-i18n="navHome">Home</a>
-            <a class="nav-link" data-nav="projects" href="{{PROJECTS_HREF}}" data-i18n="navProjects">Projects</a>
+            <a class="nav-link" data-nav="projects"{{CURRENT_PROJECTS}} href="{{PROJECTS_HREF}}" data-i18n="navProjects">Projects</a>
             <a class="nav-link" data-nav="skills" href="{{SKILLS_HREF}}" data-i18n="navSkills">Skills</a>
             <a class="nav-link" data-nav="about" href="{{ABOUT_HREF}}" data-i18n="navAbout">About Me</a>
             <a class="nav-link" data-nav="contact" href="{{CONTACT_HREF}}" data-i18n="navContact">Contact</a>

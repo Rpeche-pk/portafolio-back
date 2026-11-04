@@ -79,10 +79,18 @@ test("source pages use shell markers and keep generated output behavior", async 
         assert.equal((output.match(/<nav\b/g) ?? []).length, 2, `${pageName} primary and footer navigation`);
         assert.equal((output.match(/class="site-footer"/g) ?? []).length, 1, `${pageName} approved footer`);
         assert.doesNotMatch(output, /class="page-footer py-3 border-top"/);
+        const primaryLinks = [...nav.matchAll(/<a\b([^>]*)>/g)];
         for (const [key, href] of Object.entries(config.navigation)) {
-          assert.ok(output.includes(`data-nav="${key}" href="${href}"`), `${pageName} ${key} route`);
+          const routes = primaryLinks
+            .filter(([, attributes]) => attributes.includes(`data-nav="${key}"`))
+            .map(([, attributes]) => attributes.match(/\bhref="([^"]+)"/)?.[1]);
+          assert.deepEqual(routes, [href, href], `${pageName} ${key} routes`);
         }
-        assert.match(output, /class="brand" href="#home"/);
+        const brandHref = nav.match(/<a class="brand" href="([^"]+)"/)?.[1];
+        assert.equal(brandHref, config.navigation.home, `${pageName} brand route`);
+        if (config.activeLinks.includes("nav-project")) {
+          assert.equal((nav.match(/data-nav="projects"[^>]*aria-current="location"/g) ?? []).length, 2, `${pageName} current project links`);
+        }
       } else {
         assert.equal((output.match(/<nav\b/g) ?? []).length, 1);
         assert.equal((output.match(/class="page-footer py-3 border-top"/g) ?? []).length, 1);

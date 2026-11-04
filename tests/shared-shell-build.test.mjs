@@ -7,8 +7,9 @@ import test from "node:test";
 import { buildSite } from "../scripts/build-shared-shell.mjs";
 
 const repositoryRoot = dirname(dirname(fileURLToPath(import.meta.url)));
+const pageShell = JSON.parse(await readFile(join(repositoryRoot, "templates/page-shell.json"), "utf8"));
 
-test("approved Work Gallery shell is generated for home while internal pages retain static shell routes", async () => {
+test("approved Work Gallery shell is generated for home and project details while legacy internal pages retain static routes", async () => {
   const tempRoot = await mkdtemp(join(tmpdir(), "portfolio-gallery-shell-"));
   const output = join(tempRoot, "output");
 
@@ -16,6 +17,7 @@ test("approved Work Gallery shell is generated for home while internal pages ret
     await buildSite({ output });
     const home = await readFile(join(output, "index.html"), "utf8");
     const internal = await readFile(join(output, "cv.html"), "utf8");
+    const projectDetail = await readFile(join(output, "project-page.html"), "utf8");
 
     assert.match(home, /data-nav="home" href="#home"/);
     assert.match(home, /data-nav="projects" href="#projects"/);
@@ -30,6 +32,11 @@ test("approved Work Gallery shell is generated for home while internal pages ret
     assert.match(internal, /href="index\.html#projects"/);
     assert.match(internal, /class="nav-link active" aria-current="location" href="index\.html#about"/);
     assert.doesNotMatch(internal, /aria-current="page"/);
+    assert.match(projectDetail, /class="brand" href="index\.html#home"/);
+    assert.match(projectDetail, /data-nav="projects" aria-current="location" href="index\.html#projects"/);
+    assert.match(projectDetail, /class="site-footer"/);
+    assert.match(projectDetail, /assets\/css\/work-gallery\.css/);
+    assert.match(projectDetail, /assets\/js\/work-gallery\.js/);
 
     const nestedPageRoute = new URL("../index.html#projects", "https://portfolio.example/work/detail.html");
     assert.equal(nestedPageRoute.href, "https://portfolio.example/index.html#projects");
@@ -57,9 +64,10 @@ test("shared-shell build is deterministic for both inline and marker-based page 
       const secondPage = await readFile(join(secondOutput, pageName));
       assert.deepEqual(secondPage, firstPage, `${pageName} is stable when rebuilding generated HTML`);
       const generatedPage = firstPage.toString("utf8");
-      if (pageName === "index.html") {
+      if (pageShell[pageName].navbarTemplate === "work-gallery-navbar.html") {
         assert.equal((generatedPage.match(/<nav\b/g) ?? []).length, 2);
         assert.equal((generatedPage.match(/class="site-footer"/g) ?? []).length, 1);
+        assert.equal((generatedPage.match(/class="page-footer py-3 border-top"/g) ?? []).length, 0);
       } else {
         assert.equal((generatedPage.match(/<nav\b/g) ?? []).length, 1);
         assert.equal((generatedPage.match(/class="page-footer py-3 border-top"/g) ?? []).length, 1);
