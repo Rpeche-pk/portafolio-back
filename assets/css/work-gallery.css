@@ -718,3 +718,56 @@ html { scroll-behavior: smooth; }
     transition: none;
   }
 }
+    :root { --back-to-top-size: 48px; --back-to-top-edge: 24px; }
+    .site-footer .footer-inner { padding-block-end: calc(var(--back-to-top-size) + var(--back-to-top-edge) + env(safe-area-inset-bottom, 0px)); }
+    [data-back-to-top] {
+      position: fixed;
+      z-index: 12;
+      right: max(var(--back-to-top-edge), env(safe-area-inset-right, 0px));
+      bottom: max(var(--back-to-top-edge), env(safe-area-inset-bottom, 0px));
+      display: grid;
+      width: var(--back-to-top-size);
+      height: var(--back-to-top-size);
+      place-items: center;
+      padding: 0;
+      border: 1px solid color-mix(in srgb, var(--accent) 62%, var(--line));
+      border-radius: 12px;
+      background: var(--accent);
+      color: var(--paper);
+      box-shadow: 0 4px 14px rgba(0, 43, 80, .16);
+      cursor: pointer;
+      opacity: 0;
+      translate: 0 6px;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 180ms var(--ease-out), translate 180ms var(--ease-out), visibility 0s linear 180ms;
+    }
+    [data-back-to-top][data-visible="true"] {
+      opacity: 1;
+      translate: 0 0;
+      visibility: visible;
+      pointer-events: auto;
+      transition: opacity 180ms var(--ease-out), translate 180ms var(--ease-out), visibility 0s;
+    }
+    [data-back-to-top] svg { display: block; width: 22px; height: 22px; }
+    [data-back-to-top]:focus-visible { outline: 3px solid var(--secondary); outline-offset: 4px; }
+    :root[data-theme="dark"] [data-back-to-top] { box-shadow: 0 4px 14px rgba(0, 0, 0, .34); }
+    @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+      [data-back-to-top]:hover { translate: 0 -2px; box-shadow: 0 6px 18px rgba(0, 43, 80, .2); }
+    }
+    [data-back-to-top]:active { scale: .97; }
+    @media (max-width: 760px) {
+      :root { --back-to-top-edge: 16px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      [data-back-to-top] {
+        translate: none;
+        scale: none;
+        transition: opacity 180ms var(--ease-out), visibility 0s linear 180ms;
+      }
+      [data-back-to-top][data-visible="true"] {
+        translate: none;
+        scale: none;
+        transition: opacity 180ms var(--ease-out), visibility 0s;
+      }
+    }

@@ -3,7 +3,7 @@
 
       const messages = {
         en: {
-          footerNavigation: 'Footer navigation', footerAbout: 'About', footerContact: 'Contact me', footerRights: 'All rights reserved.', footerEmailLabel: 'Compose in Gmail (opens in a new tab)', footerEmailSubject: 'Portfolio contact',
+          backToTop: 'Back to top', footerNavigation: 'Footer navigation', footerAbout: 'About', footerContact: 'Contact me', footerRights: 'All rights reserved.', footerEmailLabel: 'Compose in Gmail (opens in a new tab)', footerEmailSubject: 'Portfolio contact',
           pageTitle: 'Luis Peche — Work gallery', zephyrCatalogChatAlt: 'Zephyr Cygnus catalog screen beside a WhatsApp order conversation on two phones.', zephyrPromoChatCatalogAlt: 'Zephyr Cygnus promotional menu and QR screen beside its mobile catalog and WhatsApp order chat.', zephyrMobileCatalogAlt: 'Zephyr Cygnus mobile catalog showing products and a message button.', primaryNavigation: 'Primary navigation', brandHome: 'Luis Peche home', sections: 'Sections',
           navHome: 'Home', navProjects: 'Projects', navSkills: 'Skills', navAbout: 'About Me', menu: 'Menu', menuLabel: 'Toggle navigation menu',
           socialProfiles: 'Social profiles', chooseLanguage: 'Choose language', themeToggle: 'Theme', themeToggleLabel: 'Toggle color theme', githubLabel: 'GitHub profile (opens in a new tab)',
@@ -25,7 +25,7 @@
           cordActivated: 'Theme changed.'
         },
         es: {
-          footerNavigation: 'Navegación del pie de página', footerAbout: 'Sobre mí', footerContact: 'Contacto', footerRights: 'Todos los derechos reservados.', footerEmailLabel: 'Redactar en Gmail (se abre en una pestaña nueva)', footerEmailSubject: 'Contacto desde el portafolio',
+          backToTop: 'Volver al inicio', footerNavigation: 'Navegación del pie de página', footerAbout: 'Sobre mí', footerContact: 'Contacto', footerRights: 'Todos los derechos reservados.', footerEmailLabel: 'Redactar en Gmail (se abre en una pestaña nueva)', footerEmailSubject: 'Contacto desde el portafolio',
           pageTitle: 'Luis Peche — Proyectos', zephyrCatalogChatAlt: 'Pantallas del catálogo de Zephyr Cygnus y de un pedido por WhatsApp en dos teléfonos.', zephyrPromoChatCatalogAlt: 'Pantalla promocional de Zephyr Cygnus con menú y código QR junto al catálogo móvil y al chat de pedido por WhatsApp.', zephyrMobileCatalogAlt: 'Catálogo móvil de Zephyr Cygnus con productos y un botón para enviar un mensaje.', primaryNavigation: 'Navegación principal', brandHome: 'Inicio de Luis Peche', sections: 'Secciones',
           navHome: 'Inicio', navProjects: 'Proyectos', navSkills: 'Habilidades', navAbout: 'Sobre mí', menu: 'Menú', menuLabel: 'Alternar menú de navegación',
           socialProfiles: 'Perfiles sociales', chooseLanguage: 'Elegir idioma', themeToggle: 'Tema', themeToggleLabel: 'Alternar tema de color', githubLabel: 'Perfil de GitHub (se abre en una pestaña nueva)',
@@ -1089,6 +1089,115 @@
         if (main) navigationResizeObserver.observe(main);
       }
       scheduleActiveSection();
+
+      function initializeBackToTop() {
+        const backToTopButton = document.querySelector('[data-back-to-top]');
+        if (!backToTopButton || backToTopButton.dataset.backToTopInitialized === 'true') return;
+        backToTopButton.dataset.backToTopInitialized = 'true';
+
+        const configuredTargetSelector = backToTopButton.dataset.backToTopTarget;
+        const configuredTarget = configuredTargetSelector && configuredTargetSelector !== 'auto'
+          ? document.querySelector(configuredTargetSelector)
+          : null;
+        const homeTarget = document.getElementById('home');
+        const pageStart = configuredTarget ?? homeTarget ?? document.querySelector('main');
+        const visibilityTarget = homeTarget ?? document.querySelector('main h1') ?? document.querySelector('main');
+        const focusTarget = pageStart?.matches('h1, h2')
+          ? pageStart
+          : pageStart?.querySelector('h1, h2') ?? document.querySelector('main h1, #home h1');
+        let hasPassedStart = false;
+        let visibilityFrame = 0;
+
+        function setVisible(visible) {
+          if (backToTopButton.dataset.visible === String(visible)) return;
+          if (!visible && document.activeElement === backToTopButton) backToTopButton.blur();
+          backToTopButton.dataset.visible = String(visible);
+          backToTopButton.inert = !visible;
+          backToTopButton.tabIndex = visible ? 0 : -1;
+          if (visible) backToTopButton.removeAttribute('aria-hidden');
+          else backToTopButton.setAttribute('aria-hidden', 'true');
+        }
+
+        function overlapsProtectedControl() {
+          const buttonRect = backToTopButton.getBoundingClientRect();
+          if (!buttonRect.width || !buttonRect.height) return false;
+          const controls = document.querySelectorAll(
+            'form input, form textarea, form select, form button, form a[href], .site-footer a[href], .mobile-panel a[href], .cord-handle, .theme-toggle'
+          );
+          for (const control of controls) {
+            if (control === backToTopButton || backToTopButton.contains(control)) continue;
+            const rect = control.getBoundingClientRect();
+            if (
+              rect.width > 0 && rect.height > 0 &&
+              rect.left < buttonRect.right && rect.right > buttonRect.left &&
+              rect.top < buttonRect.bottom && rect.bottom > buttonRect.top
+            ) return true;
+          }
+          return false;
+        }
+
+        function syncVisibility() {
+          const formHasFocus = document.activeElement?.closest?.('form');
+          setVisible(hasPassedStart && !menu?.open && !formHasFocus && !overlapsProtectedControl());
+        }
+
+        function scheduleVisibilitySync() {
+          if (visibilityFrame) return;
+          visibilityFrame = requestNavFrame(() => {
+            visibilityFrame = 0;
+            syncVisibility();
+          });
+        }
+
+        backToTopButton.setAttribute('aria-hidden', 'true');
+        backToTopButton.inert = true;
+        backToTopButton.tabIndex = -1;
+        backToTopButton.dataset.visible = 'false';
+        setVisible(false);
+
+        menu?.addEventListener('toggle', scheduleVisibilitySync);
+        document.addEventListener('focusin', scheduleVisibilitySync);
+        document.addEventListener('focusout', scheduleVisibilitySync);
+        window.addEventListener('scroll', scheduleVisibilitySync, { passive: true });
+        window.addEventListener('resize', scheduleVisibilitySync, { passive: true });
+
+        if (visibilityTarget && typeof IntersectionObserver === 'function') {
+          const visibilityObserver = new IntersectionObserver((entries) => {
+            const entry = entries[0];
+            if (!entry) return;
+            hasPassedStart = !entry.isIntersecting;
+            scheduleVisibilitySync();
+          }, { threshold: 0 });
+          visibilityObserver.observe(visibilityTarget);
+        } else {
+          const updateVisibilityFallback = () => {
+            hasPassedStart = Boolean(visibilityTarget && visibilityTarget.getBoundingClientRect().bottom <= 0);
+            scheduleVisibilitySync();
+          };
+          window.addEventListener('scroll', updateVisibilityFallback, { passive: true });
+          window.addEventListener('resize', updateVisibilityFallback, { passive: true });
+          updateVisibilityFallback();
+        }
+
+        backToTopButton.addEventListener('click', (event) => {
+          if (backToTopButton.dataset.visible !== 'true') return;
+          if (event.detail === 0 && focusTarget) {
+            if (!focusTarget.hasAttribute('tabindex')) focusTarget.tabIndex = -1;
+            focusTarget.focus({ preventScroll: true });
+          }
+          if (homeTarget) setActiveSection('home');
+          const destinationTop = configuredTarget
+            ? configuredTarget.getBoundingClientRect().top + scrollRoot.scrollTop
+            : 0;
+          window.scrollTo({
+            top: destinationTop,
+            behavior: prefersReducedMotion() ? 'auto' : 'smooth'
+          });
+          scheduleActiveSection();
+        });
+      }
+
+      initializeBackToTop();
 
       const cord = document.querySelector('.cord-handle');
       const cordLine = document.querySelector('.cord-line');
