@@ -15,9 +15,9 @@ function extractSectionIds(html) {
 }
 
 test("homepage retains incumbent title, one labelled H1, and the approved section anchors", () => {
-  assert.match(homepage, /<title>Home - LuisPeche<\/title>/);
+  assert.match(homepage, /<title>Luis Peche Aparcana \| Backend &amp; AI Developer<\/title>/);
   assert.equal((homepage.match(/<h1\b/g) ?? []).length, 1);
-  assert.match(homepage, /<h1 id="hero-title" data-i18n="heroName">Luis Peche<\/h1>/);
+  assert.match(homepage, /<h1 id="hero-title" data-i18n="heroName">Luis Peche Aparcana<\/h1>/);
   assert.deepEqual(extractSectionIds(homepage), ["home", "projects", "skills", "about", "contact"]);
   assert.match(homepage, /href="assets\/css\/work-gallery\.css"/);
   assert.match(homepage, /src="assets\/js\/work-gallery\.js"/);
@@ -68,9 +68,9 @@ test("contact and CV actions keep real local/document destinations and validatio
   assert.match(homepage, /<form[^>]*action="https:\/\/send\.pageclip\.co\//);
   assert.match(homepage, /id="contact-message"[^>]*maxlength="1500"/);
   assert.match(footerTemplate, /https:\/\/mail\.google\.com\/mail\/u\/0\/\?to=pecheaparcana1998@gmail\.com/);
-  assert.match(homepage, /href="cv\.html"/);
-  assert.match(homepage, /download="Luis-Peche-CV\.html"/);
-  assert.doesNotMatch(homepage, /cv\.pdf/i);
+  assert.match(homepage, /href="assets\/pdf\/luis-peche-cv\.pdf"/);
+  assert.match(homepage, /download="luis-peche-cv\.pdf"/);
+  assert.doesNotMatch(homepage, /href="cv\.html"/);
 });
 
 test("home page source has unique IDs and no project-detail local anchors", () => {

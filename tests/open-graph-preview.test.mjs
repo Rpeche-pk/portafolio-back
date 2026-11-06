@@ -12,8 +12,8 @@ const png = await readFile(path.join(root, 'assets/img/og/portada-portafolio.png
 const expectedOpenGraph = {
   'og:type': 'website',
   'og:url': 'https://luispeche.vercel.app/',
-  'og:title': 'Luis Peche | Backend & AI Developer',
-  'og:description': 'Explore my backend and AI projects built with Java, Spring Boot, Python, and AWS.',
+  'og:title': 'Luis Peche Aparcana | Backend & AI Developer',
+  'og:description': 'Luis Peche Aparcana (Luis Peche) is a backend and generative AI developer building microservices and integrations with Java, Spring Boot, Python, and AWS.',
   'og:image': 'https://luispeche.vercel.app/assets/img/og/portada-portafolio.png',
   'og:image:type': 'image/png',
   'og:image:alt': 'Cover image for Luis Peche’s software development portfolio',

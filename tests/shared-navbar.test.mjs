@@ -146,13 +146,13 @@ test("shared navbar preserves destinations and declares accessible collapse cont
 
 test("Work Gallery brand labels retain visible branding in both locales", () => {
   for (const template of [workGalleryNavbar, workGalleryFooter]) {
-    assert.match(template, /aria-label="LP LuisPeche home" data-i18n-aria-label="brandHome"/);
+    assert.match(template, /aria-label="LP Luis Peche home" data-i18n-aria-label="brandHome"/);
     assert.match(template, /<span class="brand-mark" aria-hidden="true">LP<\/span>/);
-    assert.match(template, /Luis<span class="brand-name-highlight">Peche<\/span>/);
+    assert.match(template, /Luis <span class="brand-name-highlight">Peche<\/span>/);
   }
 
-  assert.match(workGalleryRuntime, /brandHome:\s*'LP LuisPeche home'/);
-  assert.match(workGalleryRuntime, /brandHome:\s*'LP LuisPeche, ir al inicio'/);
+  assert.match(workGalleryRuntime, /brandHome:\s*'LP Luis Peche home'/);
+  assert.match(workGalleryRuntime, /brandHome:\s*'LP Luis Peche, ir al inicio'/);
 });
 
 test("navbar styles meet contrast, target, spacing, focus, and fixed-anchor requirements", () => {
