@@ -275,6 +275,9 @@ async function createSiteFiles(sourcePagesDirectory = repositoryRoot) {
   }
 
   outputFiles.set("CNAME", await readFile(join(repositoryRoot, "CNAME")));
+  for (const seoFile of ["robots.txt", "sitemap.xml"]) {
+    outputFiles.set(seoFile, await readFile(join(repositoryRoot, seoFile)));
+  }
   for (const assetPath of await listFiles(join(repositoryRoot, "assets"))) {
     outputFiles.set(`assets/${assetPath}`, await readFile(join(repositoryRoot, "assets", assetPath)));
   }
