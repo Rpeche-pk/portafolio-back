@@ -15,7 +15,7 @@ S7. Give the user the exact deployment and Google Search Console steps, includin
 - T1 — S1-S7 — route: inline — status: done — commit: n/a — audit the published/local baseline, indexable routes, build path, and available verification tools.
 - T2 — S1, S2, S4 — route: inline — status: done — commit: aa3ac1b — add RED homepage metadata, localized full-name H1, responsive layout, and structured-data tests; implement the homepage SEO slice.
 - T3 — S3 — route: inline — status: done — commit: d4e0938 — add per-project metadata regressions and implement unique English titles, descriptions, and canonicals for the six project routes.
-- T4 — S5 — route: inline — status: done — commit: pending — add RED robots/sitemap/build-output tests, then generate and publish both root files through the existing build.
+- T4 — S5 — route: inline — status: done — commit: 11346ae — add RED robots/sitemap/build-output tests, then generate and publish both root files through the existing build.
 - T5 — S6-S7 — route: inline plus independent verification for item 5 — status: blocked — commit: pending — local verification and deployment/Search Console instructions are complete; waiting for a supported independent-verifier session.
 
 ## Log
