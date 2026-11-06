@@ -17,7 +17,7 @@ function extractSectionIds(html) {
 test("homepage retains incumbent title, one labelled H1, and the approved section anchors", () => {
   assert.match(homepage, /<title>Luis Peche Aparcana \| Backend &amp; AI Developer<\/title>/);
   assert.equal((homepage.match(/<h1\b/g) ?? []).length, 1);
-  assert.match(homepage, /<h1 id="hero-title" data-i18n="heroName">Luis Peche Aparcana<\/h1>/);
+  assert.match(homepage, /<h1 id="hero-title" data-i18n="heroName">Luis Peche<\/h1>/);
   assert.deepEqual(extractSectionIds(homepage), ["home", "projects", "skills", "about", "contact"]);
   assert.match(homepage, /href="assets\/css\/work-gallery\.css"/);
   assert.match(homepage, /src="assets\/js\/work-gallery\.js"/);

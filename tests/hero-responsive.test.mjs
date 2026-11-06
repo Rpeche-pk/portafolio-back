@@ -12,7 +12,7 @@ const hero = homepage.match(/<section class="portfolio-block block-intro hero"[^
 
 test("homepage hero preserves the approved content, image, and local actions", () => {
   assert.ok(hero, "homepage Work Gallery hero exists");
-  assert.match(hero, /<h1 id="hero-title"[^>]*>Luis Peche Aparcana<\/h1>/);
+  assert.match(hero, /<h1 id="hero-title"[^>]*>Luis Peche<\/h1>/);
   assert.match(hero, /Backend &amp; Generative AI Developer/);
   assert.match(hero, /<img class="portrait"[^>]*src="assets\/img\/avatars\/perfil\.jpg"[^>]*alt="Portrait of Luis Peche"/);
   assert.match(hero, /href="assets\/pdf\/luis-peche-cv\.pdf"/);

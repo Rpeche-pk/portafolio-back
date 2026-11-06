@@ -50,11 +50,11 @@ test('homepage Open Graph title, description, and URL match canonical metadata',
   assert.deepEqual(metaValues('property', 'og:image'), [`${canonicalUrl}assets/img/og/portada-portafolio.png`]);
 });
 
-test('full-name H1 remains localized in both languages and responsive', () => {
+test('hero-title uses the short name in both languages and remains responsive', () => {
   const heroName = home.match(/<h1\b[^>]*id=["']hero-title["'][^>]*>([\s\S]*?)<\/h1>/i)?.[1].trim();
-  assert.equal(heroName, 'Luis Peche Aparcana');
-  assert.match(workGallery, /en\s*:\s*\{[\s\S]*?heroName:\s*'Luis Peche Aparcana'/);
-  assert.match(workGallery, /es\s*:\s*\{[\s\S]*?heroName:\s*'Luis Peche Aparcana'/);
+  assert.equal(heroName, 'Luis Peche');
+  assert.match(workGallery, /en\s*:\s*\{[\s\S]*?heroName:\s*'Luis Peche'/);
+  assert.match(workGallery, /es\s*:\s*\{[\s\S]*?heroName:\s*'Luis Peche'/);
   assert.match(css, /\.hero\s+#hero-title\s*\{[^}]*max-width:\s*14ch;[^}]*font-size:\s*clamp\(/);
   assert.match(css, /@media\s*\(max-width:\s*760px\)[\s\S]*?\.hero\s+#hero-title\s*\{[^}]*max-width:\s*12ch;[^}]*font-size:\s*clamp\(/);
 });
