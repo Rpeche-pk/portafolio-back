@@ -36,7 +36,7 @@ Risk: item 5 (production deployment); preserve unrelated files and original imag
 - T2 — S1-S3: Add RED metadata regression, valid PNG asset, and one initial-HTML Open Graph set; route: inline test-first; commit: `e8f0624`.
 - T3 — S4: Deploy and verify anonymous HTML/image responses; route: user-owned push to `main`, then parent public verification; no agent push; commit: T2 commit.
 - T4 — S5: Check WhatsApp preview and cache-bust only if needed; route: parent after deployment; commit: none.
-- T5 — S6: Commit the current task-log update on the feature branch and fast-forward local `main`; route: parent inline; commit: pending.
+- T5 — S6: Commit the current task-log update on the feature branch and fast-forward local `main`; route: parent inline; commit: `298d757`.
 - T6 — S6: Delete merged local branches other than `main` with safe Git deletion; leave remote refs untouched; route: parent inline; commit: none.
 
 ## Log
@@ -86,3 +86,6 @@ Vercel CLI 65.12.1 was bootstrapped into `.git/og-preview-npm-cache`. No `VERCEL
 > toma los cambios mandalo a main y avisame para hacer push y luego borra las ramas diferentes a main
 
 The user now wants the local changes on `main`, a notification to perform the push themselves, and removal of local branches other than `main`. This supersedes the Vercel CLI login route; do not push. Current branch is `main` at `d7a95d6`; only `odd/tasks/portfolio-share-preview.md` is modified. `feature/portfolio-share-preview` and `feature/desing-hero` are fully merged into `main`; no unmerged local branches were found. Remote branches will not be deleted. A push to `main` triggers Vercel, GitHub Pages, and Azure Static Web Apps workflows.
+
+### L10 — Local branch cleanup
+`feature/desing-hero` and `feature/portfolio-share-preview` were deleted with `git branch -d` after confirming both were merged into local `main`. Remote refs were untouched. A temporary evidence branch is being used to commit this log update; it will be fast-forwarded into `main` and deleted, then the final local branch list will be verified.
