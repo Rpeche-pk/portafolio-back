@@ -28,11 +28,16 @@ Risk: item 5 (production deployment); preserve unrelated files and original imag
 ### S5 — WhatsApp preview
 > Después del despliegue, pega el enlace en WhatsApp para comprobar la vista previa. Si aparece una tarjeta anterior, prueba la URL con `?v=2` para comprobar si se trata de caché.
 
+### S6 — Local branch integration and cleanup
+> toma los cambios mandalo a main y avisame para hacer push y luego borra las ramas diferentes a main
+
 ## Tasks
 - T1 — S2: Verify image bytes/dimensions and Vercel route; route: inline read-only discovery; commit: none.
 - T2 — S1-S3: Add RED metadata regression, valid PNG asset, and one initial-HTML Open Graph set; route: inline test-first; commit: `e8f0624`.
-- T3 — S4: Build, deploy to Vercel, and verify anonymous HTML/image responses; route: independent high-risk verification plus parent deployment; commit: T2 commit.
+- T3 — S4: Deploy and verify anonymous HTML/image responses; route: user-owned push to `main`, then parent public verification; no agent push; commit: T2 commit.
 - T4 — S5: Check WhatsApp preview and cache-bust only if needed; route: parent after deployment; commit: none.
+- T5 — S6: Commit the current task-log update on the feature branch and fast-forward local `main`; route: parent inline; commit: pending.
+- T6 — S6: Delete merged local branches other than `main` with safe Git deletion; leave remote refs untouched; route: parent inline; commit: none.
 
 ## Log
 
@@ -66,4 +71,18 @@ Observed RED before implementation (2 failing tests: no Open Graph set; `.png` f
 `gentle-ai-verify` read the feature document through `## Log` and independently returned S1-S3 met: nine tags exactly once in both source and generated initial heads, correct `/assets/img/og/` URL, true source/generated PNGs with 1424×752 IHDR, source/output assets byte-identical, and unique Open Graph set. `node --test tests/open-graph-preview.test.mjs` passed 2/2; `node scripts/build-shared-shell.mjs --check` reports 109 files current. S4-S5 remain pending Vercel deployment/WhatsApp. No repo edits or Git state changes by verifier.
 
 ### L5 — Work-unit commit
-T2 implementation, regression test, valid PNG, preserved JPEG source, and feature document were committed on `feature/portfolio-share-preview` as `e8f0624` (`feat(meta): add WhatsApp share preview metadata`).
+T2 implementation, regression test, valid PNG, preserved JPEG source, and feature document were committed on `feature/portfolio-share-preview` as `e8f0624` (`feat(meta): add WhatsApp share preview metadata`). The evidence-doc commit is `d7a95d6`; both commits were fast-forwarded into local `main`, which is currently clean at `d7a95d6`.
+
+### L6 — Deployment routing blocker
+The repository has no Vercel CLI installed and no `.vercel/project.json`. `origin/main` remains at `60daa80`; pushing local `main` would trigger Vercel and the configured GitHub Pages and Azure Static Web Apps workflows (`.github/workflows/static.yml`, `.github/workflows/azure-static-web-apps-purple-sky-0f8cc0610.yml`). The requested target is Vercel only, the user selected Vercel-only CLI/project setup; no Git push is authorized.
+
+### L7 — Vercel-only deployment decision
+The user chose “Configurar despliegue solo en Vercel”. Use a Vercel-specific deployment path only; do not push `main` and do not trigger GitHub Pages or Azure.
+
+### L8 — Authentication blocker
+Vercel CLI 65.12.1 was bootstrapped into `.git/og-preview-npm-cache`. No `VERCEL_TOKEN`, `VERCEL_ORG_ID`, or `VERCEL_PROJECT_ID` environment values are configured. `npx --yes vercel --global-config .git/og-preview-cli-config whoami` returned `Logged out` (exit 1), without using the user's global profile. Deployment is waiting for the user to complete CLI login with `npx --yes vercel --global-config .git/og-preview-cli-config login` from the repository root. No push or deployment occurred.
+
+### L9 — Local main and branch cleanup request
+> toma los cambios mandalo a main y avisame para hacer push y luego borra las ramas diferentes a main
+
+The user now wants the local changes on `main`, a notification to perform the push themselves, and removal of local branches other than `main`. This supersedes the Vercel CLI login route; do not push. Current branch is `main` at `d7a95d6`; only `odd/tasks/portfolio-share-preview.md` is modified. `feature/portfolio-share-preview` and `feature/desing-hero` are fully merged into `main`; no unmerged local branches were found. Remote branches will not be deleted. A push to `main` triggers Vercel, GitHub Pages, and Azure Static Web Apps workflows.
