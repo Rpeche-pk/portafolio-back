@@ -1,13 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="300" height="64" viewBox="0 0 300 64" role="img" aria-labelledby="lockup-title">
-  <title id="lockup-title">LP monogram with Luis Peche wordmark</title>
-  <style>
-    @font-face {
-      font-family: Lato;
-      font-style: normal;
-      font-weight: 700;
-      src: url("../../fonts/S6u9w4BMUTPHh6UVSwiPGQ.woff2") format("woff2");
-    }
-  </style>
-  <path d="M11 11v42h24M31 53V11h12c10 0 16 6 16 16s-6 16-16 16H31" fill="none" stroke="#fff" stroke-width="5.5" stroke-linecap="square" stroke-linejoin="round"/>
-  <text x="80" y="43" fill="#fff" font-family="Lato, Arial, sans-serif" font-size="36" font-weight="700" letter-spacing="-0.8">Luis Peche</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="64" aria-labelledby="lockup-title" role="img" viewBox="0 0 300 64"><title id="lockup-title">LP monogram with Luis Peche wordmark</title><style>@font-face{font-family:Lato;font-style:normal;font-weight:700;src:url(../../fonts/S6u9w4BMUTPHh6UVSwiPGQ.woff2) format(&quot;woff2&quot;)}</style><path fill="none" stroke="#fff" stroke-linecap="square" stroke-linejoin="round" stroke-width="5.5" d="M11 11v42h24M31 53V11h12c10 0 16 6 16 16s-6 16-16 16H31"/><text x="80" y="43" fill="#fff" font-family="Lato, Arial, sans-serif" font-size="36" font-weight="700" letter-spacing="-.8">Luis Peche</text></svg>
