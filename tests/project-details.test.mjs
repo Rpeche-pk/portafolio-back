@@ -34,10 +34,10 @@ const detailContent = {
     technologies: ["Java 17", "Spring Boot", "Spring Data JPA", "Spring Security", "Spring Mail", "Docker", "Firestorage", "Lombok", "Maven", "Zxing", "PostgreSQL", "JWT", "Whiskeysockets/Baileys", "NodeJs 18", "WhatsApp Business"],
   },
   "project-page-1.html": {
-    title: "Dev BOT SUPERMARKET",
+    title: "Proyecto Tesis Maivibot",
     images: ["assets/img/tech/devbot.png"],
-    links: ["https://drive.google.com/file/d/1mu4XKJmX1erhrPCWHEUYw6Vbc105cOXz/view?usp=sharing"],
-    technologies: ["Python", "Selenium", "Selenium Grid", "Scheduled", "NodeJs", "Docker", "Google Cloud Platform", "Dialogflow", "MongoDb", "Facebook Messenger"],
+    links: ["https://github.com/Rpeche-pk/maivi-bot-tesis.git", "https://github.com/Rpeche-pk/micro-supermarket.git"],
+    technologies: ["BuilderBot", "Node.js", "GPT-4o mini", "WhatsApp", "Telegram", "Instagram", "Java 17", "Spring Boot", "MongoDB Atlas", "Python", "Selenium", "Selenium Grid", "Google Cloud"],
   },
   "project-page-2.html": {
     title: 'digital wallet "cashier"',
@@ -58,10 +58,10 @@ const detailContent = {
     technologies: ["Java 17", "Spring Boot", "Spring Data JPA", "Spring Security", "Whiskeysockets/Baileys", "MYSQL", "NodeJs", "WhatsApp Business"],
   },
   "project-page-5.html": {
-    title: "AI Assistant",
-    images: ["assets/img/tech/spring-ai.jpg"],
-    links: ["https://docs.spring.io/spring-ai/reference/api/mcp/mcp-overview.html"],
-    technologies: ["Spring AI Framework", "Java 17/21", "Spring Boot 3.x", "Spring Security", "MCP (Model Context Protocol)", "Vector Databases (Chroma/Pinecone)", "OpenAI API / Azure OpenAI", "RAG Implementation", "Tool Calling & Function Calling", "Agentic Pattern Implementation", "Multi-modal LLM Integration", "Retrieval Augmented Generation", "Intelligent Workflow Orchestration"],
+    title: "OCR",
+    images: ["assets/img/tech/ocr.png"],
+    links: [],
+    technologies: ["Java 25", "Spring Boot", "Spring AI", "Mockito", "SonarQube", "OWASP Dependency-Check", "AWS Textract", "Amazon SNS", "Amazon SQS", "AWS IAM Roles Anywhere", "Amazon Bedrock"],
   },
 };
 
@@ -120,6 +120,19 @@ test("project detail layouts are accessible while retaining titles, media, links
     assert.deepEqual(images, expected.images, `${pageName} media assets`);
     assert.deepEqual(links, expected.links, `${pageName} outbound URLs`);
     assert.deepEqual(technologies, expected.technologies, `${pageName} technology list`);
+  }
+});
+
+test("OCR has no invented link or legacy agent copy; MaiviBot repositories open safely", async () => {
+  const ocr = await readFile(join(repositoryRoot, "project-page-5.html"), "utf8");
+  assert.doesNotMatch(ocr, /\bMCP\b|\bRAG\b|AI Assistant|Multi-LLM|Vector Databases/i);
+  assert.doesNotMatch(ocr, /<a\b/);
+  const maivi = await readFile(join(repositoryRoot, "project-page-1.html"), "utf8");
+  const links = [...maivi.matchAll(/<a\b[^>]*>/g)].map(([tag]) => tag);
+  assert.equal(links.length, 2);
+  for (const tag of links) {
+    assert.match(tag, /target="_blank"/);
+    assert.match(tag, /rel="noopener noreferrer"/);
   }
 });
 

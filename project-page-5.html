@@ -16,14 +16,9 @@
     <title>Projects - LuisPeche</title>
     <link rel="icon" href="assets/img/avatars/perfil.jpg" type="image/jpg">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/Lato.css">
-    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
     <link rel="stylesheet" href="assets/css/bs-theme-overrides.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/Articles-Cards-images.css">
     <link rel="stylesheet" href="assets/css/Footer-Dark-icons.css">
     <link rel="stylesheet" href="assets/css/Lightbox-Gallery-baguetteBox.min.css">
-    <link rel="stylesheet" href="assets/css/pikaday.min.css">
     <link rel="stylesheet" href="assets/css/work-gallery.css">
     <meta name="theme-color" content="#ffffff">
 </head>
@@ -34,42 +29,29 @@
         <section class="portfolio-block project project-detail" aria-labelledby="project-title">
             <div class="container project-detail-container">
                 <div class="heading project-detail-heading">
-                    <h1 id="project-title" class="project-detail-title">AI Assistant</h1>
+                    <h1 id="project-title" class="project-detail-title" data-key="proyects" data-value="proyects-five-title">OCR</h1>
                 </div>
-                <img class="project-detail-cover" src="assets/img/tech/spring-ai.jpg" alt="" decoding="async">
+                <img class="project-detail-cover" src="assets/img/tech/ocr.png" alt="" fetchpriority="high" decoding="async">
                 <div class="row project-detail-grid">
                     <div class="col-12 col-md-6 offset-md-1 info project-detail-copy">
                         <h2 class="fs-3" data-key="proyects" data-value="proyects-five-description">Descripción</h2>
-                        <p data-key="proyects" data-value="proyects-five-parraf-1">🤖<strong>AI Assistant Agent</strong>, un sistema de agentes inteligentes desarrollado con <strong>Spring AI Framework</strong>, implementando arquitecturas RAG (Retrieval Augmented Generation) y servidores MCP (Model Context Protocol) para integración estandarizada con modelos de lenguaje. Este sistema enterprise-grade ofrece capacidades avanzadas de procesamiento de lenguaje natural y toma de decisiones automatizada.</p>
-                        <p data-key="proyects" data-value="proyects-five-parraf-2">
-                            <strong>Patrones Agenticos Avanzados:</strong> Implementa Chain Workflow, Routing Workflow y Orchestrator-Workers para procesamiento inteligente de tareas complejas.</br>
-                            <strong>Integración Multi-LLM:</strong> Soporte para múltiples proveedores (OpenAI, Azure OpenAI, Ollama) con failover automático y balanceo de carga.</br>
-                            <strong>MCP Server Implementation:</strong> Desarrollo de servidores Model Context Protocol para integración estandarizada con herramientas externas y bases de datos vectoriales.</br>
-                            <strong>RAG Architecture:</strong> Sistema de recuperación y generación aumentada con vector stores para consultas contextualizadas sobre documentos empresariales.</br>
-                        </p>
-                        <p class="fs-4 fw-bolder"><strong>Doc</strong>:&nbsp;
-                            <a class="fs-4" data-key="proyects" data-value="proyects-five-sub-title2" href="https://docs.spring.io/spring-ai/reference/api/mcp/mcp-overview.html" target="_blank" rel="external">Spring-AI-MCP-Docs</a>&nbsp;
-                        </p>
+                        <p data-key="proyects" data-value="proyects-five-parraf-1">Se desarrolló e implementó un componente OCR para logística, integrado con el aplicativo core de Indigo Administrativo para cargar archivos. Inicialmente procesó recibos de luz, agua e internet, reduciendo el tiempo operativo que el área usuaria dedicaba a buscar qué datos ingresar de cada recibo.</p>
+                        <p data-key="proyects" data-value="proyects-five-parraf-2">La implementación usó Java 25, Spring Boot y Spring AI con arquitectura limpia, pruebas con Mockito, SonarQube y OWASP Dependency-Check para revisar vulnerabilidades. AWS Textract, Amazon SNS y Amazon SQS se integraron mediante AWS IAM Roles Anywhere para acceder a los recursos de AWS. Amazon Bedrock permitió generar datos más depurados y estructurados.</p>
                     </div>
                     <div class="col-12 col-md-3 offset-md-1 meta project-detail-tech">
-                        <div class="tags"><span class="fs-6 meta-heading">[🔨 Backend ]</span>
+                        <div class="tags"><span class="fs-6 meta-heading" data-key="proyects" data-value="proyects-five-tech-heading">Tecnologías</span>
                             <ul>
-                                <li>Spring AI Framework</li>
-                                <li>Java 17/21</li>
-                                <li>Spring Boot 3.x</li>
-                                <li>Spring Security</li>
-                                <li>MCP (Model Context Protocol)</li>
-                                <li>Vector Databases (Chroma/Pinecone)</li>
-                                <li>OpenAI API / Azure OpenAI</li>
-                                <li>RAG Implementation</li>
-                                <li>Tool Calling & Function Calling</li>
-                            </ul>
-                            <span class="meta-heading">[🧠 AI Capabilities]</span>
-                            <ul>
-                                <li>Agentic Pattern Implementation</li>
-                                <li>Multi-modal LLM Integration</li>
-                                <li>Retrieval Augmented Generation</li>
-                                <li>Intelligent Workflow Orchestration</li>
+                                <li>Java 25</li>
+                                <li>Spring Boot</li>
+                                <li>Spring AI</li>
+                                <li>Mockito</li>
+                                <li>SonarQube</li>
+                                <li>OWASP Dependency-Check</li>
+                                <li>AWS Textract</li>
+                                <li>Amazon SNS</li>
+                                <li>Amazon SQS</li>
+                                <li>AWS IAM Roles Anywhere</li>
+                                <li>Amazon Bedrock</li>
                             </ul>
                         </div>
                     </div>
@@ -78,16 +60,11 @@
         </section>
     </main>
     <!-- shared-footer -->
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/particles.min.js"></script>
-    <script src="assets/js/contact-me.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="assets/js/language.js"></script>
     <script src="assets/js/Lightbox-Gallery-baguetteBox.min.js"></script>
     <script src="assets/js/Lightbox-Gallery.js"></script>
-    <script src="assets/js/pikaday.min.js"></script>
-    <script src="assets/js/theme.js"></script>
     <script src="assets/js/work-gallery.js" defer></script>
 </body>
 

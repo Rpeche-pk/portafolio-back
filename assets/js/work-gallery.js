@@ -4,44 +4,44 @@
       const messages = {
         en: {
           backToTop: 'Back to top', footerNavigation: 'Footer navigation', footerAbout: 'About', footerContact: 'Contact me', footerRights: 'All rights reserved.', footerEmailLabel: 'Compose in Gmail (opens in a new tab)', footerEmailSubject: 'Portfolio contact',
-          pageTitle: 'Luis Peche — Work gallery', zephyrCatalogChatAlt: 'Zephyr Cygnus catalog screen beside a WhatsApp order conversation on two phones.', zephyrPromoChatCatalogAlt: 'Zephyr Cygnus promotional menu and QR screen beside its mobile catalog and WhatsApp order chat.', zephyrMobileCatalogAlt: 'Zephyr Cygnus mobile catalog showing products and a message button.', primaryNavigation: 'Primary navigation', brandHome: 'Luis Peche home', sections: 'Sections',
+          pageTitle: 'Luis Peche — Work gallery', zephyrCatalogChatAlt: 'Zephyr Cygnus catalog screen beside a WhatsApp order conversation on two phones.', zephyrPromoChatCatalogAlt: 'Zephyr Cygnus promotional menu and QR screen beside its mobile catalog and WhatsApp order chat.', zephyrMobileCatalogAlt: 'Zephyr Cygnus mobile catalog showing products and a message button.', primaryNavigation: 'Primary navigation', brandHome: 'LP LuisPeche home', sections: 'Sections',
           navHome: 'Home', navProjects: 'Projects', navSkills: 'Skills', navAbout: 'About Me', menu: 'Menu', menuLabel: 'Toggle navigation menu',
           socialProfiles: 'Social profiles', chooseLanguage: 'Choose language', themeToggle: 'Theme', themeToggleLabel: 'Toggle color theme', githubLabel: 'GitHub profile (opens in a new tab)',
           linkedinLabel: 'LinkedIn profile (opens in a new tab)', languageSpanish: 'Change language to Spanish', languageEnglish: 'Change language to English',
           heroName: 'Luis Peche', heroRole: 'Backend & Generative AI Developer', heroRoleBadge: 'JAVA & AI BACKEND SPECIALIST',
           heroSummary: 'I develop microservices and integrations with Java, Spring Boot, and SQL Server, as well as generative AI agents with Python. I have over 2 years of experience in the banking sector, also working with AWS services and Salesforce Marketing Cloud',
           stackTitle: 'Tech Stack', techStack: 'Tech Stack', techJava: 'Java', techPython: 'Python', techSpringBoot: 'Spring Boot', techAws: 'AWS', techGenerativeAi: 'Generative AI', techMarketingCloud: 'Marketing Cloud', techDocker: 'Docker', techSqlServer: 'SQL Server',
-          bankExperienceTitle: '2+ years in the banking sector', bankExperienceSummary: 'Developing backend solutions, microservices, and integrations for banking processes', certificationsTitle: 'Certifications', certificationListLabel: 'AWS certification examples', certificationViewLabel: 'View credential', certificationNewTabLabel: 'opens in a new tab', certificationPendingLabel: 'Credly URL pending', confirmedProfileDetails: 'Confirmed profile details',
+          bankExperienceTitle: '2+ years in the banking sector', bankExperienceSummary: 'Developing backend solutions, microservices, and integrations for banking processes', certificationsTitle: 'Certifications', certificationListLabel: 'AWS certification examples', certificationViewLabel: 'View credential', certificationAiViewLabel: 'View AI credential', certificationNewTabLabel: 'opens in a new tab', confirmedProfileDetails: 'Confirmed profile details',
           knowMe: 'Know Me', downloadCV: 'Download CV', portraitAlt: 'Portrait of Luis Peche', photoBadgesLabel: 'Confirmed photo details', photoCardTitle: 'Backend & Cloud', photoCardSummary: 'Microservices · AWS · Generative AI',
-          aboutEyebrow: 'PROFESSIONAL & ACADEMIC JOURNEY', aboutTitle: 'Professional Milestones', aboutSubtitle: 'My professional experience and education in software development, technology, and banking solutions', projectsEyebrow: 'PROJECTS', skillsEyebrow: 'TECHNICAL STACK & TOOLING', aboutFiltersLabel: 'Filter milestones', aboutTimelineLabel: 'Professional and academic milestones', aboutFilterAll: 'All milestones', aboutFilterExperience: 'Experience', aboutFilterEducation: 'Education', aboutCategoryExperience: 'Experience', aboutCategoryEducation: 'Education', aboutCategoryCertification: 'Certification', aboutCertificateAction: 'View certificate', aboutDocumentAction: 'View document', aboutStatusAll: '{count} milestones shown', aboutStatusExperience: '{count} experience records shown', aboutStatusEducation: '{count} education and certification records shown', aboutDateNoCountry: 'Nov. 2023 — Present', aboutDateDataAnalytics: 'Sep. 2023 — Nov. 2023', aboutDateZephyr: 'Aug. 2023 — Present', aboutDateAlura: 'May. 2023 — Sep. 2023', aboutDateIbague: 'Apr. 2023 — Jun. 2023', aboutDateJavaDeveloper: 'Feb. 2022 — Mar. 2022', aboutDateJavaProgrammer: 'Oct. 2021 — Nov. 2021', aboutDateAws: 'Mar. 2021', aboutDateHospital: 'May. 2019 — Nov. 2019', aboutDateSystemsEngineering: 'Dec. 2016 — Apr. 2022', aboutTitleNoCountry: 'Backend Developer', aboutTitleZephyr: 'Freelance Programmer', aboutTitleHospital: 'IT Unit', aboutTitleDataAnalytics: 'Bootcamp Data Analytics', aboutTitleAlura: 'Java and Spring boot specialization - Alura', aboutTitleIbague: 'Java and Spring boot - Advanced', aboutTitleJavaDeveloper: 'Java Developer', aboutTitleJavaProgrammer: 'Java Programmer', aboutTitleSystemsEngineering: 'Systems Engineering', aboutDescriptionNoCountry: 'Backend work on the “Cashier” digital wallet using a layered REST architecture, design patterns, and good practices.', aboutDescriptionZephyr: 'A chatbot service that initially manages the fast-food sales process and could be adapted to other commercial processes.', aboutDescriptionHospital: 'Managed MSSQL Server queries for medical appointments, Power BI reports, and the GALENHOS system; also developed a Java desktop app to meet staff needs.', aboutDescriptionDataAnalytics: 'Hands-on training in data analytics with Python, Microsoft SQL Server, and Power BI.', aboutDescriptionAlura: 'REST API development using a layered approach and the Richardson maturity model, with work on MySQL databases.', aboutDescriptionIbague: 'REST API development with layered organization, Richardson maturity principles, PostgreSQL administration, Spring Data, Spring Security, OpenAPI, Postman, Lombok, and Spring Boot.', aboutDescriptionJavaDeveloper: 'The course covered Java libraries, frameworks, good practices, and design patterns for web applications.', aboutDescriptionJavaProgrammer: 'Java SE and Jakarta EE component development, plus preparation for the Oracle Java 11 Developer exam (1Z0-819).', aboutDescriptionAws: 'Introductory AWS course covering cloud fundamentals, best practices, and console navigation.', aboutDescriptionSystemsEngineering: 'The CV states I am a Bachiller in Systems Engineering.', aboutTagLayeredArchitecture: 'Layered architecture', aboutTagDesignPatterns: 'Design patterns', aboutTagGoodPractices: 'Good practices', aboutTagRichardson: 'Richardson maturity model', aboutTagOracleExam: 'Oracle Java 11 Developer exam preparation', navContact: 'Contact',
+          aboutEyebrow: 'PROFESSIONAL & ACADEMIC JOURNEY', aboutTitle: 'Professional Milestones', aboutSubtitle: 'My professional experience and education in software development, technology, and banking solutions', projectsEyebrow: 'PROJECTS', skillsEyebrow: 'TECHNICAL STACK & TOOLING', aboutFiltersLabel: 'Filter milestones', aboutTimelineLabel: 'Professional and academic milestones', aboutFilterAll: 'All milestones', aboutFilterExperience: 'Experience', aboutFilterEducation: 'Education', aboutCategoryExperience: 'Experience', aboutCategoryEducation: 'Education', aboutCategoryCertification: 'Certification', aboutCertificateAction: 'View certificate', aboutDownloadCertificateAction: 'Download certificate', aboutDocumentAction: 'View document', aboutStatusAll: '{count} milestones shown', aboutStatusExperience: '{count} experience records shown', aboutStatusEducation: '{count} education and certification records shown', aboutDateNoCountry: 'Oct. 2023 — Jan. 2024', aboutDateAiPractitioner: 'Sep. 24, 2026 — Sep. 24, 2029', aboutDateJavaArchitecture: 'Aug. 16, 2025 — Jan. 10, 2026', aboutDateDataAnalytics: 'Sep. 2023 — Nov. 2023', aboutDateAlura: 'May. 2023 — Sep. 2023', aboutDateIbague: 'Apr. 2023 — Jun. 2023', aboutDateJavaDeveloper: 'Feb. 2022 — Mar. 2022', aboutDateJavaProgrammer: 'Oct. 2021 — Nov. 2021', aboutDateAws: 'Mar. 2021', aboutDateHospital: 'May. 2019 — Nov. 2019', aboutDateSystemsEngineering: 'Dec. 2016 — Apr. 2022', aboutTitleNoCountry: 'Backend Developer', aboutTitleAiPractitioner: 'AWS Certified AI Practitioner', aboutTitleJavaArchitecture: 'Software Architecture in Java', aboutTitleHospital: 'IT Unit', aboutTitleDataAnalytics: 'Bootcamp Data Analytics', aboutTitleAlura: 'Java and Spring boot specialization - Alura', aboutTitleIbague: 'Java and Spring boot - Advanced', aboutTitleJavaDeveloper: 'Java Developer', aboutTitleJavaProgrammer: 'Java Programmer', aboutTitleSystemsEngineering: 'Systems Engineering', aboutDescriptionNoCountry: 'I participated in multicultural teams developing backend solutions with Java and Spring Boot, collaborating to solve technical challenges and meet delivery deadlines.', aboutDescriptionAiPractitioner: 'The AWS Certified AI Practitioner is a foundational AWS AI credential, earned Sep. 24, 2026 and valid for three years through Sep. 24, 2029.', aboutDescriptionJavaArchitecture: 'Completed a 102-hour program covering Layered, Hexagonal, and Clean Architecture with Java and Spring, strengthening my approach to designing maintainable, scalable, and decoupled systems.', aboutDescriptionHospital: 'Managed MSSQL Server queries for medical appointments, Power BI reports, and the GALENHOS system; also developed a Java desktop app to meet staff needs.', aboutDescriptionDataAnalytics: 'Hands-on training in data analytics with Python, Microsoft SQL Server, and Power BI.', aboutDescriptionAlura: 'REST API development using a layered approach and the Richardson maturity model, with work on MySQL databases.', aboutDescriptionIbague: 'REST API development with layered organization, Richardson maturity principles, PostgreSQL administration, Spring Data, Spring Security, OpenAPI, Postman, Lombok, and Spring Boot.', aboutDescriptionJavaDeveloper: 'The course covered Java libraries, frameworks, good practices, and design patterns for web applications.', aboutDescriptionJavaProgrammer: 'Java SE and Jakarta EE component development, plus preparation for the Oracle Java 11 Developer exam (1Z0-819).', aboutDescriptionAws: 'Introductory AWS course covering cloud fundamentals, best practices, and console navigation.', aboutDescriptionSystemsEngineering: 'The CV states I am a Bachiller in Systems Engineering.', aboutTagLayeredArchitecture: 'Layered architecture', aboutTagDesignPatterns: 'Design patterns', aboutTagGoodPractices: 'Good practices', aboutTagRichardson: 'Richardson maturity model', aboutTagOracleExam: 'Oracle Java 11 Developer exam preparation', navContact: 'Contact',
           contactTitle: 'Contact Me', contactIntro: 'Tell me what you’re building, or reach out through a direct channel.',
           contactAsideLabel: 'Direct channels and engineering domains', contactChannelsTitle: 'Direct Channels', contactChannelsIntro: 'Email me or visit my professional profiles.', contactChannelsLabel: 'Contact channels',
           contactEmailLabel: 'Email', contactEmailValue: 'Compose in Gmail', contactLinkedInLabel: 'LinkedIn', contactLinkedInValue: 'Open profile', contactGitHubLabel: 'GitHub', contactGitHubValue: 'Open profile', contactExternalNotice: 'opens in a new tab',
           contactFocusTitle: 'Target Engineering Domains', contactFocusListLabel: 'Target engineering domains',
           contactFormTitle: 'Send a message', contactFormIntro: 'All fields are required.', contactName: 'Name', contactNameHelp: 'How should I address you?', contactEmail: 'Email', contactEmailHelp: 'I’ll use this address to reply.', contactMessage: 'Message', contactMessageHelp: 'Briefly tell me what you’re working on.', contactMessageLimit: 'Maximum 1500 characters.', contactSend: 'Send message', contactSending: 'Sending…', contactNameRequired: 'Enter your name.', contactEmailRequired: 'Enter your email address.', contactEmailInvalid: 'Enter a valid email address.', contactMessageRequired: 'Enter a message.', contactSuccess: 'Your message was sent successfully.', contactFailure: 'Your message could not be sent. Please try again or email me directly.', contactUnavailable: 'Automatic sending is unavailable. You can still reach me directly by email.',
-          projectsTitle: 'What I Build', projectsIntro: 'Selected work from my portfolio', skillsTitle: 'Tools Behind the Work', skillsIntro: 'Technologies documented across my projects and profile', skillsFilterAll: 'All', skillsCarouselLabel: 'Technology carousel', skillsFiltersLabel: 'Filter technologies by category', skillsTrackLabel: 'Technology cards', skillsHelp: 'Use the arrow controls, keyboard, or swipe to browse.', skillsCategoryLanguages: 'Languages', skillsCategoryFrameworks: 'Frameworks & APIs', skillsCategoryData: 'Data', skillsCategorySecurity: 'Security', skillsCategoryCloud: 'Cloud & tooling', skillsPrevious: 'Previous technologies', skillsNext: 'Next technologies', skillsPause: 'Pause automatic scrolling', skillsResume: 'Resume automatic scrolling', skillsRestart: 'Restart automatic scrolling', skillsPauseLabel: 'Pause', skillsResumeLabel: 'Resume', skillsRestartLabel: 'Restart', skillsStatusRunning: 'Auto-scroll on', skillsStatusPaused: 'Auto-scroll paused', skillsStatusReduced: 'Paused for reduced motion', skillsStatusEnd: 'End of the list', skillsSlideRole: 'slide', skillsSlideLabel: '{name}, {position} of {total}', technologies: 'Technologies', projectDetailsAction: 'Details', projectDetailsLabel: 'View details for', projectFooterDetails: 'Details', projectFooterDetailsLabel: 'Open details for', projectDemoAction: 'Demo', projectDemoLabel: 'Open live demo for', projectExternalNewTab: 'opens in a new tab',
+          projectsTitle: 'What I Build', projectsIntro: 'Selected work from my portfolio', skillsTitle: 'Tools Behind the Work', skillsIntro: 'Technologies documented across my projects and profile', skillsFilterAll: 'All', skillsCarouselLabel: 'Technology carousel', skillsFiltersLabel: 'Filter technologies by category', skillsTrackLabel: 'Technology cards', skillsHelp: 'Use the arrow controls, keyboard, swipe, or drag with the mouse to browse.', skillsCategoryLanguages: 'Languages', skillsCategoryAi: 'AI', skillsCategoryFrameworks: 'Frameworks & APIs', skillsCategoryData: 'Data', skillsCategorySecurity: 'Security', skillsCategoryCloud: 'Cloud & tooling', skillsPrevious: 'Previous technologies', skillsNext: 'Next technologies', skillsPause: 'Pause automatic scrolling', skillsResume: 'Resume automatic scrolling', skillsRestart: 'Restart automatic scrolling', skillsPauseLabel: 'Pause', skillsResumeLabel: 'Resume', skillsRestartLabel: 'Restart', skillsStatusRunning: 'Auto-scroll on', skillsStatusPaused: 'Auto-scroll paused', skillsStatusReduced: 'Paused for reduced motion', skillsStatusEnd: 'End of the list', skillsSlideRole: 'slide', skillsSlideLabel: '{name}, {position} of {total}', technologies: 'Technologies', projectDetailsAction: 'Details', projectDetailsLabel: 'View details for', projectFooterDetails: 'Details', projectFooterDetailsLabel: 'Open details for', projectDemoAction: 'Demo', projectDemoLabel: 'Open live demo for', projectExternalNewTab: 'opens in a new tab',
           cordLabel: 'Pull the cord to switch the color theme.', cordHintLine1: 'Pull the', cordHintLine2: 'cord!',
           cordHelp: 'Pull down or press Enter or Space to switch the color theme.',
           cordActivated: 'Theme changed.'
         },
         es: {
           backToTop: 'Volver al inicio', footerNavigation: 'Navegación del pie de página', footerAbout: 'Sobre mí', footerContact: 'Contacto', footerRights: 'Todos los derechos reservados.', footerEmailLabel: 'Redactar en Gmail (se abre en una pestaña nueva)', footerEmailSubject: 'Contacto desde el portafolio',
-          pageTitle: 'Luis Peche — Proyectos', zephyrCatalogChatAlt: 'Pantallas del catálogo de Zephyr Cygnus y de un pedido por WhatsApp en dos teléfonos.', zephyrPromoChatCatalogAlt: 'Pantalla promocional de Zephyr Cygnus con menú y código QR junto al catálogo móvil y al chat de pedido por WhatsApp.', zephyrMobileCatalogAlt: 'Catálogo móvil de Zephyr Cygnus con productos y un botón para enviar un mensaje.', primaryNavigation: 'Navegación principal', brandHome: 'Inicio de Luis Peche', sections: 'Secciones',
+          pageTitle: 'Luis Peche — Proyectos', zephyrCatalogChatAlt: 'Pantallas del catálogo de Zephyr Cygnus y de un pedido por WhatsApp en dos teléfonos.', zephyrPromoChatCatalogAlt: 'Pantalla promocional de Zephyr Cygnus con menú y código QR junto al catálogo móvil y al chat de pedido por WhatsApp.', zephyrMobileCatalogAlt: 'Catálogo móvil de Zephyr Cygnus con productos y un botón para enviar un mensaje.', primaryNavigation: 'Navegación principal', brandHome: 'LP LuisPeche, ir al inicio', sections: 'Secciones',
           navHome: 'Inicio', navProjects: 'Proyectos', navSkills: 'Habilidades', navAbout: 'Sobre mí', menu: 'Menú', menuLabel: 'Alternar menú de navegación',
           socialProfiles: 'Perfiles sociales', chooseLanguage: 'Elegir idioma', themeToggle: 'Tema', themeToggleLabel: 'Alternar tema de color', githubLabel: 'Perfil de GitHub (se abre en una pestaña nueva)',
           linkedinLabel: 'Perfil de LinkedIn (se abre en una pestaña nueva)', languageSpanish: 'Cambiar el idioma a español', languageEnglish: 'Cambiar el idioma a inglés',
           heroName: 'Luis Peche', heroRole: 'Desarrollador Backend & IA Generativa', heroRoleBadge: 'ESPECIALISTA BACKEND JAVA E IA',
           heroSummary: 'Desarrollo microservicios e integraciones con Java, Spring Boot y SQL Server, y agentes de IA generativa con Python. Cuento con más de 2 años de experiencia en el sector bancario, trabajando también con servicios de AWS y Salesforce Marketing Cloud',
           stackTitle: 'Stack tecnológico', techStack: 'Stack tecnológico', techJava: 'Java', techPython: 'Python', techSpringBoot: 'Spring Boot', techAws: 'AWS', techGenerativeAi: 'IA generativa', techMarketingCloud: 'Marketing Cloud', techDocker: 'Docker', techSqlServer: 'SQL Server',
-          bankExperienceTitle: 'Más de 2 años en el sector bancario', bankExperienceSummary: 'Desarrollo de soluciones backend, microservicios e integraciones para procesos bancarios', certificationsTitle: 'Certificaciones', certificationListLabel: 'Ejemplos de certificaciones AWS', certificationViewLabel: 'Ver credencial', certificationNewTabLabel: 'se abre en una pestaña nueva', certificationPendingLabel: 'Falta la URL de Credly', confirmedProfileDetails: 'Datos confirmados del perfil',
+          bankExperienceTitle: 'Más de 2 años en el sector bancario', bankExperienceSummary: 'Desarrollo de soluciones backend, microservicios e integraciones para procesos bancarios', certificationsTitle: 'Certificaciones', certificationListLabel: 'Ejemplos de certificaciones AWS', certificationViewLabel: 'Ver credencial', certificationAiViewLabel: 'Ver credencial de IA', certificationNewTabLabel: 'se abre en una pestaña nueva', confirmedProfileDetails: 'Datos confirmados del perfil',
           knowMe: 'Conóceme', downloadCV: 'Descargar CV', portraitAlt: 'Retrato de Luis Peche', photoBadgesLabel: 'Datos confirmados de la foto', photoCardTitle: 'Backend & Cloud', photoCardSummary: 'Microservicios · AWS · IA generativa',
-          aboutEyebrow: 'TRAYECTORIA PROFESIONAL Y ACADÉMICA', aboutTitle: 'Mi trayectoria', aboutSubtitle: 'Mi experiencia profesional y formación en desarrollo de software, tecnología y soluciones para el sector bancario', projectsEyebrow: 'PROYECTOS', skillsEyebrow: 'STACK TECNOLÓGICO Y HERRAMIENTAS', aboutFiltersLabel: 'Filtrar trayectoria', aboutTimelineLabel: 'Trayectoria profesional y académica', aboutFilterAll: 'Toda la trayectoria', aboutFilterExperience: 'Experiencia', aboutFilterEducation: 'Formación', aboutCategoryExperience: 'Experiencia', aboutCategoryEducation: 'Educación', aboutCategoryCertification: 'Certificación', aboutCertificateAction: 'Ver certificado', aboutDocumentAction: 'Ver documento', aboutStatusAll: 'Se muestran {count} registros de trayectoria', aboutStatusExperience: 'Se muestran {count} registros de experiencia', aboutStatusEducation: 'Se muestran {count} registros de formación', aboutDateNoCountry: 'nov. 2023 — actualidad', aboutDateDataAnalytics: 'sep. 2023 — nov. 2023', aboutDateZephyr: 'ago. 2023 — actualidad', aboutDateAlura: 'may. 2023 — sep. 2023', aboutDateIbague: 'abr. 2023 — jun. 2023', aboutDateJavaDeveloper: 'feb. 2022 — mar. 2022', aboutDateJavaProgrammer: 'oct. 2021 — nov. 2021', aboutDateAws: 'mar. 2021', aboutDateHospital: 'may. 2019 — nov. 2019', aboutDateSystemsEngineering: 'dic. 2016 — abr. 2022', aboutTitleNoCountry: 'Backend Developer', aboutTitleZephyr: 'Freelance Programmer', aboutTitleHospital: 'Unidad de Informática', aboutTitleDataAnalytics: 'Bootcamp Data Analytics', aboutTitleAlura: 'Especialización Java y Spring Boot - Alura', aboutTitleIbague: 'Java y Spring Boot - Avanzado', aboutTitleJavaDeveloper: 'Java Developer', aboutTitleJavaProgrammer: 'Java Programmer', aboutTitleSystemsEngineering: 'Ingeniería de Sistemas', aboutDescriptionNoCountry: 'Participación en el desarrollo backend de la billetera digital “Cashier” con arquitectura REST en capas, patrones de diseño y buenas prácticas.', aboutDescriptionZephyr: 'Servicio de chatbot que gestiona inicialmente el proceso de venta de comida rápida y podría adaptarse a otros procesos comerciales.', aboutDescriptionHospital: 'Gestión de consultas MSSQL Server para citas médicas, reportes de Power BI y el sistema GALENHOS; además, desarrollo de una aplicación Java de escritorio según las necesidades del personal.', aboutDescriptionDataAnalytics: 'Formación práctica en análisis de datos con Python, Microsoft SQL Server y Power BI.', aboutDescriptionAlura: 'Desarrollo de APIs REST con arquitectura en capas según el modelo de madurez de Richardson y trabajo con bases de datos MySQL.', aboutDescriptionIbague: 'Desarrollo de APIs REST por capas, principios de madurez de Richardson, administración de PostgreSQL y uso de Spring Data, Spring Security, OpenAPI, Postman, Lombok y Spring Boot.', aboutDescriptionJavaDeveloper: 'El curso abordó librerías Java, frameworks, buenas prácticas y patrones de diseño para aplicaciones web.', aboutDescriptionJavaProgrammer: 'Desarrollo de componentes con Java SE y Jakarta EE, y preparación para el examen Oracle Java 11 Developer (1Z0-819).', aboutDescriptionAws: 'Curso introductorio de AWS sobre fundamentos de nube, buenas prácticas y navegación por la consola.', aboutDescriptionSystemsEngineering: 'Actualmente soy bachiller en Ingeniería de Sistemas.', aboutTagLayeredArchitecture: 'Arquitectura en capas', aboutTagDesignPatterns: 'Patrones de diseño', aboutTagGoodPractices: 'Buenas prácticas', aboutTagRichardson: 'Modelo de madurez de Richardson', aboutTagOracleExam: 'Preparación para el examen Oracle Java 11 Developer', navContact: 'Contacto',
+          aboutEyebrow: 'TRAYECTORIA PROFESIONAL Y ACADÉMICA', aboutTitle: 'Mi trayectoria', aboutSubtitle: 'Mi experiencia profesional y formación en desarrollo de software, tecnología y soluciones para el sector bancario', projectsEyebrow: 'PROYECTOS', skillsEyebrow: 'STACK TECNOLÓGICO Y HERRAMIENTAS', aboutFiltersLabel: 'Filtrar trayectoria', aboutTimelineLabel: 'Trayectoria profesional y académica', aboutFilterAll: 'Toda la trayectoria', aboutFilterExperience: 'Experiencia', aboutFilterEducation: 'Formación', aboutCategoryExperience: 'Experiencia', aboutCategoryEducation: 'Educación', aboutCategoryCertification: 'Certificación', aboutCertificateAction: 'Ver certificado', aboutDownloadCertificateAction: 'Descargar certificado', aboutDocumentAction: 'Ver documento', aboutStatusAll: 'Se muestran {count} registros de trayectoria', aboutStatusExperience: 'Se muestran {count} registros de experiencia', aboutStatusEducation: 'Se muestran {count} registros de formación', aboutDateNoCountry: 'octubre de 2023 – enero de 2024', aboutDateAiPractitioner: '24 sep. 2026 — 24 sep. 2029', aboutDateJavaArchitecture: '16 ago. 2025 — 10 ene. 2026', aboutDateDataAnalytics: 'sep. 2023 — nov. 2023', aboutDateAlura: 'may. 2023 — sep. 2023', aboutDateIbague: 'abr. 2023 — jun. 2023', aboutDateJavaDeveloper: 'feb. 2022 — mar. 2022', aboutDateJavaProgrammer: 'oct. 2021 — nov. 2021', aboutDateAws: 'mar. 2021', aboutDateHospital: 'may. 2019 — nov. 2019', aboutDateSystemsEngineering: 'dic. 2016 — abr. 2022', aboutTitleNoCountry: 'Backend Developer', aboutTitleAiPractitioner: 'AWS Certified AI Practitioner', aboutTitleJavaArchitecture: 'Software Architecture in Java', aboutTitleHospital: 'Unidad de Informática', aboutTitleDataAnalytics: 'Bootcamp Data Analytics', aboutTitleAlura: 'Especialización Java y Spring Boot - Alura', aboutTitleIbague: 'Java y Spring Boot - Avanzado', aboutTitleJavaDeveloper: 'Java Developer', aboutTitleJavaProgrammer: 'Java Programmer', aboutTitleSystemsEngineering: 'Ingeniería de Sistemas', aboutDescriptionNoCountry: 'Participé en equipos multiculturales desarrollando soluciones backend con Java y Spring Boot, colaborando en la resolución de retos técnicos y el cumplimiento de los plazos de entrega.', aboutDescriptionAiPractitioner: 'Una credencial fundamental de AWS en IA, obtenida el 24 de septiembre de 2026 y vigente por tres años hasta el 24 de septiembre de 2029.', aboutDescriptionJavaArchitecture: 'Culminé un programa de 102 horas sobre arquitecturas en capas, hexagonal y limpia con Java y Spring, que fortaleció mi criterio para diseñar sistemas mantenibles, escalables y desacoplados.', aboutDescriptionHospital: 'Gestión de consultas MSSQL Server para citas médicas, reportes de Power BI y el sistema GALENHOS; además, desarrollo de una aplicación Java de escritorio según las necesidades del personal.', aboutDescriptionDataAnalytics: 'Formación práctica en análisis de datos con Python, Microsoft SQL Server y Power BI.', aboutDescriptionAlura: 'Desarrollo de APIs REST con arquitectura en capas según el modelo de madurez de Richardson y trabajo con bases de datos MySQL.', aboutDescriptionIbague: 'Desarrollo de APIs REST por capas, principios de madurez de Richardson, administración de PostgreSQL y uso de Spring Data, Spring Security, OpenAPI, Postman, Lombok y Spring Boot.', aboutDescriptionJavaDeveloper: 'El curso abordó librerías Java, frameworks, buenas prácticas y patrones de diseño para aplicaciones web.', aboutDescriptionJavaProgrammer: 'Desarrollo de componentes con Java SE y Jakarta EE, y preparación para el examen Oracle Java 11 Developer (1Z0-819).', aboutDescriptionAws: 'Curso introductorio de AWS sobre fundamentos de nube, buenas prácticas y navegación por la consola.', aboutDescriptionSystemsEngineering: 'Actualmente soy bachiller en Ingeniería de Sistemas.', aboutTagLayeredArchitecture: 'Arquitectura en capas', aboutTagDesignPatterns: 'Patrones de diseño', aboutTagGoodPractices: 'Buenas prácticas', aboutTagRichardson: 'Modelo de madurez de Richardson', aboutTagOracleExam: 'Preparación para el examen Oracle Java 11 Developer', navContact: 'Contacto',
           contactTitle: 'Contáctame', contactIntro: 'Contame qué estás desarrollando o escribime por uno de los canales directos.',
           contactAsideLabel: 'Canales directos y áreas de especialización', contactChannelsTitle: 'Canales directos', contactChannelsIntro: 'Escribime por email o visitá mis perfiles profesionales.', contactChannelsLabel: 'Canales de contacto',
           contactEmailLabel: 'Email', contactEmailValue: 'Redactar en Gmail', contactLinkedInLabel: 'LinkedIn', contactLinkedInValue: 'Ver perfil', contactGitHubLabel: 'GitHub', contactGitHubValue: 'Ver perfil', contactExternalNotice: 'se abre en una pestaña nueva',
           contactFocusTitle: 'Áreas de especialización', contactFocusListLabel: 'Áreas de especialización',
           contactFormTitle: 'Enviar un mensaje', contactFormIntro: 'Todos los campos son obligatorios.', contactName: 'Nombre', contactNameHelp: '¿Cómo querés que te llame?', contactEmail: 'Correo electrónico', contactEmailHelp: 'Voy a usar este correo para responderte.', contactMessage: 'Mensaje', contactMessageHelp: 'Contame brevemente en qué estás trabajando.', contactMessageLimit: 'Máximo 1500 caracteres.', contactSend: 'Enviar mensaje', contactSending: 'Enviando…', contactNameRequired: 'Escribí tu nombre.', contactEmailRequired: 'Escribí tu correo electrónico.', contactEmailInvalid: 'Ingresá un correo electrónico válido.', contactMessageRequired: 'Escribí tu mensaje.', contactSuccess: 'Tu mensaje se envió correctamente.', contactFailure: 'No se pudo enviar tu mensaje. Probá de nuevo o escribime por email.', contactUnavailable: 'El envío automático no está disponible. Podés escribirme directamente por email.',
-          projectsTitle: 'Lo que construyo', projectsIntro: 'Proyectos seleccionados de mi portafolio', skillsTitle: 'Herramientas detrás del trabajo', skillsIntro: 'Tecnologías documentadas en mis proyectos y perfil', skillsFilterAll: 'Todas', skillsCarouselLabel: 'Carrusel de tecnologías', skillsFiltersLabel: 'Filtrar tecnologías por categoría', skillsTrackLabel: 'Tarjetas de tecnologías', skillsHelp: 'Usá los controles de flecha, el teclado o deslizá para recorrer.', skillsCategoryLanguages: 'Lenguajes', skillsCategoryFrameworks: 'Frameworks y APIs', skillsCategoryData: 'Datos', skillsCategorySecurity: 'Seguridad', skillsCategoryCloud: 'Nube y herramientas', skillsPrevious: 'Tecnologías anteriores', skillsNext: 'Tecnologías siguientes', skillsPause: 'Pausar desplazamiento automático', skillsResume: 'Reanudar desplazamiento automático', skillsRestart: 'Reiniciar desplazamiento automático', skillsPauseLabel: 'Pausar', skillsResumeLabel: 'Reanudar', skillsRestartLabel: 'Reiniciar', skillsStatusRunning: 'Desplazamiento automático activo', skillsStatusPaused: 'Desplazamiento automático pausado', skillsStatusReduced: 'Pausado por movimiento reducido', skillsStatusEnd: 'Fin de la lista', skillsSlideRole: 'diapositiva', skillsSlideLabel: '{name}, {position} de {total}', technologies: 'Tecnologías', projectDetailsAction: 'Detalles', projectDetailsLabel: 'Ver detalles de', projectFooterDetails: 'Detalles', projectFooterDetailsLabel: 'Ver detalles de', projectDemoAction: 'Demo', projectDemoLabel: 'Abrir demo de', projectExternalNewTab: 'se abre en una pestaña nueva',
+          projectsTitle: 'Lo que construyo', projectsIntro: 'Proyectos seleccionados de mi portafolio', skillsTitle: 'Herramientas detrás del trabajo', skillsIntro: 'Tecnologías documentadas en mis proyectos y perfil', skillsFilterAll: 'Todas', skillsCarouselLabel: 'Carrusel de tecnologías', skillsFiltersLabel: 'Filtrar tecnologías por categoría', skillsTrackLabel: 'Tarjetas de tecnologías', skillsHelp: 'Usá los controles de flecha, el teclado, deslizá o arrastrá con el mouse para recorrer.', skillsCategoryLanguages: 'Lenguajes', skillsCategoryAi: 'IA', skillsCategoryFrameworks: 'Frameworks y APIs', skillsCategoryData: 'Datos', skillsCategorySecurity: 'Seguridad', skillsCategoryCloud: 'Nube y herramientas', skillsPrevious: 'Tecnologías anteriores', skillsNext: 'Tecnologías siguientes', skillsPause: 'Pausar desplazamiento automático', skillsResume: 'Reanudar desplazamiento automático', skillsRestart: 'Reiniciar desplazamiento automático', skillsPauseLabel: 'Pausar', skillsResumeLabel: 'Reanudar', skillsRestartLabel: 'Reiniciar', skillsStatusRunning: 'Desplazamiento automático activo', skillsStatusPaused: 'Desplazamiento automático pausado', skillsStatusReduced: 'Pausado por movimiento reducido', skillsStatusEnd: 'Fin de la lista', skillsSlideRole: 'diapositiva', skillsSlideLabel: '{name}, {position} de {total}', technologies: 'Tecnologías', projectDetailsAction: 'Detalles', projectDetailsLabel: 'Ver detalles de', projectFooterDetails: 'Detalles', projectFooterDetailsLabel: 'Ver detalles de', projectDemoAction: 'Demo', projectDemoLabel: 'Abrir demo de', projectExternalNewTab: 'se abre en una pestaña nueva',
           cordLabel: 'Tira del cordón para cambiar el tema de color.', cordHintLine1: '¡Tira del', cordHintLine2: 'cordón!',
           cordHelp: 'Tira hacia abajo o pulsa Enter o Espacio para cambiar el tema de color.',
           cordActivated: 'Tema cambiado.'
@@ -54,16 +54,16 @@
           specialty: { confirmed: true, kind: 'specialty', position: 'bottom-right', label: { en: 'Backend developer', es: 'Desarrollador backend' } }
         },
         certifications: [
-          { id: 'aws-cloud-practitioner', name: 'AWS Certified Cloud Practitioner', issuer: 'Amazon Web Services', level: 'Foundational', badgePath: 'assets/icon/cloud-practitioner.png', validationUrl: null },
+          { id: 'aws-cloud-practitioner', name: 'AWS Certified Cloud Practitioner', issuer: 'Amazon Web Services', level: 'Foundational', badgePath: 'assets/icon/cloud-practitioner.png', validationUrl: null, temporaryValidationId: 'aws-ai-practitioner' },
           { id: 'aws-ai-practitioner', name: 'AWS Certified AI Practitioner', issuer: 'Amazon Web Services', level: 'Foundational', badgePath: 'assets/icon/ai-practitioner.png', validationUrl: 'https://www.credly.com/badges/139dafc0-fbbb-4bd1-a3ee-2d9e89107414/public_url' }
         ],
         projects: [
-          { id: 'ai-assistant', title: 'AI Assistant', image: 'assets/img/tech/spring-ai.jpg', href: 'project-page-5.html', demoUrl: null, description: { en: 'Specialist in creating AI agents with Spring AI, implementing RAG architectures for intelligent responses, and deploying MCP (Model Context Protocol) servers for standard integration with LLMs.', es: 'Especialista en creación de agentes de IA con Spring AI, implementación de arquitecturas RAG para respuestas inteligentes y despliegue de servidores MCP (Model Context Protocol) para integración estándar con LLMs.' }, technologies: ['Java 17', 'Spring Boot'] },
+          { id: 'ai-assistant', title: 'OCR', image: 'assets/img/tech/ocr.png', href: 'project-page-5.html', demoUrl: null, detailsAction: { en: 'Details', es: 'Detalle' }, description: { en: 'OCR component for Logistics that extracts and structures utility receipt data with AWS Textract and Amazon Bedrock, reducing manual lookup in the core application.', es: 'Componente OCR para Logística que extrae y estructura datos de recibos de servicios con AWS Textract y Amazon Bedrock, reduciendo la búsqueda manual en el aplicativo core.' }, technologies: ['Java 25', 'Spring Boot', 'Spring AI', 'AWS Textract', 'AWS Bedrock'] },
           { id: 'zephyr-cygnus', title: 'Zephyr Cygnus', image: 'assets/img/tech/zephyr.png', href: 'project-page.html', demoUrl: 'https://youtube.com/shorts/Y6HE0hWtwjQ?feature=share', description: { en: 'We want to offer you not just an ordering tool, but a digital companion that understands your preferences and makes every meal an easy and delicious experience.', es: 'Queremos ofrecerle no solo una herramienta para realizar pedidos, sino un compañero digital que comprenda sus preferencias y haga de cada comida una experiencia fácil y deliciosa.' }, technologies: ['Java 17', 'Spring Boot', 'PostgreSQL', 'Node.js 18', 'Baileys', 'WhatsApp Business'] },
           { id: 'trucking', title: 'Trucking', image: 'assets/img/tech/trucking.png', href: 'project-page-3.html', demoUrl: 'https://youtu.be/UziTMfvcI_I?si=1UnvCDU5zI0jnLUk', description: { en: 'A powerful web application that was developed for the efficient management of vehicle fleets. It has Chatbot for better control and decision making', es: 'Una potente aplicación web que se desarrollo para la gestión eficiente de flotas de vehículos. Cuenta con Chatbot para un mejor control y toma de decisión' }, technologies: ['Java 17', 'Spring Boot', 'MySQL', 'React', 'Baileys', 'Docker'] },
           { id: 'maipevi-bot', title: 'Maipevi Bot', image: 'assets/img/tech/maipevi.png', href: 'project-page-4.html', demoUrl: 'https://youtube.com/shorts/dmyQ0JASXjg?feature=share', description: { en: 'Chatbot for managing vehicle fleets, has a control panel for managing vehicles and drivers. All this within WhatsApp Mobile.', es: 'Chatbot para la gestión de flotas de vehiculos, cuenta con un panel de control para la gestión de los vehiculos y conductores. Todo esto dentro de WhatsApp Móvil.' }, technologies: ['Java 17', 'Spring Boot', 'MySQL', 'Node.js', 'Baileys', 'WhatsApp Business'] },
           { id: 'cashier', title: 'Digital Wallet "Cashier"', image: 'assets/img/nature/Banner.png', href: 'project-page-2.html', demoUrl: 'https://youtu.be/HhMpTuKcwdA?si=xswrr048GnvEkTyE', description: { en: 'Cashier is a digital wallet designed to be your Passport to the Modern Financial World. What are you waiting for to be part of this initiative.', es: 'Cashier es una billetera digital diseñada para ser su pasaporte al mundo financiero moderno. Que esperas para ser parte de esta iniciativa.' }, technologies: ['Java 17', 'Spring Boot', 'PostgreSQL', 'Angular', 'JWT', 'Docker'] },
-          { id: 'devbot-supermarket', title: 'DevBot Supermarket', image: 'assets/img/tech/devbot.png', href: 'project-page-1.html', demoUrl: null, description: { en: 'The main objective of this initiative is to provide users with a tool that allows them to quickly compare prices of different products. This makes it easier for them to make informed decisions when making their purchases.', es: 'El principal objetivo de esta iniciativa es proporcionar a los usuarios una herramienta que les permita comparar rápidamente precios de diferentes productos. Esto les facilita tomar decisiones informadas al realizar sus compras.' }, technologies: ['Python', 'Selenium Grid', 'Node.js', 'Google Cloud Platform', 'Dialogflow', 'MongoDB'] }
+          { id: 'devbot-supermarket', title: 'Proyecto Tesis Maivibot', image: 'assets/img/tech/devbot.png', href: 'project-page-1.html', demoUrl: null, detailsAction: { en: 'Details', es: 'Detalle' }, description: { en: 'Thesis chatbot combining generative AI and Python web scraping to find grocery products at Tottus, Plaza Vea, and Metro in Ica, improving search efficiency by 77%.', es: 'Chatbot de tesis que combina IA generativa y web scraping con Python para buscar abarrotes de Tottus, Plaza Vea y Metro en Ica, mejorando la eficiencia de búsqueda en un 77%.' }, technologies: ['Builder Bot', 'Node.js', 'GPT-4o mini', 'Java 17', 'Spring Boot', 'MongoDB Atlas', 'Python', 'Selenium Grid', 'Google Cloud'] }
         ]
       };
       const root = document.documentElement;
@@ -75,6 +75,7 @@
       const aboutSection = document.getElementById('about');
       const aboutFilters = aboutSection?.querySelector('[data-about-filters]');
       const aboutTimeline = aboutSection?.querySelector('[data-about-timeline]');
+      const experienceData = window.portfolioExperienceData;
       const aboutRecords = aboutTimeline ? Array.from(aboutTimeline.querySelectorAll('[data-about-record]')) : [];
       const aboutFilterButtons = aboutFilters ? Array.from(aboutFilters.querySelectorAll('[data-about-filter]')) : [];
       const aboutFilterStatus = aboutSection?.querySelector('[data-about-filter-status]');
@@ -92,6 +93,7 @@
       const skillsReducedMotionQuery = window.matchMedia?.('(prefers-reduced-motion: reduce)');
       const skillCategoryDefinitions = [
         { id: 'languages', labelKey: 'skillsCategoryLanguages' },
+        { id: 'ai', labelKey: 'skillsCategoryAi' },
         { id: 'frameworks', labelKey: 'skillsCategoryFrameworks' },
         { id: 'data', labelKey: 'skillsCategoryData' },
         { id: 'security', labelKey: 'skillsCategorySecurity' },
@@ -114,6 +116,7 @@
       const requestSkillsFrame = window.requestAnimationFrame?.bind(window) ?? ((callback) => window.setTimeout(() => callback(window.performance?.now?.() ?? Date.now()), 16));
       const cancelSkillsFrame = window.cancelAnimationFrame?.bind(window) ?? window.clearTimeout.bind(window);
       let certificationsRendered = false;
+      let scrollRevealObserver = null;
       function renderCertifications(language) {
         if (!certificationList || certificationsRendered) return;
         const rows = portfolioConfig.certifications.map((item) => {
@@ -121,7 +124,6 @@
           const card = document.createElement('article');
           card.className = 'certification-card';
           card.dataset.ui = 'certification-example';
-          card.dataset.reveal = '';
           const copy = document.createElement('div');
           copy.className = 'certification-copy';
           const title = document.createElement('h3');
@@ -134,19 +136,24 @@
           level.textContent = item.level;
           meta.appendChild(level);
           copy.append(title, meta);
-          if (item.validationUrl) {
+          const temporaryCredential = item.temporaryValidationId
+            ? portfolioConfig.certifications.find((candidate) => candidate.id === item.temporaryValidationId)
+            : null;
+          const validationUrl = item.validationUrl ?? temporaryCredential?.validationUrl ?? null;
+          if (validationUrl) {
             const link = document.createElement('a');
             link.className = 'certification-link';
-            link.href = item.validationUrl;
+            link.href = validationUrl;
             link.target = '_blank';
             link.rel = 'noopener noreferrer';
             const labelId = `certification-link-label-${item.id}`;
             const newTabId = `certification-link-new-tab-${item.id}`;
             link.setAttribute('aria-labelledby', `${title.id} ${labelId} ${newTabId}`);
+            const labelKey = item.temporaryValidationId ? 'certificationAiViewLabel' : 'certificationViewLabel';
             const linkLabel = document.createElement('span');
             linkLabel.id = labelId;
-            linkLabel.dataset.i18n = 'certificationViewLabel';
-            linkLabel.textContent = messages[language].certificationViewLabel;
+            linkLabel.dataset.i18n = labelKey;
+            linkLabel.textContent = messages[language][labelKey];
             const arrow = document.createElement('span');
             arrow.className = 'certification-link-arrow';
             arrow.setAttribute('aria-hidden', 'true');
@@ -158,17 +165,11 @@
             newTabLabel.textContent = messages[language].certificationNewTabLabel;
             link.append(linkLabel, arrow, newTabLabel);
             copy.appendChild(link);
-          } else {
-            const pending = document.createElement('p');
-            pending.className = 'certification-pending';
-            pending.dataset.i18n = 'certificationPendingLabel';
-            pending.textContent = messages[language].certificationPendingLabel;
-            copy.appendChild(pending);
           }
           const badge = document.createElement('img');
           badge.className = 'certification-badge';
-          badge.width = 56;
-          badge.height = 56;
+          badge.width = 72;
+          badge.height = 72;
           badge.alt = '';
           badge.loading = 'lazy';
           badge.decoding = 'async';
@@ -185,10 +186,14 @@
       }
       function renderProjects(language) {
         if (!projectList) return;
+        const revealedProjectIds = new Set(Array.from(projectList.querySelectorAll('[data-project-id][data-scroll-revealed]'), (card) => card.dataset.projectId));
+        projectList.querySelectorAll('[data-scroll-reveal]').forEach((card) => scrollRevealObserver?.unobserve(card));
         projectList.replaceChildren(...portfolioConfig.projects.map((project) => {
           const card = document.createElement('article');
           card.className = 'project-card';
           card.dataset.projectId = project.id;
+          card.dataset.scrollReveal = 'project';
+          if (revealedProjectIds.has(project.id)) card.dataset.scrollRevealed = '';
           const media = document.createElement('a');
           media.className = 'project-media';
           media.href = project.href;
@@ -198,6 +203,7 @@
           image.alt = '';
           image.loading = 'lazy';
           image.decoding = 'async';
+          image.fetchPriority = 'low';
           const overlay = document.createElement('span');
           overlay.className = 'project-media-overlay';
           overlay.setAttribute('aria-hidden', 'true');
@@ -222,7 +228,7 @@
           eyeIris.setAttribute('r', '3');
           eyeIcon.append(eyePath, eyeIris);
           const actionText = document.createElement('span');
-          actionText.textContent = messages[language].projectDetailsAction;
+          actionText.textContent = project.detailsAction?.[language] ?? messages[language].projectDetailsAction;
           action.append(eyeIcon, actionText);
           overlay.appendChild(action);
           const copy = document.createElement('div');
@@ -252,7 +258,7 @@
           detailsLink.dataset.projectAction = 'details';
           detailsLink.setAttribute('aria-label', `${messages[language].projectFooterDetailsLabel} ${project.title}`);
           const detailsText = document.createElement('span');
-          detailsText.textContent = messages[language].projectFooterDetails;
+          detailsText.textContent = project.detailsAction?.[language] ?? messages[language].projectFooterDetails;
           const detailsArrow = document.createElement('span');
           detailsArrow.setAttribute('aria-hidden', 'true');
           detailsArrow.textContent = ' ↗';
@@ -278,6 +284,7 @@
           card.setAttribute('aria-labelledby', title.id);
           return card;
         }));
+        observeScrollRevealTargets(projectList.querySelectorAll('[data-scroll-reveal]'));
       }
       function renderProofBadges(language) {
         const list = document.getElementById('proof-badges');
@@ -299,6 +306,211 @@
         if (Object.prototype.hasOwnProperty.call(messages, savedLanguage)) currentLanguage = savedLanguage;
       } catch {}
 
+      function createExperienceProjectElement(experience, project, language, labels) {
+        const localized = (value) => typeof value === 'string' ? value : value?.[language] ?? '';
+        const section = document.createElement('section');
+        section.className = 'about-project';
+        section.dataset.aboutProject = project.id;
+        const titleId = `about-project-${experience.id}-${project.id}-title`;
+        section.setAttribute('aria-labelledby', titleId);
+
+        const header = document.createElement('header');
+        header.className = 'about-project-header';
+        const title = document.createElement('h4');
+        title.className = 'about-project-title';
+        title.id = titleId;
+        title.textContent = project.title;
+        const meta = document.createElement('div');
+        meta.className = 'about-project-meta';
+        const periodLabel = document.createElement('span');
+        periodLabel.className = 'about-project-period-label';
+        periodLabel.textContent = labels.projectPeriod;
+        const period = document.createElement('time');
+        period.className = 'about-project-period';
+        period.dateTime = project.dateTime;
+        period.textContent = localized(project.period);
+        meta.append(periodLabel, period);
+        if (project.mode) {
+          const mode = document.createElement('span');
+          mode.className = 'about-project-mode';
+          mode.textContent = `${labels.mode}: ${localized(project.mode)}`;
+          meta.append(mode);
+        }
+        header.append(title, meta);
+
+        const layout = document.createElement('div');
+        layout.className = 'about-project-layout';
+        const media = document.createElement('div');
+        media.className = 'about-project-media';
+        const image = document.createElement('img');
+        image.src = project.image;
+        image.alt = localized(project.imageAlt);
+        image.loading = 'lazy';
+        image.decoding = 'async';
+        image.fetchPriority = 'low';
+        const mediaLink = project.projectUrl ? document.createElement('a') : null;
+        if (mediaLink) {
+          mediaLink.className = 'about-project-media-link';
+          mediaLink.href = project.projectUrl;
+          mediaLink.setAttribute('aria-label', `${labels.viewProject}: ${project.title}`);
+          mediaLink.append(image);
+          media.append(mediaLink);
+        } else {
+          media.append(image);
+        }
+
+        const content = document.createElement('div');
+        content.className = 'about-project-content';
+        const description = document.createElement('p');
+        description.className = 'about-project-description';
+        description.textContent = localized(project.description);
+        content.append(description);
+
+        if (project.deployment) {
+          const deployment = document.createElement('p');
+          deployment.className = 'about-project-detail';
+          const deploymentLabel = document.createElement('strong');
+          deploymentLabel.textContent = `${labels.deployment}: `;
+          const deploymentValue = document.createElement('span');
+          deploymentValue.textContent = localized(project.deployment);
+          deployment.append(deploymentLabel, deploymentValue);
+          content.append(deployment);
+        }
+
+        if (Array.isArray(project.technologies) && project.technologies.length) {
+          const technologyGroup = document.createElement('div');
+          technologyGroup.className = 'about-project-technologies';
+          const technologyLabel = document.createElement('p');
+          technologyLabel.className = 'about-project-detail about-project-technology-label';
+          technologyLabel.textContent = labels.technologies;
+          const technologies = document.createElement('ul');
+          technologies.className = 'about-project-tags';
+          technologies.setAttribute('aria-label', labels.technologies);
+          for (const technology of project.technologies) {
+            const item = document.createElement('li');
+            item.textContent = technology;
+            technologies.append(item);
+          }
+          technologyGroup.append(technologyLabel, technologies);
+          content.append(technologyGroup);
+        }
+
+        const actions = document.createElement('div');
+        actions.className = 'about-project-actions';
+        if (project.projectUrl) {
+          const projectLink = document.createElement('a');
+          projectLink.className = 'about-project-action';
+          projectLink.href = project.projectUrl;
+          projectLink.textContent = labels.viewProject;
+          projectLink.setAttribute('aria-label', `${labels.viewProject}: ${project.title}`);
+          actions.append(projectLink);
+        }
+        if (project.videoUrl) {
+          const videoLink = document.createElement('a');
+          videoLink.className = 'about-project-action';
+          videoLink.href = project.videoUrl;
+          videoLink.target = '_blank';
+          videoLink.rel = 'noopener noreferrer';
+          videoLink.textContent = labels.watchVideo;
+          videoLink.setAttribute('aria-label', `${labels.watchVideo}: ${project.title} (${labels.opensInNewTab})`);
+          actions.append(videoLink);
+        }
+        if (actions.childElementCount) content.append(actions);
+        layout.append(media, content);
+        section.append(header, layout);
+        return section;
+      }
+
+      function renderExperienceRoles(record, experience, language, labels) {
+        const rolesOutlet = record.querySelector('[data-about-roles]');
+        if (!rolesOutlet || !Array.isArray(experience.roles)) return false;
+
+        const organizationPeriod = record.querySelector('[data-about-organization-period]');
+        if (organizationPeriod && experience.organizationPeriod?.[language]) {
+          organizationPeriod.textContent = experience.organizationPeriod[language];
+          if (experience.organizationPeriodStart) organizationPeriod.dateTime = experience.organizationPeriodStart;
+        }
+
+        const roleNodes = new Map([...rolesOutlet.querySelectorAll('[data-about-role]')].map((roleNode) => [roleNode.dataset.aboutRole, roleNode]));
+        for (const role of experience.roles) {
+          const roleNode = roleNodes.get(role.id);
+          if (!roleNode) continue;
+          if (roleNode.dataset.hydrated !== 'true') {
+            roleNode.open = role.openByDefault === true;
+            roleNode.dataset.hydrated = 'true';
+          }
+
+          const title = roleNode.querySelector('[data-about-role-title]');
+          if (title && role.title?.[language]) title.textContent = role.title[language];
+          const period = roleNode.querySelector('[data-about-role-period]');
+          if (period && role.period?.[language]) {
+            period.textContent = role.period[language];
+            if (role.periodStart) period.dateTime = role.periodStart;
+          }
+
+          const initiativeList = roleNode.querySelector('[data-about-role-initiatives]');
+          if (!initiativeList || !Array.isArray(role.initiatives)) continue;
+          initiativeList.setAttribute('aria-label', labels.initiatives);
+          const initiativeNodes = new Map([...initiativeList.querySelectorAll('[data-about-initiative]')].map((initiativeNode) => [initiativeNode.dataset.aboutInitiative, initiativeNode]));
+          for (const initiative of role.initiatives) {
+            const initiativeNode = initiativeNodes.get(initiative.id);
+            if (!initiativeNode) continue;
+            const initiativeTitle = initiativeNode.querySelector('[data-about-initiative-title]');
+            if (initiativeTitle && initiative.title?.[language]) initiativeTitle.textContent = initiative.title[language];
+            const description = initiativeNode.querySelector('[data-about-initiative-description]');
+            if (description && initiative.description?.[language]) description.textContent = initiative.description[language];
+            const technologyList = initiativeNode.querySelector('[data-about-initiative-technologies]');
+            if (technologyList) {
+              if (Array.isArray(initiative.technologies)) {
+                technologyList.replaceChildren(...initiative.technologies.map((technology) => {
+                  const item = document.createElement('li');
+                  item.textContent = technology;
+                  return item;
+                }));
+              }
+              technologyList.setAttribute('aria-label', `${labels.initiativeTechnologies} ${initiative.title?.[language] ?? initiative.id}`);
+            }
+            const proposal = initiativeNode.querySelector('[data-about-initiative-proposed]');
+            const proposalText = initiative.proposedComponents?.[language];
+            const proposalLabel = initiativeNode.querySelector('[data-about-initiative-proposed-label]');
+            const proposalBlock = initiativeNode.querySelector('.about-initiative-proposal');
+            if (proposal && proposalText) {
+              proposal.textContent = proposalText;
+              if (proposalLabel) proposalLabel.textContent = `${labels.proposedComponents}:`;
+              if (proposalBlock) proposalBlock.hidden = false;
+            } else if (proposalBlock) {
+              proposalBlock.hidden = true;
+            }
+          }
+        }
+        return true;
+      }
+
+      function renderExperienceRecords(language) {
+        const labels = experienceData?.labels?.[language];
+        if (!aboutTimeline || !labels || !Array.isArray(experienceData.experiences)) return;
+        for (const experience of experienceData.experiences) {
+          if (!experience || typeof experience.id !== 'string') continue;
+          const record = aboutTimeline.querySelector(`[data-about-experience-id="${experience.id}"]`);
+          if (!record) continue;
+          const role = record.querySelector('[data-about-experience-role]');
+          if (role && experience.role?.[language]) role.textContent = experience.role[language];
+          const period = record.querySelector('[data-about-experience-period]');
+          if (period && experience.period?.[language]) {
+            period.textContent = experience.period[language];
+            if (experience.periodStart) period.dateTime = experience.periodStart;
+          }
+          const duration = record.querySelector('[data-about-experience-duration]');
+          if (duration && experience.duration?.[language]) duration.textContent = experience.duration[language];
+          const summary = record.querySelector('[data-about-experience-summary]');
+          if (summary && experience.summary?.[language]) summary.textContent = experience.summary[language];
+          if (renderExperienceRoles(record, experience, language, labels)) continue;
+          const projectList = record.querySelector('[data-about-projects]');
+          if (!projectList || !Array.isArray(experience.projects)) continue;
+          projectList.replaceChildren(...experience.projects.map((project) => createExperienceProjectElement(experience, project, language, labels)));
+        }
+      }
+
       function applyLanguage(language, persist = true) {
         const dictionary = messages[language];
         if (!dictionary) return false;
@@ -318,6 +530,7 @@
           const value = dictionary[element.dataset.i18nAlt];
           if (typeof value === 'string') element.setAttribute('alt', value);
         });
+        renderExperienceRecords(language);
         all('[data-language]').forEach((button) => {
           button.setAttribute('aria-pressed', String(button.dataset.language === language));
         });
@@ -524,6 +737,7 @@
         currentAboutFilter = allowed.has(filterId) ? filterId : 'all';
         aboutRecords.forEach((record) => {
           record.hidden = currentAboutFilter !== 'all' && record.dataset.aboutGroup !== currentAboutFilter;
+          if (record.hidden) scrollRevealObserver?.unobserve(record);
         });
         const selectedButton = aboutFilterButtons.find((button) => button.dataset.aboutFilter === currentAboutFilter);
         aboutFilterButtons.forEach((button) => {
@@ -532,6 +746,8 @@
         const visibleCount = aboutRecords.filter((record) => !record.hidden).length;
         const statusKey = currentAboutFilter === 'experience' ? 'aboutStatusExperience' : currentAboutFilter === 'education' ? 'aboutStatusEducation' : 'aboutStatusAll';
         if (aboutFilterStatus) aboutFilterStatus.textContent = messages[currentLanguage][statusKey].replace('{count}', String(visibleCount));
+        revealVisibleTimelineRecords();
+        observeScrollRevealTargets(aboutRecords.filter((record) => !record.hidden));
         if (keepFocus) selectedButton?.focus({ preventScroll: true });
       }
       function initializeAboutTimeline() {
@@ -548,16 +764,6 @@
         });
         aboutFilters.hidden = false;
         applyAboutFilter('all');
-        if (!prefersReducedMotion() && typeof window.IntersectionObserver === 'function') {
-          const timelineObserver = new window.IntersectionObserver((entries, observer) => {
-            entries.forEach((entry) => {
-              if (!entry.isIntersecting) return;
-              entry.target.classList.add('is-entered');
-              observer.unobserve(entry.target);
-            });
-          }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
-          aboutRecords.forEach((record) => timelineObserver.observe(record));
-        }
       }
       function initializeSkillsCarousel() {
         if (!skillsSection || !skillsTrack || !skillsSlides.length) return;
@@ -836,22 +1042,110 @@
       initializeAboutTimeline();
       initializeContactForm();
 
-      const revealTargets = all('[data-reveal]');
-      if (revealTargets.length && typeof window.IntersectionObserver === 'function' && !prefersReducedMotion()) {
-        const revealObserver = new window.IntersectionObserver((entries, observer) => {
-          entries.forEach((entry) => {
-            if (!entry.isIntersecting) return;
-            const index = Number(entry.target.dataset.revealIndex || 0);
-            entry.target.style.setProperty('--reveal-delay', `${index * 80}ms`);
-            entry.target.classList.add('is-revealed');
-            observer.unobserve(entry.target);
+      const scrollRevealMotionQuery = window.matchMedia?.('(prefers-reduced-motion: reduce)');
+      function scheduleScrollRevealFrame(callback) {
+        if (typeof window.requestAnimationFrame === 'function') return window.requestAnimationFrame(callback);
+        return window.setTimeout(callback, 16);
+      }
+      function markScrollTargetRevealed(target, immediate = false) {
+        if (!target) return;
+        if (immediate) target.setAttribute('data-scroll-reveal-immediate', '');
+        target.setAttribute('data-scroll-revealed', '');
+        scrollRevealObserver?.unobserve(target);
+      }
+      function disableScrollReveals() {
+        scrollRevealObserver?.disconnect();
+        scrollRevealObserver = null;
+        root.classList.remove('has-scroll-reveals');
+        all('[data-scroll-reveal]').forEach((target) => target.setAttribute('data-scroll-revealed', ''));
+      }
+      function observeScrollRevealTargets(targets) {
+        if (!scrollRevealObserver) return;
+        try {
+          Array.from(targets).forEach((target) => {
+            if (!target.hasAttribute('data-scroll-revealed')) scrollRevealObserver.observe(target);
           });
-        }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
-        revealTargets.forEach((element, index) => {
-          element.dataset.revealIndex = String(index);
-          revealObserver.observe(element);
+        } catch {
+          disableScrollReveals();
+        }
+      }
+      function isScrollTargetInActivationRange(target) {
+        const bounds = target.getBoundingClientRect();
+        return bounds.bottom > 0 && bounds.top <= window.innerHeight * 0.88;
+      }
+      function revealVisibleTimelineRecords() {
+        aboutRecords.forEach((record) => {
+          if (record.hidden || record.hasAttribute('data-scroll-revealed')) return;
+          const bounds = record.getBoundingClientRect();
+          if (bounds.bottom > 0 && bounds.top < window.innerHeight) markScrollTargetRevealed(record, true);
         });
       }
+      function initializeScrollReveals() {
+        const targets = all('[data-scroll-reveal]');
+        if (!targets.length || prefersReducedMotion() || typeof window.IntersectionObserver !== 'function') return;
+        try {
+          scrollRevealObserver = new window.IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting && !entry.target.hidden) {
+                entry.target.setAttribute('data-scroll-revealed', '');
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0, rootMargin: '0px 0px -12% 0px' });
+          targets.forEach((target) => {
+            if (target.hasAttribute('data-scroll-revealed')) return;
+            if (isScrollTargetInActivationRange(target)) markScrollTargetRevealed(target);
+            else scrollRevealObserver.observe(target);
+          });
+          root.classList.add('has-scroll-reveals');
+        } catch {
+          disableScrollReveals();
+        }
+      }
+      function revealAnchorDestination(destination) {
+        if (!destination) return;
+        const section = destination.closest('section[id]') ?? destination;
+        const immediateGroups = new Set(['skills-toolbar', 'skills-track-shell', 'about-filters', 'contact-form', 'contact-card']);
+        const targets = [];
+        if (destination.matches('[data-scroll-reveal]')) targets.push(destination);
+        const containingTarget = destination.closest('[data-scroll-reveal]');
+        if (containingTarget) targets.push(containingTarget);
+        section.querySelectorAll('[data-scroll-reveal]').forEach((target) => {
+          if (immediateGroups.has(target.dataset.scrollReveal) || isScrollTargetInActivationRange(target)) targets.push(target);
+        });
+        targets.forEach((target) => markScrollTargetRevealed(target, true));
+      }
+      function revealCurrentAnchor() {
+        if (!window.location.hash) return;
+        let anchorId;
+        try { anchorId = decodeURIComponent(window.location.hash.slice(1)); } catch { return; }
+        const destination = document.getElementById(anchorId);
+        if (!destination) return;
+        revealAnchorDestination(destination);
+        scheduleScrollRevealFrame(() => revealAnchorDestination(destination));
+      }
+      document.addEventListener('focusin', (event) => {
+        const target = event.target instanceof Element ? event.target.closest('[data-scroll-reveal]') : null;
+        if (target) markScrollTargetRevealed(target, true);
+      });
+      document.addEventListener('invalid', (event) => {
+        const target = event.target instanceof Element ? event.target.closest('[data-scroll-reveal]') : null;
+        if (target) markScrollTargetRevealed(target, true);
+      }, true);
+      document.addEventListener('click', (event) => {
+        const link = event.target instanceof Element ? event.target.closest('a[href^="#"]') : null;
+        if (!link) return;
+        scheduleScrollRevealFrame(revealCurrentAnchor);
+      });
+      window.addEventListener('hashchange', revealCurrentAnchor);
+      initializeScrollReveals();
+      revealCurrentAnchor();
+      const handleScrollRevealMotionChange = (event) => {
+        if (event.matches) disableScrollReveals();
+        else initializeScrollReveals();
+      };
+      if (scrollRevealMotionQuery?.addEventListener) scrollRevealMotionQuery.addEventListener('change', handleScrollRevealMotionChange);
+      else scrollRevealMotionQuery?.addListener?.(handleScrollRevealMotionChange);
 
       const themeToggle = document.querySelector('[data-theme-toggle]');
       const themeColorMeta = document.querySelector('meta[name="theme-color"]');
@@ -872,23 +1166,31 @@
       syncThemeToggle();
 
       const menu = document.querySelector('.mobile-menu');
-      const menuSummary = menu?.querySelector('summary');
-      const syncMenuState = () => menuSummary?.setAttribute('aria-expanded', String(Boolean(menu?.open)));
-      if (menu) {
-        menu.addEventListener('toggle', syncMenuState);
+      const menuToggle = menu?.querySelector('.menu-toggle');
+      const menuPanel = menu?.querySelector('.mobile-panel');
+      function setMenuOpen(isOpen) {
+        if (!menu || !menuToggle || !menuPanel) return;
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        menuPanel.hidden = !isOpen;
+        menu.classList.toggle('is-open', isOpen);
+        menu.dispatchEvent(new window.Event('mobilemenuchange'));
+      }
+      if (menu && menuToggle && menuPanel) {
+        menuToggle.addEventListener('click', () => {
+          setMenuOpen(menuToggle.getAttribute('aria-expanded') !== 'true');
+        });
         menu.addEventListener('click', (event) => {
           if (!event.target.closest?.('.mobile-links a')) return;
-          menu.open = false;
-          syncMenuState();
-          menuSummary?.focus({ preventScroll: true });
+          setMenuOpen(false);
+          menuToggle.focus({ preventScroll: true });
         });
         document.addEventListener('keydown', (event) => {
-          if (event.key !== 'Escape' || !menu.open) return;
-          menu.open = false;
-          syncMenuState();
-          menuSummary?.focus({ preventScroll: true });
+          if (event.key !== 'Escape' || menuToggle.getAttribute('aria-expanded') !== 'true') return;
+          event.preventDefault();
+          setMenuOpen(false);
+          menuToggle.focus({ preventScroll: true });
         });
-        syncMenuState();
+        setMenuOpen(false);
       }
 
       const navLinks = all('.nav-link[data-nav]');
@@ -1763,7 +2065,7 @@
       window.addEventListener('resize', scheduleCordPosition, { passive: true });
       window.visualViewport?.addEventListener('resize', scheduleCordPosition, { passive: true });
       window.visualViewport?.addEventListener('scroll', scheduleCordPosition, { passive: true });
-      mobileMenu?.addEventListener('toggle', scheduleCordPosition);
+      mobileMenu?.addEventListener('mobilemenuchange', scheduleCordPosition);
       if (typeof ResizeObserver === 'function') {
         const cordResizeObserver = new ResizeObserver(scheduleCordPosition);
         if (mainContainer) cordResizeObserver.observe(mainContainer);

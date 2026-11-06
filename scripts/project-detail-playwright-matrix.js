@@ -44,13 +44,28 @@ async (page) => {
           alt: image.getAttribute('alt'),
         })),
         projectOutboundCount: document.querySelectorAll('.project-detail-copy a[href^="http"]').length,
+        projectOutbound: [...document.querySelectorAll('.project-detail-copy a[href^="http"]')].map((link) => ({ href: link.href, target: link.target, rel: link.rel })),
+        cover: document.querySelector('.project-detail-cover')?.getAttribute('src'),
       }));
 
       assert(state.documentWidth <= state.viewport, `${route} overflows at ${width}px`);
       assert(state.h1Count === 1, `${route} must have one H1 at ${width}px`);
       assert(state.mainCount === 1 && state.pageLandmark, `${route} must expose its labelled main project landmark`);
       assert(state.images.length > 0 && state.images.every((image) => image.loaded && image.hasAlt), `${route} has an unloaded image or missing alt attribute`);
-      assert(state.projectOutboundCount > 0, `${route} has no project outbound link`);
+      if (project === 'ai-assistant') {
+        assert(state.projectOutboundCount === 0, 'OCR must not invent a project outbound link');
+        assert(state.cover === 'assets/img/tech/ocr.png', 'OCR cover changed');
+      } else {
+        assert(state.projectOutboundCount > 0, `${route} has no project outbound link`);
+      }
+      if (project === 'devbot-supermarket') {
+        assert(state.cover === 'assets/img/tech/devbot.png', 'MaiviBot cover changed');
+        assert(JSON.stringify(state.projectOutbound.map((link) => link.href)) === JSON.stringify([
+          'https://github.com/Rpeche-pk/maivi-bot-tesis.git',
+          'https://github.com/Rpeche-pk/micro-supermarket.git',
+        ]), 'MaiviBot repository URLs changed');
+        assert(state.projectOutbound.every((link) => link.target === '_blank' && link.rel === 'noopener noreferrer'), 'MaiviBot repositories must open safely');
+      }
       viewportResults.push({ width, overflow: false, h1Count: state.h1Count, imageCount: state.images.length, allImagesLoadedAndNamed: true, projectOutboundCount: state.projectOutboundCount });
     }
 
@@ -67,6 +82,11 @@ async (page) => {
 
     await page.locator('[data-language="es"]:visible').first().click();
     await page.waitForFunction(() => document.documentElement.lang === 'es');
+    if (project === 'ai-assistant' || project === 'devbot-supermarket') {
+      await page.waitForFunction((title) => document.querySelector('h1')?.textContent === title, project === 'ai-assistant' ? 'OCR' : 'Proyecto Tesis Maivibot');
+      const copy = await page.locator('.project-detail-copy').innerText();
+      assert(project === 'ai-assistant' ? copy.includes('recibos de luz, agua e internet') && !/\b(MCP|RAG)\b/.test(copy) : copy.includes('mejora del 77% en la eficiencia de búsqueda') && copy.includes('69% de los usuarios reportó una experiencia positiva'), `${route} Spanish facts missing`);
+    }
     assert(await page.evaluate(() => localStorage.getItem('language')) === 'es', `${route} did not persist Spanish`);
     let spanishAlts = null;
     if (project === 'zephyr') {
@@ -76,6 +96,14 @@ async (page) => {
 
     await page.locator('[data-language="en"]:visible').first().click();
     await page.waitForFunction(() => document.documentElement.lang === 'en');
+    if (project === 'ai-assistant' || project === 'devbot-supermarket') {
+      await page.waitForFunction((phrase) => document.querySelector('.project-detail-copy')?.textContent.includes(phrase), project === 'ai-assistant' ? 'electricity, water and internet bills' : '77% improvement in search efficiency');
+      const copy = await page.locator('.project-detail-copy').innerText();
+      assert(project === 'ai-assistant' ? !/\b(MCP|RAG)\b/.test(copy) : copy.includes('69% of users reported a positive experience'), `${route} English facts missing`);
+      if (project === 'devbot-supermarket') {
+        assert(await page.locator('#project-title').innerText() === 'Proyecto Tesis Maivibot', `${route} English title missing`);
+      }
+    }
     assert(await page.evaluate(() => localStorage.getItem('language')) === 'en', `${route} did not persist English`);
     let englishAlts = null;
     if (project === 'zephyr') {
@@ -126,7 +154,7 @@ async (page) => {
     assert(focus?.className.split(/\s+/).includes('nav-link') && focus.focusVisible && parseFloat(focus.outlineWidth) >= 3, `${route} keyboard navigation did not expose a 3px focus ring`);
 
     await page.emulateMedia({ reducedMotion: 'reduce' });
-    const reducedMotionDuration = await page.locator('.project-detail-copy a').first().evaluate((link) => getComputedStyle(link).transitionDuration);
+    const reducedMotionDuration = await page.locator(project === 'ai-assistant' ? '.nav-link' : '.project-detail-copy a').first().evaluate((link) => getComputedStyle(link).transitionDuration);
     assert(reducedMotionDuration.split(',').every((duration) => parseFloat(duration) === 0), `${route} link transition is not disabled for reduced motion`);
     await page.emulateMedia({ reducedMotion: null });
 

@@ -1,6 +1,6 @@
 <header class="site-header">
     <nav class="container nav-inner" id="flags" aria-label="Primary navigation" data-i18n-aria-label="primaryNavigation">
-      <a class="brand" href="{{HOME_HREF}}" aria-label="Luis Peche home" data-i18n-aria-label="brandHome">
+      <a class="brand" href="{{HOME_HREF}}" aria-label="LP LuisPeche home" data-i18n-aria-label="brandHome">
         <span class="brand-mark" aria-hidden="true">LP</span>
         <span class="brand-name"><span class="monogram sr-only">LP</span>Luis<span class="brand-name-highlight">Peche</span><span class="cursor" aria-hidden="true">_</span></span>
       </a>
@@ -29,9 +29,20 @@
           </button>
         </div>
       </div>
-      <details class="mobile-menu">
-        <summary class="menu-summary" aria-label="Open navigation menu" aria-expanded="false" data-i18n="menu" data-i18n-aria-label="menuLabel">Menu</summary>
-        <div class="mobile-panel">
+      <div class="mobile-controls">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme" data-i18n-aria-label="themeToggleLabel" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <span class="sr-only" data-i18n="themeToggle">Theme</span>
+        </button>
+        <div class="mobile-menu">
+          <button class="menu-toggle" type="button" aria-controls="mobile-navigation-panel" aria-expanded="false" aria-label="Toggle navigation menu" data-i18n-aria-label="menuLabel">
+            <span class="menu-icon" aria-hidden="true">
+              <span class="menu-icon-line"></span>
+              <span class="menu-icon-line"></span>
+              <span class="menu-icon-line"></span>
+            </span>
+          </button>
+          <div class="mobile-panel" id="mobile-navigation-panel" hidden>
           <div class="mobile-links" aria-label="Sections" data-i18n-aria-label="sections">
             <a class="nav-link" data-nav="home" href="{{HOME_HREF}}" data-i18n="navHome">Home</a>
             <a class="nav-link" data-nav="projects"{{CURRENT_PROJECTS}} href="{{PROJECTS_HREF}}" data-i18n="navProjects">Projects</a>
@@ -49,10 +60,6 @@
               </a>
             </div>
             <div class="mobile-preferences">
-            <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme" data-i18n-aria-label="themeToggleLabel" aria-pressed="false">
-              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-              <span class="sr-only" data-i18n="themeToggle">Theme</span>
-            </button>
             <div class="language-switcher" role="group" aria-label="Choose language" data-i18n-aria-label="chooseLanguage">
               <button class="language-option" type="button" data-language="es" aria-label="Change language to Spanish" data-i18n-aria-label="languageSpanish" aria-pressed="false">
                 <svg viewBox="0 0 60 40" aria-hidden="true" focusable="false"><path fill="#D91023" d="M0 0h60v40H0z"/><path fill="#fff" d="M20 0h20v40H20z"/></svg>
@@ -63,6 +70,7 @@
             </div>
           </div>
         </div>
-      </details>
+        </div>
+      </div>
     </nav>
   </header>

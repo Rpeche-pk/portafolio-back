@@ -17,7 +17,7 @@ const englishCatalog = JSON.parse(
   await readFile(join(repositoryRoot, "assets", "js", "languages", "en.json"), "utf8"),
 );
 
-function createHarness({ fetchResponse, savedLanguage = null } = {}) {
+function createHarness({ fetchResponse, savedLanguage = null, elements } = {}) {
   const storage = new Map(savedLanguage ? [["language", savedLanguage]] : []);
   const translatedText = {
     dataset: { key: "navbar", value: "nav-home" },
@@ -41,7 +41,7 @@ function createHarness({ fetchResponse, savedLanguage = null } = {}) {
     document: {
       currentScript: { src: "https://portfolio.test/subpath/assets/js/language.js" },
       getElementById: (id) => id === "flags" ? flags : null,
-      querySelectorAll: () => [translatedText],
+      querySelectorAll: () => elements ?? [translatedText],
     },
     fetch: async (url) => {
       requestedUrl = String(url);
@@ -153,6 +153,37 @@ test("project five uses its own equivalent description label key", () => {
     englishCatalog.proyects[descriptionHeading[1]],
     englishCatalog.proyects["proyects-four-description"],
   );
+});
+
+test("OCR and MaiviBot detail content switches through both public language controls", async () => {
+  for (const [route, prefix, title, facts] of [
+    ["project-page-5.html", "five", "OCR", ["Java 25", "Spring Boot", "Spring AI", "Mockito", "SonarQube", "OWASP Dependency-Check", "AWS Textract", "Amazon SNS", "Amazon SQS", "AWS IAM Roles Anywhere", "Amazon Bedrock", "Indigo"]],
+    ["project-page-1.html", "one", "Proyecto Tesis Maivibot", ["77%", "69%", "Tottus", "Plaza Vea", "Metro", "Ica", "BuilderBot", "Node.js", "GPT-4o mini", "WhatsApp", "Telegram", "Instagram", "Java 17", "Spring Boot", "MongoDB Atlas", "Python", "Selenium Grid", "Google Cloud"]],
+  ]) {
+    const html = await readFile(join(repositoryRoot, route), "utf8");
+    const elements = [...html.matchAll(/data-key="([^"]+)" data-value="([^"]+)"[^>]*>([\s\S]*?)<\/(?:h1|h2|p|span|a)>/g)]
+      .map(([, key, value, innerHTML]) => ({ dataset: { key, value }, innerHTML }));
+    assert.ok(elements.some((element) => element.dataset.value === `proyects-${prefix}-title`), `${route} localizable title`);
+    const fallback = elements.map((element) => element.innerHTML).join(" ");
+    for (const fact of facts) assert.ok(fallback.includes(fact), `${route} fallback includes ${fact}`);
+    const harness = createHarness({
+      elements,
+      fetchResponse: { ok: true, json: async () => harness.languageOption.dataset.language === "es" ? spanishCatalog : englishCatalog },
+    });
+    for (const language of ["en", "es", "en"]) {
+      harness.languageOption.dataset.language = language;
+      await harness.click({ closest: () => harness.languageOption });
+      assert.equal(harness.storage.get("language"), language);
+      assert.equal(elements.find((element) => element.dataset.value === `proyects-${prefix}-title`).innerHTML, title);
+      const copy = elements.map((element) => element.innerHTML).join(" ");
+      for (const fact of facts) assert.ok(copy.includes(fact), `${route} ${language} includes ${fact}`);
+      if (prefix === "five") assert.doesNotMatch(copy, /MCP|RAG|AI Assistant|Multi-LLM/i);
+      if (prefix === "one") {
+        assert.match(copy, language === "en" ? /77% improvement in search efficiency/ : /mejora del 77% en la eficiencia de búsqueda/);
+        assert.match(copy, language === "en" ? /69% of users reported a positive experience/ : /69% de los usuarios reportó una experiencia positiva/);
+      }
+    }
+  }
 });
 
 test("homepage portrait has accessible alternative text and GitHub remains in the approved navbar", () => {

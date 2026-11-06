@@ -25,21 +25,29 @@ test("homepage retains incumbent title, one labelled H1, and the approved sectio
   assert.equal(shell["index.html"].footerTemplate, "work-gallery-footer.html");
 });
 
+test("home Know Me action links to the About Me section", () => {
+  assert.match(homepage, /<a class="button" href="#about"><span data-i18n="knowMe">Know Me<\/span>/);
+  assert.match(homepage, /<section\b[^>]*id="about"/);
+});
+
 test("project, credential, skill, and journey content remains available without JavaScript", () => {
   const fallbacks = [...homepage.matchAll(/<noscript[^>]*>([\s\S]*?)<\/noscript>/g)].map(([, content]) => content);
   const projectFallback = fallbacks.find((content) => content.includes("Project links remain available")) ?? "";
   const credentialFallback = fallbacks.find((content) => content.includes("AWS Certified Cloud Practitioner")) ?? "";
   assert.equal((projectFallback.match(/<a\b/g) ?? []).length, 6);
-  assert.match(projectFallback, /AI Assistant/);
-  assert.match(projectFallback, /DevBot Supermarket/);
+  assert.match(projectFallback, /OCR/);
+  assert.match(projectFallback, /Proyecto Tesis Maivibot/);
   assert.match(credentialFallback, /AWS Certified Cloud Practitioner/);
   assert.match(credentialFallback, /AWS Certified AI Practitioner/);
   assert.equal((credentialFallback.match(/<li\b/g) ?? []).length, 2);
-  assert.equal((credentialFallback.match(/<a\b/g) ?? []).length, 1);
-  assert.match(credentialFallback, /Credly URL pending/);
+  assert.equal((credentialFallback.match(/<a\b/g) ?? []).length, 2);
+  assert.doesNotMatch(credentialFallback, /Credly URL pending|Falta la URL de Credly/);
+  assert.match(credentialFallback, /View AI credential/);
+  assert.match(credentialFallback, /View credential/);
+  assert.match(credentialFallback, /rel="noopener noreferrer"/);
   assert.match(credentialFallback, /139dafc0-fbbb-4bd1-a3ee-2d9e89107414/);
-  assert.equal((homepage.match(/class="skills-slide"/g) ?? []).length, 23);
-  assert.equal((homepage.match(/class="about-timeline-item"/g) ?? []).length, 10);
+  assert.equal((homepage.match(/class="skills-slide"/g) ?? []).length, 20);
+  assert.equal((homepage.match(/class="about-timeline-item"/g) ?? []).length, 12);
   assert.match(homepage, /The hero includes an introductory AWS course and the Alura Java and Spring Boot specialization\./);
 });
 

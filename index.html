@@ -14,6 +14,7 @@
   <main class="container">
     <section class="portfolio-block block-intro hero" id="home" aria-labelledby="hero-title">
       <div class="hero-copy">
+        <div class="hero-intro" data-scroll-reveal="hero-intro">
         <div class="hero-role-badge">
           <span class="hero-role-dot" aria-hidden="true"><span class="hero-role-pulse"></span><span class="hero-role-core"></span></span>
           <span class="hero-role-label" data-i18n="heroRoleBadge">JAVA &amp; AI BACKEND SPECIALIST</span>
@@ -21,6 +22,8 @@
         <h1 id="hero-title" data-i18n="heroName">Luis Peche</h1>
         <p class="specialty" data-i18n="heroRole">Backend &amp; Generative AI Developer</p>
         <p class="lede" data-i18n="heroSummary">I develop microservices and integrations with Java, Spring Boot, and SQL Server, as well as generative AI agents with Python. I have over 2 years of experience in the banking sector, also working with AWS services and Salesforce Marketing Cloud</p>
+        </div>
+        <div class="hero-support" data-scroll-reveal="hero-support">
         <section class="hero-stack" aria-labelledby="stack-title">
           <h2 class="stack-title" id="stack-title" data-i18n="stackTitle">Tech Stack</h2>
           <ul class="tech-list" aria-label="Tech Stack" data-i18n-aria-label="techStack">
@@ -28,10 +31,11 @@
           </ul>
         </section>
         <div class="hero-actions">
-          <a class="button" href="cv.html"><span data-i18n="knowMe">Know Me</span><svg class="button-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 4 12 12 M6 12h6V6" /></svg></a>
-          <a class="button button-secondary" href="cv.html" download="Luis-Peche-CV.html"><span data-i18n="downloadCV">Download CV</span><svg class="button-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4 M6 4h6v6" /></svg></a>
+          <a class="button" href="#about"><span data-i18n="knowMe">Know Me</span><svg class="button-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 4 12 12 M6 12h6V6" /></svg></a>
+          <a class="button button-secondary" href="assets/pdf/luis-peche-cv.pdf" download="luis-peche-cv.pdf"><span data-i18n="downloadCV">Download CV</span><svg class="button-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4 M6 4h6v6" /></svg></a>
         </div>
-        <aside class="bank-experience" data-ui="bank-experience" data-reveal aria-labelledby="bank-experience-title">
+        </div>
+        <aside class="bank-experience" data-ui="bank-experience" data-scroll-reveal="experience" aria-labelledby="bank-experience-title">
           <span class="bank-experience-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M10 18v-7"/><path d="M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M3 22h18"/><path d="M6 18v-7"/></svg>
           </span>
@@ -40,7 +44,7 @@
             <p data-i18n="bankExperienceSummary">Developing backend solutions, microservices, and integrations for banking processes</p>
           </div>
         </aside>
-        <section class="certifications" aria-labelledby="certifications-title">
+        <section class="certifications" data-scroll-reveal="certifications" aria-labelledby="certifications-title">
           <div class="certifications-heading">
             <img class="certifications-mark" src="assets/icon/badge-check.svg" width="22" height="22" alt="" aria-hidden="true" decoding="async">
             <h2 id="certifications-title" data-i18n="certificationsTitle">Certifications</h2>
@@ -48,12 +52,12 @@
           </div>
           <ul class="certification-list" id="certification-list" aria-label="AWS certification examples" data-i18n-aria-label="certificationListLabel"></ul>
           <noscript class="no-script-fallback"><ul class="certification-list" aria-label="AWS certification examples">
-            <li><article class="certification-card"><div class="certification-copy"><h3>AWS Certified Cloud Practitioner</h3><div class="certification-meta"><span class="certification-level">Foundational</span></div><p class="certification-pending">Credly URL pending</p></div><img class="certification-badge" src="assets/icon/cloud-practitioner.png" width="56" height="56" loading="lazy" decoding="async" alt=""></article></li>
-            <li><article class="certification-card"><div class="certification-copy"><h3>AWS Certified AI Practitioner</h3><div class="certification-meta"><span class="certification-level">Foundational</span></div><a class="certification-link" href="https://www.credly.com/badges/139dafc0-fbbb-4bd1-a3ee-2d9e89107414/public_url" target="_blank" rel="noopener noreferrer" aria-label="View AWS Certified AI Practitioner credential (opens in a new tab)">View credential <span aria-hidden="true">↗</span> <span class="sr-only">opens in a new tab</span></a></div><img class="certification-badge" src="assets/icon/ai-practitioner.png" width="56" height="56" loading="lazy" decoding="async" alt=""></article></li>
+            <li><article class="certification-card"><div class="certification-copy"><h3>AWS Certified Cloud Practitioner</h3><div class="certification-meta"><span class="certification-level">Foundational</span></div><a class="certification-link" href="https://www.credly.com/badges/139dafc0-fbbb-4bd1-a3ee-2d9e89107414/public_url" target="_blank" rel="noopener noreferrer" aria-label="View AI credential for AWS Certified Cloud Practitioner (opens in a new tab)">View AI credential <span class="certification-link-arrow" aria-hidden="true">↗</span><span class="sr-only">opens in a new tab</span></a></div><img class="certification-badge" src="assets/icon/cloud-practitioner.png" width="72" height="72" loading="lazy" decoding="async" alt=""></article></li>
+            <li><article class="certification-card"><div class="certification-copy"><h3>AWS Certified AI Practitioner</h3><div class="certification-meta"><span class="certification-level">Foundational</span></div><a class="certification-link" href="https://www.credly.com/badges/139dafc0-fbbb-4bd1-a3ee-2d9e89107414/public_url" target="_blank" rel="noopener noreferrer" aria-label="View AWS Certified AI Practitioner credential (opens in a new tab)">View credential <span aria-hidden="true">↗</span> <span class="sr-only">opens in a new tab</span></a></div><img class="certification-badge" src="assets/icon/ai-practitioner.png" width="72" height="72" loading="lazy" decoding="async" alt=""></article></li>
           </ul></noscript>
         </section>
       </div>
-      <figure class="hero-media" data-profile-frame>
+      <figure class="hero-media" data-profile-frame data-scroll-reveal="hero-photo">
         <div class="profile-frame">
           <div class="profile-motion" data-profile-tilt>
             <div class="terminal-bar">
@@ -101,7 +105,7 @@
     </div>
 
     <section class="projects section-divider" id="projects" aria-labelledby="projects-title">
-      <div class="section-heading">
+      <div class="section-heading" data-scroll-reveal="projects-heading">
         <div class="section-heading-main">
           <div class="hero-role-badge">
             <span class="hero-role-dot" aria-hidden="true"><span class="hero-role-pulse"></span><span class="hero-role-core"></span></span>
@@ -112,10 +116,10 @@
         <p data-i18n="projectsIntro">Selected work from my portfolio</p>
       </div>
       <div class="project-list" id="project-list"></div>
-      <noscript class="no-script-fallback"><p>Project links remain available without JavaScript:</p><ul><li><a href="project-page-5.html">AI Assistant</a></li><li><a href="project-page.html">Zephyr Cygnus</a></li><li><a href="project-page-3.html">Trucking</a></li><li><a href="project-page-4.html">Maipevi Bot</a></li><li><a href="project-page-2.html">Digital Wallet “Cashier”</a></li><li><a href="project-page-1.html">DevBot Supermarket</a></li></ul></noscript>
+      <noscript class="no-script-fallback"><p>Project links remain available without JavaScript:</p><ul><li><a href="project-page-5.html">OCR</a></li><li><a href="project-page.html">Zephyr Cygnus</a></li><li><a href="project-page-3.html">Trucking</a></li><li><a href="project-page-4.html">Maipevi Bot</a></li><li><a href="project-page-2.html">Digital Wallet “Cashier”</a></li><li><a href="project-page-1.html">Proyecto Tesis Maivibot</a></li></ul></noscript>
     </section>
     <section class="skills-section section-divider" id="skills" aria-labelledby="skills-title">
-      <div class="section-heading">
+      <div class="section-heading" data-scroll-reveal="skills-heading">
         <div class="section-heading-main">
           <div class="hero-role-badge">
             <span class="hero-role-dot" aria-hidden="true"><span class="hero-role-pulse"></span><span class="hero-role-core"></span></span>
@@ -126,7 +130,7 @@
         <p data-i18n="skillsIntro">Technologies documented across my projects and profile</p>
       </div>
       <div class="skills-carousel" role="region" aria-roledescription="carousel" aria-label="Technology carousel" data-i18n-aria-label="skillsCarouselLabel">
-        <div class="skills-toolbar">
+        <div class="skills-toolbar" data-scroll-reveal="skills-toolbar">
           <div class="skills-filters" data-skills-filters role="group" aria-label="Filter technologies by category" data-i18n-aria-label="skillsFiltersLabel" hidden></div>
           <div class="skills-controls" data-skills-controls hidden>
             <span class="skills-autoplay-status" data-skills-status data-state="paused" role="status" aria-live="polite" aria-atomic="true" hidden><span class="skills-status-dot" aria-hidden="true"></span><span data-skills-status-text></span></span>
@@ -145,82 +149,73 @@
             </div>
           </div>
         </div>
-        <p class="skills-help" id="skills-help" data-i18n="skillsHelp">Use the arrow controls, keyboard, or swipe to browse.</p>
-        <ul class="skills-track" id="skills-track" data-skills-track tabindex="0" aria-label="Technology cards" data-i18n-aria-label="skillsTrackLabel" aria-describedby="skills-help">
-          <li class="skills-slide" data-skill-id="java" data-skill-category="languages" data-skill-icon="assets/img/svg/java.svg" role="group" aria-roledescription="slide" aria-label="Java, 1 of 23">
+        <p class="skills-help" id="skills-help" data-i18n="skillsHelp">Use the arrow controls, keyboard, swipe, or drag with the mouse to browse.</p>
+        <ul class="skills-track" id="skills-track" data-skills-track data-scroll-reveal="skills-track-shell" tabindex="0" aria-label="Technology cards" data-i18n-aria-label="skillsTrackLabel" aria-describedby="skills-help">
+          <li class="skills-slide" data-skill-id="java" data-skill-category="languages" data-skill-icon="assets/img/svg/java.svg" aria-roledescription="slide" aria-label="Java, 1 of 20">
             <article class="skills-card" aria-labelledby="skill-title-java"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><img src="assets/img/svg/java.svg" width="44" height="44" loading="lazy" decoding="async" alt=""></span><p class="skills-category" data-i18n="skillsCategoryLanguages">Languages</p></div><h3 id="skill-title-java" data-skill-copy data-en="Java" data-es="Java">Java</h3><p class="skills-specialty" data-skill-copy data-en="Backend language" data-es="Lenguaje backend">Backend language</p><p class="skills-description" data-skill-copy data-en="Java 17 appears in several project stacks, including AI Assistant, Zephyr Cygnus, and Cashier." data-es="Java 17 aparece en varios stacks de proyectos, como AI Assistant, Zephyr Cygnus y Cashier.">Java 17 appears in several project stacks, including AI Assistant, Zephyr Cygnus, and Cashier.</p></article>
           </li>
-          <li class="skills-slide" data-skill-id="python" data-skill-category="languages" data-skill-icon="assets/img/svg/python.svg" role="group" aria-roledescription="slide" aria-label="Python, 2 of 23">
-            <article class="skills-card" aria-labelledby="skill-title-python"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><img src="assets/img/svg/python.svg" width="44" height="44" loading="lazy" decoding="async" alt=""></span><p class="skills-category" data-i18n="skillsCategoryLanguages">Languages</p></div><h3 id="skill-title-python" data-skill-copy data-en="Python" data-es="Python">Python</h3><p class="skills-specialty" data-skill-copy data-en="Automation language" data-es="Lenguaje de automatización">Automation language</p><p class="skills-description" data-skill-copy data-en="Listed in the DevBot Supermarket stack alongside Selenium Grid." data-es="Aparece en el stack de DevBot Supermarket junto con Selenium Grid.">Listed in the DevBot Supermarket stack alongside Selenium Grid.</p></article>
+          <li class="skills-slide" data-skill-id="python" data-skill-category="ai" data-skill-icon="assets/img/svg/python.svg" aria-roledescription="slide" aria-label="Python, 2 of 20">
+            <article class="skills-card" aria-labelledby="skill-title-python"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><img src="assets/img/svg/python.svg" width="44" height="44" loading="lazy" decoding="async" alt=""></span><p class="skills-category" data-i18n="skillsCategoryAi">AI</p></div><h3 id="skill-title-python" data-skill-copy data-en="Python" data-es="Python">Python</h3><p class="skills-specialty" data-skill-copy data-en="Automation language" data-es="Lenguaje de automatización">Automation language</p><p class="skills-description" data-skill-copy data-en="Listed in the DevBot Supermarket stack alongside Selenium Grid." data-es="Aparece en el stack de DevBot Supermarket junto con Selenium Grid.">Listed in the DevBot Supermarket stack alongside Selenium Grid.</p></article>
           </li>
-          <li class="skills-slide" data-skill-id="spring-boot" data-skill-category="frameworks" data-skill-icon="assets/img/svg/spring-boot.svg" role="group" aria-roledescription="slide" aria-label="Spring Boot, 3 of 23">
+          <li class="skills-slide" data-skill-id="spring-boot" data-skill-category="frameworks" data-skill-icon="assets/img/svg/spring-boot.svg" aria-roledescription="slide" aria-label="Spring Boot, 3 of 20">
             <article class="skills-card" aria-labelledby="skill-title-spring-boot"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><img src="assets/img/svg/spring-boot.svg" width="44" height="44" loading="lazy" decoding="async" alt=""></span><p class="skills-category" data-i18n="skillsCategoryFrameworks">Frameworks &amp; APIs</p></div><h3 id="skill-title-spring-boot" data-skill-copy data-en="Spring Boot" data-es="Spring Boot">Spring Boot</h3><p class="skills-specialty" data-skill-copy data-en="Java backend framework" data-es="Framework backend de Java">Java backend framework</p><p class="skills-description" data-skill-copy data-en="Listed across the Zephyr Cygnus, Trucking, Maipevi Bot, and Cashier project stacks." data-es="Aparece en los stacks de Zephyr Cygnus, Trucking, Maipevi Bot y Cashier.">Listed across the Zephyr Cygnus, Trucking, Maipevi Bot, and Cashier project stacks.</p></article>
           </li>
-          <li class="skills-slide" data-skill-id="spring-ai" data-skill-category="frameworks" data-skill-icon="" role="group" aria-roledescription="slide" aria-label="Spring AI, 4 of 23">
-            <article class="skills-card" aria-labelledby="skill-title-spring-ai"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><span class="skills-logo-fallback">SA</span></span><p class="skills-category" data-i18n="skillsCategoryFrameworks">Frameworks &amp; APIs</p></div><h3 id="skill-title-spring-ai" data-skill-copy data-en="Spring AI" data-es="Spring AI">Spring AI</h3><p class="skills-specialty" data-skill-copy data-en="AI agent framework" data-es="Framework de agentes de IA">AI agent framework</p><p class="skills-description" data-skill-copy data-en="AI Assistant lists Spring AI for its agent architecture." data-es="AI Assistant menciona Spring AI en su arquitectura de agentes.">AI Assistant lists Spring AI for its agent architecture.</p></article>
+          <li class="skills-slide" data-skill-id="spring-ai" data-skill-category="ai" data-skill-icon="assets/img/svg/spring-boot.svg" aria-roledescription="slide" aria-label="Spring AI, 4 of 20">
+            <article class="skills-card" aria-labelledby="skill-title-spring-ai"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><img src="assets/img/svg/spring-boot.svg" width="44" height="44" loading="lazy" decoding="async" alt=""></span><p class="skills-category" data-i18n="skillsCategoryAi">AI</p></div><h3 id="skill-title-spring-ai" data-skill-copy data-en="Spring AI" data-es="Spring AI">Spring AI</h3><p class="skills-specialty" data-skill-copy data-en="AI agent framework" data-es="Framework de agentes de IA">AI agent framework</p><p class="skills-description" data-skill-copy data-en="AI Assistant lists Spring AI for its agent architecture." data-es="AI Assistant menciona Spring AI en su arquitectura de agentes.">AI Assistant lists Spring AI for its agent architecture.</p></article>
           </li>
-          <li class="skills-slide" data-skill-id="spring-data-jpa" data-skill-category="frameworks" data-skill-icon="" role="group" aria-roledescription="slide" aria-label="Spring Data JPA, 5 of 23">
-            <article class="skills-card" aria-labelledby="skill-title-spring-data-jpa"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><span class="skills-logo-fallback">JPA</span></span><p class="skills-category" data-i18n="skillsCategoryFrameworks">Frameworks &amp; APIs</p></div><h3 id="skill-title-spring-data-jpa" data-skill-copy data-en="Spring Data JPA" data-es="Spring Data JPA">Spring Data JPA</h3><p class="skills-specialty" data-skill-copy data-en="Java persistence" data-es="Persistencia en Java">Java persistence</p><p class="skills-description" data-skill-copy data-en="Listed in the Zephyr Cygnus, Trucking, Cashier, and AI Assistant project stacks." data-es="Aparece en los stacks de Zephyr Cygnus, Trucking, Cashier y AI Assistant.">Listed in the Zephyr Cygnus, Trucking, Cashier, and AI Assistant project stacks.</p></article>
+          <li class="skills-slide" data-skill-id="spring-data-jpa" data-skill-category="frameworks" data-skill-icon="assets/img/svg/spring-boot.svg" aria-roledescription="slide" aria-label="Spring Data JPA, 5 of 20">
+            <article class="skills-card" aria-labelledby="skill-title-spring-data-jpa"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><img src="assets/img/svg/spring-boot.svg" width="44" height="44" loading="lazy" decoding="async" alt=""></span><p class="skills-category" data-i18n="skillsCategoryFrameworks">Frameworks &amp; APIs</p></div><h3 id="skill-title-spring-data-jpa" data-skill-copy data-en="Spring Data JPA" data-es="Spring Data JPA">Spring Data JPA</h3><p class="skills-specialty" data-skill-copy data-en="Java persistence" data-es="Persistencia en Java">Java persistence</p><p class="skills-description" data-skill-copy data-en="Listed in the Zephyr Cygnus, Trucking, Cashier, and AI Assistant project stacks." data-es="Aparece en los stacks de Zephyr Cygnus, Trucking, Cashier y AI Assistant.">Listed in the Zephyr Cygnus, Trucking, Cashier, and AI Assistant project stacks.</p></article>
           </li>
-          <li class="skills-slide" data-skill-id="spring-security" data-skill-category="security" data-skill-icon="" role="group" aria-roledescription="slide" aria-label="Spring Security, 6 of 23">
-            <article class="skills-card" aria-labelledby="skill-title-spring-security"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><span class="skills-logo-fallback">SS</span></span><p class="skills-category" data-i18n="skillsCategorySecurity">Security</p></div><h3 id="skill-title-spring-security" data-skill-copy data-en="Spring Security" data-es="Spring Security">Spring Security</h3><p class="skills-specialty" data-skill-copy data-en="Application security" data-es="Seguridad de aplicaciones">Application security</p><p class="skills-description" data-skill-copy data-en="Listed in several Java backend project stacks." data-es="Aparece en varios stacks de proyectos backend Java.">Listed in several Java backend project stacks.</p></article>
+          <li class="skills-slide" data-skill-id="spring-security" data-skill-category="security" data-skill-icon="assets/img/svg/spring-boot.svg" aria-roledescription="slide" aria-label="Spring Security, 6 of 20">
+            <article class="skills-card" aria-labelledby="skill-title-spring-security"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><img src="assets/img/svg/spring-boot.svg" width="44" height="44" loading="lazy" decoding="async" alt=""></span><p class="skills-category" data-i18n="skillsCategorySecurity">Security</p></div><h3 id="skill-title-spring-security" data-skill-copy data-en="Spring Security" data-es="Spring Security">Spring Security</h3><p class="skills-specialty" data-skill-copy data-en="Application security" data-es="Seguridad de aplicaciones">Application security</p><p class="skills-description" data-skill-copy data-en="Listed in several Java backend project stacks." data-es="Aparece en varios stacks de proyectos backend Java.">Listed in several Java backend project stacks.</p></article>
           </li>
-          <li class="skills-slide" data-skill-id="nodejs" data-skill-category="frameworks" data-skill-icon="assets/img/svg/nodejs.svg" role="group" aria-roledescription="slide" aria-label="Node.js, 7 of 23">
+          <li class="skills-slide" data-skill-id="nodejs" data-skill-category="frameworks" data-skill-icon="assets/img/svg/nodejs.svg" aria-roledescription="slide" aria-label="Node.js, 7 of 20">
             <article class="skills-card" aria-labelledby="skill-title-nodejs"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><img src="assets/img/svg/nodejs.svg" width="44" height="44" loading="lazy" decoding="async" alt=""></span><p class="skills-category" data-i18n="skillsCategoryFrameworks">Frameworks &amp; APIs</p></div><h3 id="skill-title-nodejs" data-skill-copy data-en="Node.js" data-es="Node.js">Node.js</h3><p class="skills-specialty" data-skill-copy data-en="JavaScript runtime" data-es="Entorno de ejecución JavaScript">JavaScript runtime</p><p class="skills-description" data-skill-copy data-en="Listed for Zephyr Cygnus, Maipevi Bot, and DevBot Supermarket." data-es="Aparece en Zephyr Cygnus, Maipevi Bot y DevBot Supermarket.">Listed for Zephyr Cygnus, Maipevi Bot, and DevBot Supermarket.</p></article>
           </li>
-          <li class="skills-slide" data-skill-id="react" data-skill-category="frameworks" data-skill-icon="" role="group" aria-roledescription="slide" aria-label="React, 8 of 23">
-            <article class="skills-card" aria-labelledby="skill-title-react"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><span class="skills-logo-fallback">Re</span></span><p class="skills-category" data-i18n="skillsCategoryFrameworks">Frameworks &amp; APIs</p></div><h3 id="skill-title-react" data-skill-copy data-en="React" data-es="React">React</h3><p class="skills-specialty" data-skill-copy data-en="Frontend framework" data-es="Framework frontend">Frontend framework</p><p class="skills-description" data-skill-copy data-en="Listed as the frontend framework for Trucking." data-es="Aparece como framework frontend de Trucking.">Listed as the frontend framework for Trucking.</p></article>
+          <li class="skills-slide" data-skill-id="aws-bedrock" data-skill-category="ai" data-skill-icon="assets/img/svg/aws-amazon-bedrock.svg" aria-roledescription="slide" aria-label="AWS Bedrock, 8 of 20">
+            <article class="skills-card" aria-labelledby="skill-title-aws-bedrock"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><img src="assets/img/svg/aws-amazon-bedrock.svg" width="44" height="44" loading="lazy" decoding="async" alt=""></span><p class="skills-category" data-i18n="skillsCategoryAi">AI</p></div><h3 id="skill-title-aws-bedrock" data-skill-copy data-en="AWS Bedrock" data-es="AWS Bedrock">AWS Bedrock</h3><p class="skills-specialty" data-skill-copy data-en="Generative AI service" data-es="Servicio de IA generativa">Generative AI service</p><p class="skills-description" data-skill-copy data-en="Included in the portfolio's AI technology stack." data-es="Aparece en el stack de tecnologías de IA del portafolio.">Included in the portfolio's AI technology stack.</p></article>
           </li>
-          <li class="skills-slide" data-skill-id="angular" data-skill-category="frameworks" data-skill-icon="" role="group" aria-roledescription="slide" aria-label="Angular, 9 of 23">
-            <article class="skills-card" aria-labelledby="skill-title-angular"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><span class="skills-logo-fallback">Ng</span></span><p class="skills-category" data-i18n="skillsCategoryFrameworks">Frameworks &amp; APIs</p></div><h3 id="skill-title-angular" data-skill-copy data-en="Angular" data-es="Angular">Angular</h3><p class="skills-specialty" data-skill-copy data-en="Frontend framework" data-es="Framework frontend">Frontend framework</p><p class="skills-description" data-skill-copy data-en="Listed as the frontend framework for Cashier." data-es="Aparece como framework frontend de Cashier.">Listed as the frontend framework for Cashier.</p></article>
+          <li class="skills-slide" data-skill-id="angular" data-skill-category="frameworks" data-skill-icon="assets/img/svg/angular.svg" aria-roledescription="slide" aria-label="Angular, 9 of 20">
+            <article class="skills-card" aria-labelledby="skill-title-angular"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><img src="assets/img/svg/angular.svg" width="44" height="44" loading="lazy" decoding="async" alt=""></span><p class="skills-category" data-i18n="skillsCategoryFrameworks">Frameworks &amp; APIs</p></div><h3 id="skill-title-angular" data-skill-copy data-en="Angular" data-es="Angular">Angular</h3><p class="skills-specialty" data-skill-copy data-en="Frontend framework" data-es="Framework frontend">Frontend framework</p><p class="skills-description" data-skill-copy data-en="Listed as the frontend framework for Cashier." data-es="Aparece como framework frontend de Cashier.">Listed as the frontend framework for Cashier.</p></article>
           </li>
-          <li class="skills-slide" data-skill-id="whatsapp-business" data-skill-category="frameworks" data-skill-icon="" role="group" aria-roledescription="slide" aria-label="WhatsApp Business, 10 of 23">
-            <article class="skills-card" aria-labelledby="skill-title-whatsapp-business"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><span class="skills-logo-fallback">WA</span></span><p class="skills-category" data-i18n="skillsCategoryFrameworks">Frameworks &amp; APIs</p></div><h3 id="skill-title-whatsapp-business" data-skill-copy data-en="WhatsApp Business" data-es="WhatsApp Business">WhatsApp Business</h3><p class="skills-specialty" data-skill-copy data-en="Business messaging" data-es="Mensajería empresarial">Business messaging</p><p class="skills-description" data-skill-copy data-en="Listed in the Zephyr Cygnus and Maipevi Bot project stacks." data-es="Aparece en los stacks de Zephyr Cygnus y Maipevi Bot.">Listed in the Zephyr Cygnus and Maipevi Bot project stacks.</p></article>
+          <li class="skills-slide" data-skill-id="langchain" data-skill-category="ai" data-skill-icon="assets/img/svg/langgraph-langchain.svg" aria-roledescription="slide" aria-label="LangChain, 10 of 20">
+            <article class="skills-card" aria-labelledby="skill-title-langchain"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><img src="assets/img/svg/langgraph-langchain.svg" width="44" height="44" loading="lazy" decoding="async" alt=""></span><p class="skills-category" data-i18n="skillsCategoryAi">AI</p></div><h3 id="skill-title-langchain" data-skill-copy data-en="LangChain" data-es="LangChain">LangChain</h3><p class="skills-specialty" data-skill-copy data-en="AI application framework" data-es="Framework para aplicaciones de IA">AI application framework</p><p class="skills-description" data-skill-copy data-en="Included in the portfolio's AI technology stack." data-es="Aparece en el stack de tecnologías de IA del portafolio.">Included in the portfolio's AI technology stack.</p></article>
           </li>
-          <li class="skills-slide" data-skill-id="mcp" data-skill-category="frameworks" data-skill-icon="" role="group" aria-roledescription="slide" aria-label="MCP, 11 of 23">
-            <article class="skills-card" aria-labelledby="skill-title-mcp"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><span class="skills-logo-fallback">MCP</span></span><p class="skills-category" data-i18n="skillsCategoryFrameworks">Frameworks &amp; APIs</p></div><h3 id="skill-title-mcp" data-skill-copy data-en="MCP" data-es="MCP">MCP</h3><p class="skills-specialty" data-skill-copy data-en="Tool integration protocol" data-es="Protocolo de integración de herramientas">Tool integration protocol</p><p class="skills-description" data-skill-copy data-en="AI Assistant describes MCP servers for integration with language models and external tools." data-es="AI Assistant describe servidores MCP para integrar modelos de lenguaje y herramientas externas.">AI Assistant describes MCP servers for integration with language models and external tools.</p></article>
-          </li>
-          <li class="skills-slide" data-skill-id="dialogflow" data-skill-category="frameworks" data-skill-icon="" role="group" aria-roledescription="slide" aria-label="Dialogflow, 12 of 23">
-            <article class="skills-card" aria-labelledby="skill-title-dialogflow"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><span class="skills-logo-fallback">Df</span></span><p class="skills-category" data-i18n="skillsCategoryFrameworks">Frameworks &amp; APIs</p></div><h3 id="skill-title-dialogflow" data-skill-copy data-en="Dialogflow" data-es="Dialogflow">Dialogflow</h3><p class="skills-specialty" data-skill-copy data-en="Conversational platform" data-es="Plataforma conversacional">Conversational platform</p><p class="skills-description" data-skill-copy data-en="Listed in the DevBot Supermarket project stack." data-es="Aparece en el stack del proyecto DevBot Supermarket.">Listed in the DevBot Supermarket project stack.</p></article>
-          </li>
-          <li class="skills-slide" data-skill-id="sql-server" data-skill-category="data" data-skill-icon="assets/img/svg/sql-server.svg" role="group" aria-roledescription="slide" aria-label="SQL Server, 13 of 23">
+          <li class="skills-slide" data-skill-id="sql-server" data-skill-category="data" data-skill-icon="assets/img/svg/sql-server.svg" aria-roledescription="slide" aria-label="SQL Server, 11 of 20">
             <article class="skills-card" aria-labelledby="skill-title-sql-server"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><img src="assets/img/svg/sql-server.svg" width="44" height="44" loading="lazy" decoding="async" alt=""></span><p class="skills-category" data-i18n="skillsCategoryData">Data</p></div><h3 id="skill-title-sql-server" data-skill-copy data-en="SQL Server" data-es="SQL Server">SQL Server</h3><p class="skills-specialty" data-skill-copy data-en="Relational database" data-es="Base de datos relacional">Relational database</p><p class="skills-description" data-skill-copy data-en="Named in the portfolio profile summary for backend integrations." data-es="Se menciona en el resumen del perfil para integraciones backend.">Named in the portfolio profile summary for backend integrations.</p></article>
           </li>
-          <li class="skills-slide" data-skill-id="postgresql" data-skill-category="data" data-skill-icon="assets/img/svg/postgresql.svg" role="group" aria-roledescription="slide" aria-label="PostgreSQL, 14 of 23">
+          <li class="skills-slide" data-skill-id="postgresql" data-skill-category="data" data-skill-icon="assets/img/svg/postgresql.svg" aria-roledescription="slide" aria-label="PostgreSQL, 12 of 20">
             <article class="skills-card" aria-labelledby="skill-title-postgresql"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><img src="assets/img/svg/postgresql.svg" width="44" height="44" loading="lazy" decoding="async" alt=""></span><p class="skills-category" data-i18n="skillsCategoryData">Data</p></div><h3 id="skill-title-postgresql" data-skill-copy data-en="PostgreSQL" data-es="PostgreSQL">PostgreSQL</h3><p class="skills-specialty" data-skill-copy data-en="Relational database" data-es="Base de datos relacional">Relational database</p><p class="skills-description" data-skill-copy data-en="Listed for Zephyr Cygnus and Cashier." data-es="Aparece en Zephyr Cygnus y Cashier.">Listed for Zephyr Cygnus and Cashier.</p></article>
           </li>
-          <li class="skills-slide" data-skill-id="mysql" data-skill-category="data" data-skill-icon="" role="group" aria-roledescription="slide" aria-label="MySQL, 15 of 23">
-            <article class="skills-card" aria-labelledby="skill-title-mysql"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><span class="skills-logo-fallback">My</span></span><p class="skills-category" data-i18n="skillsCategoryData">Data</p></div><h3 id="skill-title-mysql" data-skill-copy data-en="MySQL" data-es="MySQL">MySQL</h3><p class="skills-specialty" data-skill-copy data-en="Relational database" data-es="Base de datos relacional">Relational database</p><p class="skills-description" data-skill-copy data-en="Listed for Trucking and Maipevi Bot." data-es="Aparece en Trucking y Maipevi Bot.">Listed for Trucking and Maipevi Bot.</p></article>
+          <li class="skills-slide" data-skill-id="langgraph" data-skill-category="ai" data-skill-icon="assets/img/svg/langgraph-langchain.svg" aria-roledescription="slide" aria-label="LangGraph, 13 of 20">
+            <article class="skills-card" aria-labelledby="skill-title-langgraph"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><img src="assets/img/svg/langgraph-langchain.svg" width="44" height="44" loading="lazy" decoding="async" alt=""></span><p class="skills-category" data-i18n="skillsCategoryAi">AI</p></div><h3 id="skill-title-langgraph" data-skill-copy data-en="LangGraph" data-es="LangGraph">LangGraph</h3><p class="skills-specialty" data-skill-copy data-en="AI workflow library" data-es="Biblioteca para workflows de IA">AI workflow library</p><p class="skills-description" data-skill-copy data-en="Included in the portfolio's AI technology stack." data-es="Aparece en el stack de tecnologías de IA del portafolio.">Included in the portfolio's AI technology stack.</p></article>
           </li>
-          <li class="skills-slide" data-skill-id="mongodb" data-skill-category="data" data-skill-icon="" role="group" aria-roledescription="slide" aria-label="MongoDB, 16 of 23">
-            <article class="skills-card" aria-labelledby="skill-title-mongodb"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><span class="skills-logo-fallback">MDB</span></span><p class="skills-category" data-i18n="skillsCategoryData">Data</p></div><h3 id="skill-title-mongodb" data-skill-copy data-en="MongoDB" data-es="MongoDB">MongoDB</h3><p class="skills-specialty" data-skill-copy data-en="Document database" data-es="Base de datos documental">Document database</p><p class="skills-description" data-skill-copy data-en="Listed in the DevBot Supermarket project stack." data-es="Aparece en el stack del proyecto DevBot Supermarket.">Listed in the DevBot Supermarket project stack.</p></article>
+          <li class="skills-slide" data-skill-id="mongodb" data-skill-category="data" data-skill-icon="assets/img/svg/MongoDB_light.svg" data-skill-icon-dark="assets/img/svg/MongoDB_dark.svg" aria-roledescription="slide" aria-label="MongoDB, 14 of 20">
+            <article class="skills-card" aria-labelledby="skill-title-mongodb"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><img class="skills-icon-light" src="assets/img/svg/MongoDB_light.svg" width="44" height="44" loading="lazy" decoding="async" alt=""><img class="skills-icon-dark" src="assets/img/svg/MongoDB_dark.svg" width="44" height="44" loading="lazy" decoding="async" alt=""></span><p class="skills-category" data-i18n="skillsCategoryData">Data</p></div><h3 id="skill-title-mongodb" data-skill-copy data-en="MongoDB" data-es="MongoDB">MongoDB</h3><p class="skills-specialty" data-skill-copy data-en="Document database" data-es="Base de datos documental">Document database</p><p class="skills-description" data-skill-copy data-en="Listed in the DevBot Supermarket project stack." data-es="Aparece en el stack del proyecto DevBot Supermarket.">Listed in the DevBot Supermarket project stack.</p></article>
           </li>
-          <li class="skills-slide" data-skill-id="jwt" data-skill-category="security" data-skill-icon="assets/img/svg/jwt.svg" role="group" aria-roledescription="slide" aria-label="JWT, 17 of 23">
+          <li class="skills-slide" data-skill-id="jwt" data-skill-category="security" data-skill-icon="assets/img/svg/jwt.svg" aria-roledescription="slide" aria-label="JWT, 15 of 20">
             <article class="skills-card" aria-labelledby="skill-title-jwt"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><img src="assets/img/svg/jwt.svg" width="44" height="44" loading="lazy" decoding="async" alt=""></span><p class="skills-category" data-i18n="skillsCategorySecurity">Security</p></div><h3 id="skill-title-jwt" data-skill-copy data-en="JWT" data-es="JWT">JWT</h3><p class="skills-specialty" data-skill-copy data-en="Token standard" data-es="Estándar de tokens">Token standard</p><p class="skills-description" data-skill-copy data-en="Listed in the Cashier and Java backend project stacks." data-es="Aparece en Cashier y en los stacks de proyectos backend Java.">Listed in the Cashier and Java backend project stacks.</p></article>
           </li>
-          <li class="skills-slide" data-skill-id="docker" data-skill-category="cloud" data-skill-icon="assets/img/svg/docker.svg" role="group" aria-roledescription="slide" aria-label="Docker, 18 of 23">
+          <li class="skills-slide" data-skill-id="docker" data-skill-category="cloud" data-skill-icon="assets/img/svg/docker.svg" aria-roledescription="slide" aria-label="Docker, 16 of 20">
             <article class="skills-card" aria-labelledby="skill-title-docker"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><img src="assets/img/svg/docker.svg" width="44" height="44" loading="lazy" decoding="async" alt=""></span><p class="skills-category" data-i18n="skillsCategoryCloud">Cloud &amp; tooling</p></div><h3 id="skill-title-docker" data-skill-copy data-en="Docker" data-es="Docker">Docker</h3><p class="skills-specialty" data-skill-copy data-en="Container platform" data-es="Plataforma de contenedores">Container platform</p><p class="skills-description" data-skill-copy data-en="Listed in Trucking and Cashier and on the existing CV." data-es="Aparece en Trucking, Cashier y el CV actual.">Listed in Trucking and Cashier and on the existing CV.</p></article>
           </li>
-          <li class="skills-slide" data-skill-id="maven" data-skill-category="cloud" data-skill-icon="assets/img/svg/maven.svg" role="group" aria-roledescription="slide" aria-label="Maven, 19 of 23">
+          <li class="skills-slide" data-skill-id="maven" data-skill-category="cloud" data-skill-icon="assets/img/svg/maven.svg" aria-roledescription="slide" aria-label="Maven, 17 of 20">
             <article class="skills-card" aria-labelledby="skill-title-maven"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><img src="assets/img/svg/maven.svg" width="44" height="44" loading="lazy" decoding="async" alt=""></span><p class="skills-category" data-i18n="skillsCategoryCloud">Cloud &amp; tooling</p></div><h3 id="skill-title-maven" data-skill-copy data-en="Maven" data-es="Maven">Maven</h3><p class="skills-specialty" data-skill-copy data-en="Java build tool" data-es="Herramienta de construcción Java">Java build tool</p><p class="skills-description" data-skill-copy data-en="Listed in multiple Java project stacks and the existing CV." data-es="Aparece en varios stacks de proyectos Java y en el CV actual.">Listed in multiple Java project stacks and the existing CV.</p></article>
           </li>
-          <li class="skills-slide" data-skill-id="selenium-grid" data-skill-category="cloud" data-skill-icon="assets/img/svg/selenium.svg" role="group" aria-roledescription="slide" aria-label="Selenium Grid, 20 of 23">
+          <li class="skills-slide" data-skill-id="selenium-grid" data-skill-category="cloud" data-skill-icon="assets/img/svg/selenium.svg" aria-roledescription="slide" aria-label="Selenium Grid, 18 of 20">
             <article class="skills-card" aria-labelledby="skill-title-selenium-grid"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><img src="assets/img/svg/selenium.svg" width="44" height="44" loading="lazy" decoding="async" alt=""></span><p class="skills-category" data-i18n="skillsCategoryCloud">Cloud &amp; tooling</p></div><h3 id="skill-title-selenium-grid" data-skill-copy data-en="Selenium Grid" data-es="Selenium Grid">Selenium Grid</h3><p class="skills-specialty" data-skill-copy data-en="Browser automation" data-es="Automatización de navegadores">Browser automation</p><p class="skills-description" data-skill-copy data-en="Listed in the DevBot Supermarket stack for browser automation." data-es="Aparece en el stack de DevBot Supermarket para automatizar navegadores.">Listed in the DevBot Supermarket stack for browser automation.</p></article>
           </li>
-          <li class="skills-slide" data-skill-id="aws" data-skill-category="cloud" data-skill-icon="" role="group" aria-roledescription="slide" aria-label="AWS, 21 of 23">
-            <article class="skills-card" aria-labelledby="skill-title-aws"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><span class="skills-logo-fallback">AWS</span></span><p class="skills-category" data-i18n="skillsCategoryCloud">Cloud &amp; tooling</p></div><h3 id="skill-title-aws" data-skill-copy data-en="AWS" data-es="AWS">AWS</h3><p class="skills-specialty" data-skill-copy data-en="Cloud platform" data-es="Plataforma en la nube">Cloud platform</p><p class="skills-description" data-skill-copy data-en="The hero includes an introductory AWS course and the Alura Java and Spring Boot specialization." data-es="El hero incluye un curso introductorio de AWS y la especialización de Java y Spring Boot de Alura.">The hero includes an introductory AWS course and the Alura Java and Spring Boot specialization.</p></article>
+          <li class="skills-slide" data-skill-id="aws" data-skill-category="cloud" data-skill-icon="assets/img/svg/Amazon Web Services_light.svg" data-skill-icon-dark="assets/img/svg/Amazon Web Services_dark.svg" aria-roledescription="slide" aria-label="AWS, 19 of 20">
+            <article class="skills-card" aria-labelledby="skill-title-aws"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><img class="skills-icon-light" src="assets/img/svg/Amazon Web Services_light.svg" width="44" height="44" loading="lazy" decoding="async" alt=""><img class="skills-icon-dark" src="assets/img/svg/Amazon Web Services_dark.svg" width="44" height="44" loading="lazy" decoding="async" alt=""></span><p class="skills-category" data-i18n="skillsCategoryCloud">Cloud &amp; tooling</p></div><h3 id="skill-title-aws" data-skill-copy data-en="AWS" data-es="AWS">AWS</h3><p class="skills-specialty" data-skill-copy data-en="Cloud platform" data-es="Plataforma en la nube">Cloud platform</p><p class="skills-description" data-skill-copy data-en="The hero includes an introductory AWS course and the Alura Java and Spring Boot specialization." data-es="El hero incluye un curso introductorio de AWS y la especialización de Java y Spring Boot de Alura.">The hero includes an introductory AWS course and the Alura Java and Spring Boot specialization.</p></article>
           </li>
-          <li class="skills-slide" data-skill-id="google-cloud-platform" data-skill-category="cloud" data-skill-icon="" role="group" aria-roledescription="slide" aria-label="Google Cloud Platform, 22 of 23">
-            <article class="skills-card" aria-labelledby="skill-title-google-cloud-platform"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><span class="skills-logo-fallback">GCP</span></span><p class="skills-category" data-i18n="skillsCategoryCloud">Cloud &amp; tooling</p></div><h3 id="skill-title-google-cloud-platform" data-skill-copy data-en="Google Cloud Platform" data-es="Google Cloud Platform">Google Cloud Platform</h3><p class="skills-specialty" data-skill-copy data-en="Cloud platform" data-es="Plataforma en la nube">Cloud platform</p><p class="skills-description" data-skill-copy data-en="Listed in the DevBot Supermarket project stack." data-es="Aparece en el stack del proyecto DevBot Supermarket.">Listed in the DevBot Supermarket project stack.</p></article>
-          </li>
-          <li class="skills-slide" data-skill-id="salesforce-marketing-cloud" data-skill-category="cloud" data-skill-icon="" role="group" aria-roledescription="slide" aria-label="Salesforce Marketing Cloud, 23 of 23">
-            <article class="skills-card" aria-labelledby="skill-title-salesforce-marketing-cloud"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><span class="skills-logo-fallback">SFMC</span></span><p class="skills-category" data-i18n="skillsCategoryCloud">Cloud &amp; tooling</p></div><h3 id="skill-title-salesforce-marketing-cloud" data-skill-copy data-en="Salesforce Marketing Cloud" data-es="Salesforce Marketing Cloud">Salesforce Marketing Cloud</h3><p class="skills-specialty" data-skill-copy data-en="Marketing automation platform" data-es="Plataforma de automatización de marketing">Marketing automation platform</p><p class="skills-description" data-skill-copy data-en="Mentioned in the portfolio profile summary alongside AWS services." data-es="Se menciona en el resumen del perfil junto con los servicios de AWS.">Mentioned in the portfolio profile summary alongside AWS services.</p></article>
+          <li class="skills-slide" data-skill-id="salesforce-marketing-cloud" data-skill-category="cloud" data-skill-icon="assets/img/svg/salesforce.svg" aria-roledescription="slide" aria-label="Salesforce Marketing Cloud, 20 of 20">
+            <article class="skills-card" aria-labelledby="skill-title-salesforce-marketing-cloud"><div class="skills-card-top"><span class="skills-card-icon" aria-hidden="true"><img src="assets/img/svg/salesforce.svg" width="44" height="44" loading="lazy" decoding="async" alt=""></span><p class="skills-category" data-i18n="skillsCategoryCloud">Cloud &amp; tooling</p></div><h3 id="skill-title-salesforce-marketing-cloud" data-skill-copy data-en="Salesforce Marketing Cloud" data-es="Salesforce Marketing Cloud">Salesforce Marketing Cloud</h3><p class="skills-specialty" data-skill-copy data-en="Marketing automation platform" data-es="Plataforma de automatización de marketing">Marketing automation platform</p><p class="skills-description" data-skill-copy data-en="Mentioned in the portfolio profile summary alongside AWS services." data-es="Se menciona en el resumen del perfil junto con los servicios de AWS.">Mentioned in the portfolio profile summary alongside AWS services.</p></article>
           </li>
         </ul>
       </div>
     </section>
     <section class="about-section section-divider" id="about" aria-labelledby="about-title">
-      <header class="about-heading">
+      <header class="about-heading" data-scroll-reveal="about-heading">
         <div class="hero-role-badge about-eyebrow">
           <span class="hero-role-dot" aria-hidden="true"><span class="hero-role-pulse"></span><span class="hero-role-core"></span></span>
           <span class="hero-role-label" data-i18n="aboutEyebrow">PROFESSIONAL &amp; ACADEMIC JOURNEY</span>
@@ -228,28 +223,104 @@
         <h2 class="about-title" id="about-title" data-i18n="aboutTitle">Professional Milestones</h2>
         <p class="about-subtitle" data-i18n="aboutSubtitle">My professional experience and education in software development, technology, and banking solutions</p>
       </header>
-      <fieldset class="about-filters" data-about-filters hidden aria-label="Filter milestones" data-i18n-aria-label="aboutFiltersLabel">
+      <fieldset class="about-filters" data-about-filters data-scroll-reveal="about-filters" hidden aria-label="Filter milestones" data-i18n-aria-label="aboutFiltersLabel">
         <legend class="sr-only" data-i18n="aboutFiltersLabel">Filter milestones</legend>
-        <button class="about-filter" type="button" data-about-filter="all" aria-controls="about-timeline" aria-pressed="true"><span data-i18n="aboutFilterAll">All milestones</span> <span class="about-filter-count">(<span data-about-count="all">10</span>)</span></button>
+        <button class="about-filter" type="button" data-about-filter="all" aria-controls="about-timeline" aria-pressed="true"><span data-i18n="aboutFilterAll">All milestones</span> <span class="about-filter-count">(<span data-about-count="all">12</span>)</span></button>
         <button class="about-filter" type="button" data-about-filter="experience" aria-controls="about-timeline" aria-pressed="false"><span data-i18n="aboutFilterExperience">Experience</span> <span class="about-filter-count">(<span data-about-count="experience">3</span>)</span></button>
-        <button class="about-filter" type="button" data-about-filter="education" aria-controls="about-timeline" aria-pressed="false"><span data-i18n="aboutFilterEducation">Education</span> <span class="about-filter-count">(<span data-about-count="education">7</span>)</span></button>
+        <button class="about-filter" type="button" data-about-filter="education" aria-controls="about-timeline" aria-pressed="false"><span data-i18n="aboutFilterEducation">Education</span> <span class="about-filter-count">(<span data-about-count="education">9</span>)</span></button>
       </fieldset>
       <p class="sr-only" data-about-filter-status aria-live="polite" aria-atomic="true"></p>
       <ol class="about-timeline" id="about-timeline" data-about-timeline aria-label="Professional and academic milestones" data-i18n-aria-label="aboutTimelineLabel">
-        <li class="about-timeline-item" data-about-record data-about-group="experience" data-about-start="2023-11">
-          <article class="about-timeline-card" aria-labelledby="about-record-no-country">
+        <li class="about-timeline-item" data-about-record data-scroll-reveal="timeline" data-about-group="education" data-about-start="2026-09-24">
+          <article class="about-timeline-card" aria-labelledby="about-record-ai-practitioner">
             <header class="about-card-header">
-              <div class="about-card-meta"><span class="about-card-category" data-i18n="aboutCategoryExperience">Experience</span><time class="about-card-date" datetime="2023-11" data-i18n="aboutDateNoCountry">Nov. 2023 — Present</time></div>
-              <h3 class="about-card-title" id="about-record-no-country" data-i18n="aboutTitleNoCountry">Backend Developer</h3>
-              <p class="about-institution"><a class="about-organization" href="https://www.nocountry.tech/" target="_blank" rel="noopener noreferrer">No Country<span class="sr-only" data-i18n="projectExternalNewTab">opens in a new tab</span></a></p>
+              <div class="about-card-meta"><span class="about-card-category" data-i18n="aboutCategoryCertification">Certification</span><time class="about-card-date" datetime="2026-09-24" data-i18n="aboutDateAiPractitioner">Sep. 24, 2026 — Sep. 24, 2029</time></div>
+              <h3 class="about-card-title" id="about-record-ai-practitioner" data-i18n="aboutTitleAiPractitioner">AWS Certified AI Practitioner</h3>
+              <p class="about-institution">Amazon Web Services</p>
             </header>
-            <div class="about-card-content">
-              <p class="about-card-description" data-i18n="aboutDescriptionNoCountry">Backend work on the “Cashier” digital wallet using a layered REST architecture, design patterns, and good practices.</p>
-              <ul class="about-tags" aria-label="Technologies" data-i18n-aria-label="technologies"><li>REST</li><li data-i18n="aboutTagLayeredArchitecture">Layered architecture</li></ul>
+            <div class="about-card-content"><p class="about-card-description" data-i18n="aboutDescriptionAiPractitioner">The AWS Certified AI Practitioner is a foundational AWS AI credential, earned Sep. 24, 2026 and valid for three years through Sep. 24, 2029.</p></div>
+            <footer class="about-card-footer"><a class="about-document-link" href="https://www.credly.com/badges/139dafc0-fbbb-4bd1-a3ee-2d9e89107414/public_url" target="_blank" rel="noopener noreferrer"><span data-i18n="aboutCertificateAction">View certificate</span> <span class="sr-only" data-i18n="projectExternalNewTab">opens in a new tab</span></a></footer>
+          </article>
+        </li>
+        <li class="about-timeline-item" data-about-record data-scroll-reveal="timeline" data-about-group="education" data-about-start="2025-08-16">
+          <article class="about-timeline-card" aria-labelledby="about-record-java-architecture">
+            <header class="about-card-header">
+              <div class="about-card-meta"><span class="about-card-category" data-i18n="aboutCategoryCertification">Certification</span><time class="about-card-date" datetime="2025-08-16" data-i18n="aboutDateJavaArchitecture">Aug. 16, 2025 — Jan. 10, 2026</time></div>
+              <h3 class="about-card-title" id="about-record-java-architecture" data-i18n="aboutTitleJavaArchitecture">Software Architecture in Java</h3>
+              <p class="about-institution">App Galaxy</p>
+            </header>
+            <div class="about-card-content"><p class="about-card-description" data-i18n="aboutDescriptionJavaArchitecture">Completed a 102-hour program covering Layered, Hexagonal, and Clean Architecture with Java and Spring, strengthening my approach to designing maintainable, scalable, and decoupled systems.</p></div>
+            <footer class="about-card-footer"><a class="about-document-link" href="assets/pdf/certificado-galaxy-architecture.pdf" download="certificado-galaxy-architecture.pdf" data-i18n="aboutDownloadCertificateAction">Download certificate</a></footer>
+          </article>
+        </li>
+        <li class="about-timeline-item" data-about-experience-id="caja-ica" data-about-record data-scroll-reveal="timeline" data-about-group="experience" data-about-start="2024-04">
+          <article class="about-timeline-card" aria-labelledby="about-record-caja-ica">
+            <header class="about-card-header">
+              <div class="about-card-meta"><span class="about-card-category" data-i18n="aboutCategoryExperience">Experience</span><time class="about-card-date" datetime="2024-04" data-about-organization-period>Apr. 2024 – Present</time></div>
+              <div class="about-employer-heading"><img class="about-employer-mark" src="assets/icon/caja-ica.png" width="52" height="52" alt="" loading="lazy" decoding="async"><h3 class="about-card-title" id="about-record-caja-ica"><a class="about-organization" href="https://cajaica.pe/" target="_blank" rel="noopener noreferrer">Caja Ica<span class="sr-only" data-i18n="projectExternalNewTab">opens in a new tab</span></a></h3></div>
+            </header>
+            <div class="about-card-content" data-about-roles="caja-ica">
+              <details class="about-role" data-about-role="crm-ai-analyst-developer" open>
+                <summary class="about-role-summary"><span class="about-role-title" data-about-role-title>CRM &amp; AI Analyst Developer</span><time class="about-role-period" datetime="2026-06" data-about-role-period>Jun. 2026 – Present</time><span class="about-role-chevron" aria-hidden="true"></span></summary>
+                <div class="about-role-content">
+                  <ul class="about-initiatives" data-about-role-initiatives aria-label="Initiatives">
+                    <li class="about-initiative" data-about-initiative="receipt-ocr"><div class="about-initiative-content"><h4 class="about-initiative-title" data-about-initiative-title>Receipt processing with OCR</h4><p class="about-initiative-description" data-about-initiative-description>Reduced the time Logistics spent manually looking up service-receipt data by adding OCR to the core application. Built it with Java 25, Spring Boot, Spring AI, and Clean Architecture; used Amazon Textract with SNS/SQS for asynchronous processing and Bedrock to structure the extracted data. Added Mockito tests, SonarQube analysis, and OWASP Dependency-Check.</p></div><div class="about-initiative-technologies-group"><ul class="about-initiative-technologies" data-about-initiative-technologies aria-label="Technologies used in Receipt processing with OCR"><li>Java 25</li><li>Spring Boot</li><li>Spring AI</li><li>Clean Architecture</li><li>Amazon Textract</li><li>Amazon SNS / SQS</li><li>Amazon Bedrock</li><li>Mockito</li><li>SonarQube</li><li>OWASP Dependency-Check</li></ul></div></li>
+                    <li class="about-initiative" data-about-initiative="executive-ai-assistant"><div class="about-initiative-content"><h4 class="about-initiative-title" data-about-initiative-title>AI assistant for executives</h4><p class="about-initiative-description" data-about-initiative-description>Enabled a Microsoft Copilot Studio assistant in Teams for Caja Ica executives, connected to a private SharePoint knowledge base, making institutional regulations, conference materials, and other documents faster to find and supporting informed decisions.</p></div><div class="about-initiative-technologies-group"><ul class="about-initiative-technologies" data-about-initiative-technologies aria-label="Technologies used in AI assistant for executives"><li>Microsoft Copilot Studio</li><li>Teams</li><li>SharePoint</li></ul></div></li>
+                    <li class="about-initiative" data-about-initiative="salesforce-collections-communications"><div class="about-initiative-content"><h4 class="about-initiative-title" data-about-initiative-title>Collections communications with Salesforce Marketing Cloud</h4><p class="about-initiative-description" data-about-initiative-description>Connected the core to Salesforce Marketing Cloud through a Java 25/Spring Boot REST API that batches customers and transfers CSV files over SFTP. Configured Data Extensions, Automation Studio, and Journey Builder to segment messages by delinquency, credit type, and customer type, so Recoveries could manage templates.</p></div><div class="about-initiative-technologies-group"><ul class="about-initiative-technologies" data-about-initiative-technologies aria-label="Technologies used in Collections communications with Salesforce Marketing Cloud"><li>Salesforce Marketing Cloud</li><li>Java 25</li><li>Spring Boot</li><li>REST API</li><li>SFTP</li><li>Data Extensions</li><li>Automation Studio</li><li>Journey Builder</li></ul></div></li>
+                    <li class="about-initiative" data-about-initiative="python-ai-agent-archetype"><div class="about-initiative-content"><h4 class="about-initiative-title" data-about-initiative-title>Python archetype for AI agents</h4><p class="about-initiative-description" data-about-initiative-description>Proposed and built a reusable AI-agent foundation with Python, FastAPI, uv, and hexagonal architecture, with SonarQube code analysis.</p><p class="about-initiative-proposal"><strong data-about-initiative-proposed-label>Proposed components:</strong> <span data-about-initiative-proposed>Qdrant for vector search, LiteLLM for model access, and a CI/CD workflow to publish and distribute the archetype through Nexus were proposed as components.</span></p></div><div class="about-initiative-technologies-group"><ul class="about-initiative-technologies" data-about-initiative-technologies aria-label="Technologies used in Python archetype for AI agents"><li>Python</li><li>FastAPI</li><li>uv</li><li>Hexagonal architecture</li><li>SonarQube</li></ul></div></li>
+                  </ul>
+                </div>
+              </details>
+              <details class="about-role" data-about-role="junior-software-developer">
+                <summary class="about-role-summary"><span class="about-role-title" data-about-role-title>Junior Software Developer</span><time class="about-role-period" datetime="2024-07" data-about-role-period>Jul. 2024 – Jun. 2026</time><span class="about-role-chevron" aria-hidden="true"></span></summary>
+                <div class="about-role-content">
+                  <ul class="about-initiatives" data-about-role-initiatives aria-label="Initiatives">
+                    <li class="about-initiative" data-about-initiative="whatsapp-card-blocking"><div class="about-initiative-content"><h4 class="about-initiative-title" data-about-initiative-title>Card blocking through WhatsApp</h4><p class="about-initiative-description" data-about-initiative-description>Made it easier for Caja Ica customers to block cards through Boty on WhatsApp. Enabled the feature with a Java and Spring Boot microservice and Circuit Breaker to handle failures when checking active cards.</p></div><div class="about-initiative-technologies-group"><ul class="about-initiative-technologies" data-about-initiative-technologies aria-label="Technologies used in Card blocking through WhatsApp"><li>Boty</li><li>WhatsApp</li><li>Java</li><li>Spring Boot</li><li>Circuit Breaker</li></ul></div></li>
+                    <li class="about-initiative" data-about-initiative="cash-counting-policies-modernization"><div class="about-initiative-content"><h4 class="about-initiative-title" data-about-initiative-title>Modernization of the cash-counting and policies module</h4><p class="about-initiative-description" data-about-initiative-description>Made agency-closing progress easier to track with a dashboard showing which branches had uploaded required documents and which were still pending. Migrated the ASP.NET Web Forms module to Angular and AG Grid, backed by a Java/Spring Boot REST API.</p></div><div class="about-initiative-technologies-group"><ul class="about-initiative-technologies" data-about-initiative-technologies aria-label="Technologies used in Modernization of the cash-counting and policies module"><li>Angular</li><li>AG Grid</li><li>Java</li><li>Spring Boot</li><li>REST API</li></ul></div></li>
+                    <li class="about-initiative" data-about-initiative="reniec-integration"><div class="about-initiative-content"><h4 class="about-initiative-title" data-about-initiative-title>RENIEC integration</h4><p class="about-initiative-description" data-about-initiative-description>Reduced the response time of personal-data queries in central applications by optimizing the Java/Spring Boot REST API integrated with RENIEC.</p></div><div class="about-initiative-technologies-group"><ul class="about-initiative-technologies" data-about-initiative-technologies aria-label="Technologies used in RENIEC integration"><li>Java</li><li>Spring Boot</li><li>REST API</li><li>RENIEC</li></ul></div></li>
+                    <li class="about-initiative" data-about-initiative="petty-cash-management"><div class="about-initiative-content"><h4 class="about-initiative-title" data-about-initiative-title>Petty-cash management</h4><p class="about-initiative-description" data-about-initiative-description>Simplified tracking of administrative-area funds by centralizing in the core the records Operations Central had kept in Excel. Implemented fund controls and monthly, preventive, and surprise counts with C#, WPF, WCF, and SQL Server, plus reports with SQL Server Reporting Services.</p></div><div class="about-initiative-technologies-group"><ul class="about-initiative-technologies" data-about-initiative-technologies aria-label="Technologies used in Petty-cash management"><li>C#</li><li>WPF</li><li>WCF</li><li>SQL Server</li><li>SQL Server Reporting Services</li></ul></div></li>
+                    <li class="about-initiative" data-about-initiative="sql-server-optimization"><div class="about-initiative-content"><h4 class="about-initiative-title" data-about-initiative-title>SQL Server optimization</h4><p class="about-initiative-description" data-about-initiative-description>Improved maintenance of core stored procedures by optimizing their logic and applying SQL Server development best practices.</p></div><div class="about-initiative-technologies-group"><ul class="about-initiative-technologies" data-about-initiative-technologies aria-label="Technologies used in SQL Server optimization"><li>SQL Server</li></ul></div></li>
+                  </ul>
+                </div>
+              </details>
+              <details class="about-role" data-about-role="backend-independent-contractor">
+                <summary class="about-role-summary"><span class="about-role-title" data-about-role-title>Backend Developer | Independent Contractor</span><time class="about-role-period" datetime="2024-04" data-about-role-period>Apr. 2024 – Jul. 2024</time><span class="about-role-chevron" aria-hidden="true"></span></summary>
+                <div class="about-role-content">
+                  <ul class="about-initiatives" data-about-role-initiatives aria-label="Initiatives">
+                    <li class="about-initiative" data-about-initiative="automatic-service-debits"><div class="about-initiative-content"><h4 class="about-initiative-title" data-about-initiative-title>Automatic service debits</h4><p class="about-initiative-description" data-about-initiative-description>Automated overnight billing for Contugas and Electrodunas using their customer lists, laying the groundwork for adding the flow to the Caja Ica mobile app. Built layered microservices with Java 11, Spring Boot 2.2.1, and SQL Server, using Strategy to select logic by service and contract.</p></div><div class="about-initiative-technologies-group"><ul class="about-initiative-technologies" data-about-initiative-technologies aria-label="Technologies used in Automatic service debits"><li>Java 11</li><li>Spring Boot 2.2.1</li><li>SQL Server</li><li>Layered architecture</li><li>Strategy pattern</li></ul></div></li>
+                    <li class="about-initiative" data-about-initiative="savings-account-migration"><div class="about-initiative-content"><h4 class="about-initiative-title" data-about-initiative-title>Savings account migration</h4><p class="about-initiative-description" data-about-initiative-description>I implemented an overnight migration process for legal-entity savings accounts. I adapted Indigo Persona to update customer data with C#, WPF, and WCF.</p></div><div class="about-initiative-technologies-group"><ul class="about-initiative-technologies" data-about-initiative-technologies aria-label="Technologies used in Savings account migration"><li>C#</li><li>WPF</li><li>WCF</li><li>Indigo Persona</li></ul></div></li>
+                  </ul>
+                </div>
+              </details>
             </div>
           </article>
         </li>
-        <li class="about-timeline-item" data-about-record data-about-group="education" data-about-start="2023-09">
+        <li class="about-timeline-item" data-about-experience-id="no-country" data-about-record data-scroll-reveal="timeline" data-about-group="experience" data-about-start="2023-10">
+          <article class="about-timeline-card" aria-labelledby="about-record-no-country">
+            <header class="about-card-header">
+              <div class="about-card-meta"><span class="about-card-category" data-i18n="aboutCategoryExperience">Experience</span><div class="about-card-period"><time class="about-card-date" datetime="2023-10" data-i18n="aboutDateNoCountry" data-about-experience-period>Oct. 2023 — Jan. 2024</time><span class="about-card-duration" data-about-experience-duration>4 months</span></div></div>
+              <div class="about-employer-heading"><img class="about-employer-mark" src="assets/icon/no-country.jpg" width="52" height="52" alt="" loading="lazy" decoding="async"><h3 class="about-card-title" id="about-record-no-country" data-i18n="aboutTitleNoCountry" data-about-experience-role>Backend Developer</h3></div>
+              <p class="about-institution"><a class="about-organization" href="https://www.nocountry.tech/" target="_blank" rel="noopener noreferrer">No Country<span class="sr-only" data-i18n="projectExternalNewTab">opens in a new tab</span></a></p>
+            </header>
+            <div class="about-card-content">
+              <p class="about-card-description" data-i18n="aboutDescriptionNoCountry" data-about-experience-summary>I participated in multicultural teams developing backend solutions with Java and Spring Boot, collaborating to solve technical challenges and meet delivery deadlines.</p>
+              <div class="about-projects" data-about-projects="no-country"></div>
+              <noscript>
+                <div class="about-projects about-projects-fallback">
+                  <section class="about-project" aria-labelledby="about-project-no-country-trucking-title">
+                    <header class="about-project-header"><h4 class="about-project-title" id="about-project-no-country-trucking-title">Trucking</h4><div class="about-project-meta"><span class="about-project-period-label">Project period</span><time class="about-project-period" datetime="2023-11">Nov. – Dec. 2023</time><span class="about-project-mode">Mode: Remote</span></div></header>
+                    <div class="about-project-layout"><div class="about-project-media"><a class="about-project-media-link" href="project-page-3.html" aria-label="View project: Trucking"><img src="assets/img/tech/trucking.png" alt="Trucking fleet management project" loading="lazy"></a></div><div class="about-project-content"><p class="about-project-description">I led the backend development of a fleet management system using a layered REST architecture, applying design patterns and best practices. I also designed and developed a WhatsApp chatbot with Baileys, integrated with the REST API built in Spring Boot.</p><p class="about-project-detail"><strong>Deployment:</strong> Physical IBM X3550 M4 server</p><div class="about-project-technologies"><p class="about-project-detail about-project-technology-label">Technologies</p><ul class="about-project-tags" aria-label="Technologies"><li>Java 17</li><li>Spring Boot</li><li>Spring Mail</li><li>Spring Security</li><li>Spring Data JPA</li><li>MapStruct</li><li>JWT</li><li>Springdoc OpenAPI</li><li>Docker</li><li>GitHub Actions</li><li>Maven</li><li>Git</li><li>Baileys</li><li>MySQL</li></ul></div><div class="about-project-actions"><a class="about-project-action" href="project-page-3.html" aria-label="View project: Trucking">View project</a><a class="about-project-action" href="https://www.youtube.com/watch?v=UziTMfvcI_I" target="_blank" rel="noopener noreferrer" aria-label="Watch video: Trucking (opens in a new tab)">Watch video</a></div></div></div>
+                  </section>
+                  <section class="about-project" aria-labelledby="about-project-no-country-cashier-title">
+                    <header class="about-project-header"><h4 class="about-project-title" id="about-project-no-country-cashier-title">Cashier</h4><div class="about-project-meta"><span class="about-project-period-label">Project period</span><time class="about-project-period" datetime="2023-10">Oct. – Nov. 2023</time></div></header>
+                    <div class="about-project-layout"><div class="about-project-media"><a class="about-project-media-link" href="project-page-2.html" aria-label="View project: Cashier"><img src="assets/img/nature/Banner.png" alt="Cashier digital wallet project" loading="lazy"></a></div><div class="about-project-content"><p class="about-project-description">I developed backend features for a digital wallet using a layered REST architecture, applying design patterns and best practices.</p><p class="about-project-detail"><strong>Deployment:</strong> Physical IBM X3550 M4 server</p><div class="about-project-technologies"><p class="about-project-detail about-project-technology-label">Technologies</p><ul class="about-project-tags" aria-label="Technologies"><li>Java 17</li><li>Spring Boot</li><li>Spring Mail</li><li>Spring Data JPA</li><li>MapStruct</li><li>Spring Security</li><li>JWT</li><li>Swagger</li><li>Docker</li><li>Firebase Cloud Storage</li><li>Maven</li><li>Git</li><li>ZXing</li><li>PostgreSQL</li></ul></div><div class="about-project-actions"><a class="about-project-action" href="project-page-2.html" aria-label="View project: Cashier">View project</a><a class="about-project-action" href="https://lnkd.in/eG2f7kgk" target="_blank" rel="noopener noreferrer" aria-label="Watch video: Cashier (opens in a new tab)">Watch video</a></div></div></div>
+                  </section>
+                </div>
+              </noscript>
+            </div>
+          </article>
+        </li>
+        <li class="about-timeline-item" data-about-record data-scroll-reveal="timeline" data-about-group="education" data-about-start="2023-09">
           <article class="about-timeline-card" aria-labelledby="about-record-data-analytics">
             <header class="about-card-header">
               <div class="about-card-meta"><span class="about-card-category" data-i18n="aboutCategoryCertification">Certification</span><time class="about-card-date" datetime="2023-09" data-i18n="aboutDateDataAnalytics">Sep. 2023 — Nov. 2023</time></div>
@@ -263,17 +334,7 @@
             <footer class="about-card-footer"><a class="about-document-link" href="https://drive.google.com/file/d/1SZl-23BwBHEAVNSDKasVoKf8dMXUlqUz/view?usp=sharing" data-i18n="aboutCertificateAction">View certificate</a></footer>
           </article>
         </li>
-        <li class="about-timeline-item" data-about-record data-about-group="experience" data-about-start="2023-08">
-          <article class="about-timeline-card" aria-labelledby="about-record-zephyr">
-            <header class="about-card-header">
-              <div class="about-card-meta"><span class="about-card-category" data-i18n="aboutCategoryExperience">Experience</span><time class="about-card-date" datetime="2023-08" data-i18n="aboutDateZephyr">Aug. 2023 — Present</time></div>
-              <h3 class="about-card-title" id="about-record-zephyr" data-i18n="aboutTitleZephyr">Freelance Programmer</h3>
-              <p class="about-institution"><a class="about-organization" href="https://youtube.com/shorts/Y6HE0hWtwjQ" target="_blank" rel="noopener noreferrer">Zephyr Cygnus<span class="sr-only" data-i18n="projectExternalNewTab">opens in a new tab</span></a></p>
-            </header>
-            <div class="about-card-content"><p class="about-card-description" data-i18n="aboutDescriptionZephyr">A chatbot service that initially manages the fast-food sales process and could be adapted to other commercial processes.</p></div>
-          </article>
-        </li>
-        <li class="about-timeline-item" data-about-record data-about-group="education" data-about-start="2023-05">
+                <li class="about-timeline-item" data-about-record data-scroll-reveal="timeline" data-about-group="education" data-about-start="2023-05">
           <article class="about-timeline-card" aria-labelledby="about-record-alura">
             <header class="about-card-header">
               <div class="about-card-meta"><span class="about-card-category" data-i18n="aboutCategoryCertification">Certification</span><time class="about-card-date" datetime="2023-05" data-i18n="aboutDateAlura">May. 2023 — Sep. 2023</time></div>
@@ -287,7 +348,7 @@
             <footer class="about-card-footer"><a class="about-document-link" href="https://app.aluracursos.com/degree/certificate/37a4e8be-2f94-4e38-817b-e1f443d68743" data-i18n="aboutCertificateAction">View certificate</a></footer>
           </article>
         </li>
-        <li class="about-timeline-item" data-about-record data-about-group="education" data-about-start="2023-04">
+        <li class="about-timeline-item" data-about-record data-scroll-reveal="timeline" data-about-group="education" data-about-start="2023-04">
           <article class="about-timeline-card" aria-labelledby="about-record-ibague">
             <header class="about-card-header">
               <div class="about-card-meta"><span class="about-card-category" data-i18n="aboutCategoryCertification">Certification</span><time datetime="2023-04" data-i18n="aboutDateIbague">Apr. 2023 — Jun. 2023</time></div>
@@ -301,7 +362,7 @@
             <footer class="about-card-footer"><a class="about-document-link" href="https://drive.google.com/file/d/1CLPtms8qmTCJvji8tgEdscl1SSkDhY0w/view?usp=sharing" data-i18n="aboutCertificateAction">View certificate</a></footer>
           </article>
         </li>
-        <li class="about-timeline-item" data-about-record data-about-group="education" data-about-start="2022-02">
+        <li class="about-timeline-item" data-about-record data-scroll-reveal="timeline" data-about-group="education" data-about-start="2022-02">
           <article class="about-timeline-card" aria-labelledby="about-record-java-developer">
             <header class="about-card-header">
               <div class="about-card-meta"><span class="about-card-category" data-i18n="aboutCategoryCertification">Certification</span><time datetime="2022-02" data-i18n="aboutDateJavaDeveloper">Feb. 2022 — Mar. 2022</time></div>
@@ -315,7 +376,7 @@
             <footer class="about-card-footer"><a class="about-document-link" href="https://drive.google.com/file/d/1qdTae8DjAI_8lppFIxrGArnqfhp2EaSE/view" data-i18n="aboutCertificateAction">View certificate</a></footer>
           </article>
         </li>
-        <li class="about-timeline-item" data-about-record data-about-group="education" data-about-start="2021-10">
+        <li class="about-timeline-item" data-about-record data-scroll-reveal="timeline" data-about-group="education" data-about-start="2021-10">
           <article class="about-timeline-card" aria-labelledby="about-record-java-programmer">
             <header class="about-card-header">
               <div class="about-card-meta"><span class="about-card-category" data-i18n="aboutCategoryCertification">Certification</span><time datetime="2021-10" data-i18n="aboutDateJavaProgrammer">Oct. 2021 — Nov. 2021</time></div>
@@ -329,7 +390,7 @@
             <footer class="about-card-footer"><a class="about-document-link" href="https://drive.google.com/file/d/1FwMEDC8v4zGxE8PfEtlw9cHKb8ET20Jp/view" data-i18n="aboutCertificateAction">View certificate</a></footer>
           </article>
         </li>
-        <li class="about-timeline-item" data-about-record data-about-group="education" data-about-start="2021-03">
+        <li class="about-timeline-item" data-about-record data-scroll-reveal="timeline" data-about-group="education" data-about-start="2021-03">
           <article class="about-timeline-card" aria-labelledby="about-record-aws-course">
             <header class="about-card-header">
               <div class="about-card-meta"><span class="about-card-category" data-i18n="aboutCategoryCertification">Certification</span><time datetime="2021-03" data-i18n="aboutDateAws">Mar. 2021</time></div>
@@ -343,11 +404,11 @@
             <footer class="about-card-footer"><a class="about-document-link" href="https://drive.google.com/file/d/1Re-aQTTTP4VZri_r5LFxudWZODGuEztM/view?usp=sharing" data-i18n="aboutCertificateAction">View certificate</a></footer>
           </article>
         </li>
-        <li class="about-timeline-item" data-about-record data-about-group="experience" data-about-start="2019-05">
+        <li class="about-timeline-item" data-about-experience-id="hospital-regional-de-ica" data-about-record data-scroll-reveal="timeline" data-about-group="experience" data-about-start="2019-05">
           <article class="about-timeline-card" aria-labelledby="about-record-hospital">
             <header class="about-card-header">
               <div class="about-card-meta"><span class="about-card-category" data-i18n="aboutCategoryExperience">Experience</span><time datetime="2019-05" data-i18n="aboutDateHospital">May. 2019 — Nov. 2019</time></div>
-              <h3 class="about-card-title" id="about-record-hospital" data-i18n="aboutTitleHospital">IT Unit</h3>
+              <div class="about-employer-heading"><img class="about-employer-mark" src="assets/icon/hrica.png" width="52" height="52" alt="" loading="lazy" decoding="async"><h3 class="about-card-title" id="about-record-hospital" data-i18n="aboutTitleHospital">IT Unit</h3></div>
               <p class="about-institution"><a class="about-organization" href="https://www.hrica.gob.pe/">Hospital Regional de Ica</a></p>
             </header>
             <div class="about-card-content">
@@ -356,7 +417,7 @@
             </div>
           </article>
         </li>
-        <li class="about-timeline-item" data-about-record data-about-group="education" data-about-start="2016-12">
+        <li class="about-timeline-item" data-about-record data-scroll-reveal="timeline" data-about-group="education" data-about-start="2016-12">
           <article class="about-timeline-card" aria-labelledby="about-record-systems-engineering">
             <header class="about-card-header">
               <div class="about-card-meta"><span class="about-card-category" data-i18n="aboutCategoryEducation">Education</span><time datetime="2016-12" data-i18n="aboutDateSystemsEngineering">Dec. 2016 — Apr. 2022</time></div>
@@ -369,14 +430,14 @@
         </li>
       </ol>
     </section>
-    <section class="contact-section section-divider" id="contact" aria-labelledby="contact-title" data-reveal>
+    <section class="contact-section section-divider" id="contact" aria-labelledby="contact-title">
       <div class="contact-content">
-        <header class="contact-heading">
+        <header class="contact-heading" data-scroll-reveal="contact-heading">
           <h2 id="contact-title" data-i18n="contactTitle">Contact Me</h2>
           <p data-i18n="contactIntro">Tell me what you’re building, or reach out through a direct channel.</p>
         </header>
         <div class="contact-layout">
-          <form class="contact-form" data-contact-form action="https://send.pageclip.co/YU1nFAImNcbUjF7E3Mql1lMy0hhVcIjy" method="post" aria-labelledby="contact-form-title">
+          <form class="contact-form" data-scroll-reveal="contact-form" data-contact-form action="https://send.pageclip.co/YU1nFAImNcbUjF7E3Mql1lMy0hhVcIjy" method="post" aria-labelledby="contact-form-title">
             <h3 id="contact-form-title" data-i18n="contactFormTitle">Send a message</h3>
             <p class="contact-form-intro" data-i18n="contactFormIntro">All fields are required.</p>
             <div class="contact-field-list">
@@ -414,7 +475,7 @@
             <p class="contact-feedback contact-feedback--warning" data-contact-unavailable data-i18n="contactUnavailable" role="status" aria-live="polite" aria-atomic="true" hidden>Automatic sending is unavailable. You can still reach me directly by email.</p>
           </form>
           <aside class="contact-aside" aria-label="Direct channels and engineering domains" data-i18n-aria-label="contactAsideLabel">
-            <section class="contact-card" aria-labelledby="contact-channels-title">
+            <section class="contact-card" data-scroll-reveal="contact-card" aria-labelledby="contact-channels-title">
               <header class="contact-card-header"><h3 id="contact-channels-title" data-i18n="contactChannelsTitle">Direct Channels</h3></header>
               <p class="contact-aside-intro" data-i18n="contactChannelsIntro">Email me or visit my professional profiles.</p>
               <ul class="contact-channels" aria-label="Contact channels" data-i18n-aria-label="contactChannelsLabel">
@@ -441,7 +502,7 @@
                 </li>
               </ul>
             </section>
-            <section class="contact-card contact-focus" aria-labelledby="contact-focus-title">
+            <section class="contact-card contact-focus" data-scroll-reveal="contact-card" aria-labelledby="contact-focus-title">
               <header class="contact-card-header"><h3 id="contact-focus-title" data-i18n="contactFocusTitle">Target Engineering Domains</h3></header>
               <ul class="contact-badges" aria-label="Target engineering domains" data-i18n-aria-label="contactFocusListLabel">
                 <li class="contact-badge">#Java</li>
@@ -465,6 +526,7 @@
   </main>
   <!-- shared-footer -->
   <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+  <script src="assets/js/experience-data.js" defer></script>
   <script src="assets/js/work-gallery.js" defer></script>
 </body>
 </html>

@@ -11,6 +11,8 @@ const navbarTemplate = await readSource("templates/shared-navbar.html");
 const footerTemplate = await readSource("templates/shared-footer.html");
 const navbarStyles = await readSource("assets/css/bs-theme-overrides.css");
 const workGalleryNavbar = await readSource("templates/work-gallery-navbar.html");
+const workGalleryFooter = await readSource("templates/work-gallery-footer.html");
+const workGalleryRuntime = await readSource("assets/js/work-gallery.js");
 const workGalleryStyles = await readSource("assets/css/work-gallery.css");
 const selectedLogo = await readSource("assets/img/avatars/logo-luis-peche.svg").catch(() => "");
 const homepage = await readSource("index.html");
@@ -140,6 +142,17 @@ test("shared navbar preserves destinations and declares accessible collapse cont
   assert.deepEqual(pageShell["index.html"].activeLinks, ["nav-home"]);
   assert.deepEqual(pageShell["contact.html"].activeLinks, ["nav-contact"]);
   assert.deepEqual(pageShell["project-page-5.html"].activeLinks, ["nav-project"]);
+});
+
+test("Work Gallery brand labels retain visible branding in both locales", () => {
+  for (const template of [workGalleryNavbar, workGalleryFooter]) {
+    assert.match(template, /aria-label="LP LuisPeche home" data-i18n-aria-label="brandHome"/);
+    assert.match(template, /<span class="brand-mark" aria-hidden="true">LP<\/span>/);
+    assert.match(template, /Luis<span class="brand-name-highlight">Peche<\/span>/);
+  }
+
+  assert.match(workGalleryRuntime, /brandHome:\s*'LP LuisPeche home'/);
+  assert.match(workGalleryRuntime, /brandHome:\s*'LP LuisPeche, ir al inicio'/);
 });
 
 test("navbar styles meet contrast, target, spacing, focus, and fixed-anchor requirements", () => {
