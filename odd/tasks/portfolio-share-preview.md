@@ -30,7 +30,7 @@ Risk: item 5 (production deployment); preserve unrelated files and original imag
 
 ## Tasks
 - T1 — S2: Verify image bytes/dimensions and Vercel route; route: inline read-only discovery; commit: none.
-- T2 — S1-S3: Add RED metadata regression, valid PNG asset, and one initial-HTML Open Graph set; route: inline test-first; commit: pending.
+- T2 — S1-S3: Add RED metadata regression, valid PNG asset, and one initial-HTML Open Graph set; route: inline test-first; commit: `e8f0624`.
 - T3 — S4: Build, deploy to Vercel, and verify anonymous HTML/image responses; route: independent high-risk verification plus parent deployment; commit: T2 commit.
 - T4 — S5: Check WhatsApp preview and cache-bust only if needed; route: parent after deployment; commit: none.
 
@@ -64,3 +64,6 @@ Observed RED before implementation (2 failing tests: no Open Graph set; `.png` f
 
 ### L4 — Independent verification
 `gentle-ai-verify` read the feature document through `## Log` and independently returned S1-S3 met: nine tags exactly once in both source and generated initial heads, correct `/assets/img/og/` URL, true source/generated PNGs with 1424×752 IHDR, source/output assets byte-identical, and unique Open Graph set. `node --test tests/open-graph-preview.test.mjs` passed 2/2; `node scripts/build-shared-shell.mjs --check` reports 109 files current. S4-S5 remain pending Vercel deployment/WhatsApp. No repo edits or Git state changes by verifier.
+
+### L5 — Work-unit commit
+T2 implementation, regression test, valid PNG, preserved JPEG source, and feature document were committed on `feature/portfolio-share-preview` as `e8f0624` (`feat(meta): add WhatsApp share preview metadata`).
