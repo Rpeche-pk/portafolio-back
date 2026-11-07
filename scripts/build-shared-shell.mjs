@@ -190,7 +190,24 @@ function validatePageConfig(pageName, config) {
   resolveTemplatePath(config.footerTemplate ?? "shared-footer.html", pageName, "footerTemplate");
 }
 
-function getNavbarVariables(config) {
+function getMaintenanceBannerMarkup(config, environment) {
+  if (config.navbarTemplate !== "work-gallery-navbar.html" || environment.MAINTENANCE_BANNER !== "true") {
+    return "";
+  }
+
+  return `<aside class="maintenance-banner">
+    <div class="container maintenance-banner-inner">
+      <img class="maintenance-banner-icon" src="assets/icon/logbrew.svg" alt="" width="20" height="20">
+      <div class="maintenance-banner-copy">
+        <strong class="maintenance-banner-title" data-i18n="maintenanceTitle">Portfolio update</strong>
+        <span class="maintenance-banner-message" data-i18n="maintenanceMessage">I’m updating the portfolio and adding new content. Thanks for stopping by!</span>
+      </div>
+    </div>
+  </aside>
+`;
+}
+
+function getNavbarVariables(config, environment = process.env) {
   const activeClass = (key) => config.activeLinks.includes(key) ? " active" : "";
   const currentPage = (key) => config.activeLinks.includes(key) ? ' aria-current="location"' : "";
 
@@ -204,6 +221,7 @@ function getNavbarVariables(config) {
   };
 
   return {
+    MAINTENANCE_BANNER: getMaintenanceBannerMarkup(config, environment),
     HOME_HREF: routes.home,
     BRAND_HREF: routes.home,
     PROJECTS_HREF: routes.projects,
@@ -239,7 +257,7 @@ async function listFiles(directory, root = directory) {
   return files.sort();
 }
 
-async function createSiteFiles(sourcePagesDirectory = repositoryRoot) {
+async function createSiteFiles(sourcePagesDirectory = repositoryRoot, environment = process.env) {
   const configPath = join(repositoryRoot, "templates", "page-shell.json");
   const config = JSON.parse(await readFile(configPath, "utf8"));
   const pages = Object.keys(config).sort();
@@ -257,7 +275,7 @@ async function createSiteFiles(sourcePagesDirectory = repositoryRoot) {
     const pageConfig = config[pageName];
     validatePageConfig(pageName, pageConfig);
 
-    const variables = getNavbarVariables(pageConfig);
+    const variables = getNavbarVariables(pageConfig, environment);
     const navbarTemplate = await readFile(resolveTemplatePath(pageConfig.navbarTemplate ?? "shared-navbar.html", pageName, "navbarTemplate"), "utf8");
     const footerTemplate = await readFile(resolveTemplatePath(pageConfig.footerTemplate ?? "shared-footer.html", pageName, "footerTemplate"), "utf8");
     let page = await readFile(join(sourcePagesDirectory, pageName), "utf8");
@@ -318,7 +336,10 @@ async function verifyOutput(outputDirectory, expectedFiles) {
 }
 
 export async function buildSite(options) {
-  const outputFiles = await createSiteFiles(options.sourcePagesDirectory ?? repositoryRoot);
+  const outputFiles = await createSiteFiles(
+    options.sourcePagesDirectory ?? repositoryRoot,
+    options.environment ?? process.env,
+  );
 
   if (options.check) {
     await verifyOutput(options.output, outputFiles);

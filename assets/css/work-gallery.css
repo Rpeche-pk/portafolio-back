@@ -880,3 +880,56 @@ html { scroll-behavior: smooth; }
     transition: none;
   }
 }
+
+.maintenance-banner {
+  background-color: #fff3cd;
+  color: #664d03;
+  border-bottom: 1px solid #ffecb5;
+}
+.maintenance-banner-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-block: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: center;
+}
+.maintenance-banner-icon {
+  display: block;
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+.maintenance-banner-copy {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  gap: 0 5px;
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+.maintenance-banner-title {
+  font-weight: 700;
+}
+.maintenance-banner-message {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 767px) {
+  .maintenance-banner-inner {
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .maintenance-banner-icon {
+    margin-top: 2px;
+  }
+  .maintenance-banner-copy {
+    justify-content: flex-start;
+  }
+}

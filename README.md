@@ -11,6 +11,12 @@ python -m http.server --directory dist 8000
 
 Open `http://localhost:8000`. Run `node scripts/build-shared-shell.mjs --check` to verify generated output without rewriting it. Preview `dist/`, not source HTML: the static generator inserts the shared shell before the page is served.
 
+## Optional maintenance banner
+
+The bilingual notice is included only when the build environment variable `MAINTENANCE_BANNER` is exactly `true`; `false` or an unset value omits its markup entirely. In Vercel, set the variable in the project’s Environment Variables for only the deployment environments where the notice should appear.
+
+For a local POSIX-shell build, run `MAINTENANCE_BANNER=true node scripts/build-shared-shell.mjs`. In PowerShell, run `$env:MAINTENANCE_BANNER = 'true'; node scripts/build-shared-shell.mjs`.
+
 ## Reuse the approved shell
 
 1. Add exactly one `<!-- shared-navbar -->` and one `<!-- shared-footer -->` marker to a page source.

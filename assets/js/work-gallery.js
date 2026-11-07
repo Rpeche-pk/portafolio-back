@@ -3,6 +3,7 @@
 
       const messages = {
         en: {
+          maintenanceTitle: 'Portfolio update', maintenanceMessage: 'I’m updating the portfolio and adding new content. Thanks for stopping by!',
           backToTop: 'Back to top', footerNavigation: 'Footer navigation', footerAbout: 'About', footerContact: 'Contact me', footerRights: 'All rights reserved.', footerEmailLabel: 'Compose in Gmail (opens in a new tab)', footerEmailSubject: 'Portfolio contact',
           pageTitle: 'Luis Peche — Work gallery', zephyrCatalogChatAlt: 'Zephyr Cygnus catalog screen beside a WhatsApp order conversation on two phones.', zephyrPromoChatCatalogAlt: 'Zephyr Cygnus promotional menu and QR screen beside its mobile catalog and WhatsApp order chat.', zephyrMobileCatalogAlt: 'Zephyr Cygnus mobile catalog showing products and a message button.', primaryNavigation: 'Primary navigation', brandHome: 'LP Luis Peche home', sections: 'Sections',
           navHome: 'Home', navProjects: 'Projects', navSkills: 'Skills', navAbout: 'About Me', menu: 'Menu', menuLabel: 'Toggle navigation menu',
@@ -25,6 +26,7 @@
           cordActivated: 'Theme changed.'
         },
         es: {
+          maintenanceTitle: 'Portafolio en actualización', maintenanceMessage: 'Estoy actualizando el portafolio y agregando contenido. ¡Gracias por tu visita!',
           backToTop: 'Volver al inicio', footerNavigation: 'Navegación del pie de página', footerAbout: 'Sobre mí', footerContact: 'Contacto', footerRights: 'Todos los derechos reservados.', footerEmailLabel: 'Redactar en Gmail (se abre en una pestaña nueva)', footerEmailSubject: 'Contacto desde el portafolio',
           pageTitle: 'Luis Peche — Proyectos', zephyrCatalogChatAlt: 'Pantallas del catálogo de Zephyr Cygnus y de un pedido por WhatsApp en dos teléfonos.', zephyrPromoChatCatalogAlt: 'Pantalla promocional de Zephyr Cygnus con menú y código QR junto al catálogo móvil y al chat de pedido por WhatsApp.', zephyrMobileCatalogAlt: 'Catálogo móvil de Zephyr Cygnus con productos y un botón para enviar un mensaje.', primaryNavigation: 'Navegación principal', brandHome: 'LP Luis Peche, ir al inicio', sections: 'Secciones',
           navHome: 'Inicio', navProjects: 'Proyectos', navSkills: 'Habilidades', navAbout: 'Sobre mí', menu: 'Menú', menuLabel: 'Alternar menú de navegación',
