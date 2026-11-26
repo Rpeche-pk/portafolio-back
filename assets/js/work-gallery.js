@@ -56,7 +56,7 @@
           specialty: { confirmed: true, kind: 'specialty', position: 'bottom-right', label: { en: 'Backend developer', es: 'Desarrollador backend' } }
         },
         certifications: [
-          { id: 'aws-cloud-practitioner', name: 'AWS Certified Cloud Practitioner', issuer: 'Amazon Web Services', level: 'Foundational', badgePath: 'assets/icon/cloud-practitioner.png', validationUrl: null, temporaryValidationId: 'aws-ai-practitioner' },
+          { id: 'aws-cloud-practitioner', name: 'AWS Certified Cloud Practitioner', issuer: 'Amazon Web Services', level: 'Foundational', badgePath: 'assets/icon/cloud-practitioner.png', validationUrl: 'https://www.credly.com/badges/864f06ec-7a4e-44dd-b4e9-7817b0769823/public_url' },
           { id: 'aws-ai-practitioner', name: 'AWS Certified AI Practitioner', issuer: 'Amazon Web Services', level: 'Foundational', badgePath: 'assets/icon/ai-practitioner.png', validationUrl: 'https://www.credly.com/badges/139dafc0-fbbb-4bd1-a3ee-2d9e89107414/public_url' }
         ],
         projects: [

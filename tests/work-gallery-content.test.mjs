@@ -47,11 +47,11 @@ test("certification cards retain both approved AWS credentials and their exact v
   assert.match(certificationFallback, /Foundational/);
   assert.doesNotMatch(certificationFallback, /Credly URL pending|Falta la URL de Credly/);
   const cloudLink = certificationFallback.match(/<h3>AWS Certified Cloud Practitioner<\/h3>[\s\S]*?<a\b[\s\S]*?<\/a>/)?.[0] ?? "";
-  assert.match(cloudLink, /href="https:\/\/www\.credly\.com\/badges\/139dafc0-fbbb-4bd1-a3ee-2d9e89107414\/public_url"/);
+  assert.match(cloudLink, /href="https:\/\/www\.credly\.com\/badges\/864f06ec-7a4e-44dd-b4e9-7817b0769823\/public_url"/);
   assert.match(cloudLink, /target="_blank"/);
   assert.match(cloudLink, /rel="noopener noreferrer"/);
-  assert.match(cloudLink, /aria-label="View AI credential for AWS Certified Cloud Practitioner \(opens in a new tab\)"/);
-  assert.match(cloudLink, /View AI credential/);
+  assert.match(cloudLink, /aria-label="View AWS Certified Cloud Practitioner credential \(opens in a new tab\)"/);
+  assert.match(cloudLink, /View credential/);
   const aiLink = certificationFallback.match(/<h3>AWS Certified AI Practitioner<\/h3>[\s\S]*?<a\b[\s\S]*?<\/a>/)?.[0] ?? "";
   assert.match(aiLink, /View credential/);
   assert.match(aiLink, /rel="noopener noreferrer"/);
@@ -59,14 +59,13 @@ test("certification cards retain both approved AWS credentials and their exact v
   assert.match(certificationFallback, /src="assets\/icon\/ai-practitioner\.png"/);
 });
 
-test("Cloud keeps its own URL unset and temporarily references the AI credential", () => {
+test("Cloud Practitioner uses its own URL in the JavaScript-rendered certification", () => {
   const records = behavior.match(/certifications:\s*\[([\s\S]*?)\n\s*\],/)?.[1] ?? "";
-  assert.match(records, /id: 'aws-cloud-practitioner', name: 'AWS Certified Cloud Practitioner', issuer: 'Amazon Web Services', level: 'Foundational', badgePath: 'assets\/icon\/cloud-practitioner\.png', validationUrl: null, temporaryValidationId: 'aws-ai-practitioner'/);
+  assert.match(records, /id: 'aws-cloud-practitioner', name: 'AWS Certified Cloud Practitioner', issuer: 'Amazon Web Services', level: 'Foundational', badgePath: 'assets\/icon\/cloud-practitioner\.png', validationUrl: 'https:\/\/www\.credly\.com\/badges\/864f06ec-7a4e-44dd-b4e9-7817b0769823\/public_url'/);
+  assert.doesNotMatch(records.match(/\{ id: 'aws-cloud-practitioner',[^\n]+/)?.[0] ?? "", /temporaryValidationId/);
   assert.match(records, /id: 'aws-ai-practitioner', name: 'AWS Certified AI Practitioner', issuer: 'Amazon Web Services', level: 'Foundational', badgePath: 'assets\/icon\/ai-practitioner\.png', validationUrl: 'https:\/\/www\.credly\.com\/badges\/139dafc0-fbbb-4bd1-a3ee-2d9e89107414\/public_url'/);
-  assert.match(behavior, /certificationAiViewLabel: 'View AI credential'/);
-  assert.match(behavior, /certificationAiViewLabel: 'Ver credencial de IA'/);
-  assert.match(behavior, /portfolioConfig\.certifications\.find\(\(candidate\) => candidate\.id === item\.temporaryValidationId\)/);
-  assert.doesNotMatch(behavior, /certificationPendingLabel|Credly URL pending|Falta la URL de Credly/);
+  assert.match(behavior, /certificationViewLabel: 'View credential'/);
+  assert.match(behavior, /certificationViewLabel: 'Ver credencial'/);
 });
 
 test("the skills carousel removes requested cards and preserves the remaining card order", () => {
